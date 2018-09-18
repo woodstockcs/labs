@@ -1,1 +1,7 @@
-lab50: true
+lab50:
+  files:
+    - !exclude "*"
+    - !include fahrenheit.c
+    - !include pseudocode.txt
+  checks: cs50/2017/ap/fahrenheit
+  submit: cs50/2017/ap/fahrenheit
