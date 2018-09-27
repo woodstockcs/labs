@@ -22,14 +22,22 @@ Here on out, to execute (i.e., run) a command means to type it into a terminal w
 
 {% next %}
 
-Shall we have you write your first program? In the file named hello.c, write your first program by typing precisely these lines into the file:
+Shall we have you write your first program? In the file named hello.c, write your first program by typing precisely these lines into the file on the line in between the curly brackets:
 
+```c
+printf("hello, world\n");
+```
+
+so that your file looks like:
+
+```c
 #include <stdio.h>
 
 int main(void)
 {
     printf("hello, world\n");
 }
+```
 
 {% next %}
 
