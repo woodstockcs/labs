@@ -24,10 +24,10 @@ Here on out, to execute (i.e., run) a command means to type it into a terminal w
 
 ## Compiling Programs
 
-Now, before we can execute the program at right, recall that we must *compile* it with a *compiler* (e.g., `clang`), translating it from *source code* into *machine code* (i.e., zeroes and ones). Execute the command below to do just that:
+Now, before we can execute the program at right, recall that we must *compile* it with a *compiler*, translating it from *source code* into *machine code* (i.e., zeroes and ones). Execute the command below to do just that:
 
 ```
-clang hello.c
+make hello
 ```
 
 And then execute this one again:
@@ -36,59 +36,18 @@ And then execute this one again:
 ls
 ```
 
-This time, you should see not only `hello.c` but `a.out` listed as well? (You can see the same graphically if you click that folder icon again.) That's because `clang` has translated the source code in `hello.c` into machine code in `a.out`, which happens to stand for "assembler output," but more on that another time.
+This time, you should see not only `hello.c` but `hello` listed as well? (You can see the same graphically if you click that folder icon again.) That's because `make` has translated the source code in `hello.c` into machine code in `hello`, which happens to be the zeros and ones that the computer understands.
 
 Now run the program by executing the below.
 
 ```
-./a.out
+./hello
 ```
 
 Hello, world, indeed!
 
 {% next %}
 
-## Naming Programs
-
-Now, `a.out` isn't the most user-friendly name for a program. Let's compile `hello.c` again, this time saving the machine code in a file called, more aptly, `hello`. Execute the below.
-
-```
-clang -o hello hello.c
-```
-
-Take care not to overlook any of those spaces therein! Then execute this one again:
-
-```
-ls
-```
-
-You should now see not only `hello.c` (and `a.out` from before) but also `hello` listed as well? That's because `-o` is a *command-line argument*, sometimes known as a *flag* or a *switch*, that tells `clang` to output (hence the `o`) a file called `hello`. Execute the below to try out the newly named program.
-
-```
-./hello
-```
-
-Hello there again!
-
-{% next %}
-
-## Making Things Easier
-
-Recall that we can automate the process of executing `clang`, letting `make` figure out how to do so for us, thereby saving us some keystrokes. Execute the below to compile this program one last time.
-
-```
-make hello
-```
-
-You should see that `make` executes `clang` with even more command-line arguments for you? More on those, too, another time!
-
-Now execute the program itself one last time by executing the below.
-
-```
-./hello
-```
-
-Phew!
 
 ## Getting User Input
 
