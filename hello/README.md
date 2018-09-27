@@ -22,6 +22,17 @@ Here on out, to execute (i.e., run) a command means to type it into a terminal w
 
 {% next %}
 
+Shall we have you write your first program? In the file named hello.c, write your first program by typing precisely these lines into the file:
+
+#include <stdio.h>
+
+int main(void)
+{
+    printf("hello, world\n");
+}
+
+{% next %}
+
 ## Compiling Programs
 
 Now, before we can execute the program at right, recall that we must *compile* it with a *compiler*, translating it from *source code* into *machine code* (i.e., zeroes and ones). Execute the command below to do just that:
