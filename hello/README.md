@@ -74,3 +74,4 @@ Execute the below, logging in with your GitHub username and password when prompt
 ```
 submit50 cs50/2018/ap/hello
 ```
+{% submit %}
