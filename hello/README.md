@@ -65,7 +65,7 @@ Now run the program by executing the below.
 
 Hello, world, indeed!
 
-{% submit "Ready to Submit?" %}
+{% next "Ready to Submit?" %}
 
 ## How to Submit
 
