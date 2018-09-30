@@ -53,7 +53,7 @@ To try out the staff's implementation of this problem, execute
 
 within <a href="https://sandbox.cs50.io/0c8ebcaa-ca6e-45fa-bff2-043e5e6d83ec">this sandbox</a>.
 
-<% hints %>
+<% hint %>
 
 ### Hints
 
