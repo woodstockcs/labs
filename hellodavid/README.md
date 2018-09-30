@@ -14,7 +14,7 @@ There will be a few important differences to create this program. You will need 
 
 A string in computer science essentially refers to a collection of characters—​a word, a sentence, or a phrase. Because when you ask the user for their name it probably consists of more than a single letter, which would be just a character (char), you need to use get_string to collect their input and to store it in a variable whose data type is string.
 
-What else will changed, though? That last line of code. You'll need to add %s in there, and the variable name. Why is that the case?
+What else will change, though? That last line of code. You'll need to add %s in there, and the variable name. Why is that the case?
 
 Essentially, %s is what’s known as a placeholder for a variable. At the time the program is compiled, we don’t know exactly what will be printed out (unlike the original program which will always print out hello, world\n), but we do expect that the program will print hello, followed by whatever the user typed. %s is how we indicate to printf that a string will be printed there.
 
