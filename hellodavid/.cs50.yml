@@ -3,3 +3,4 @@ lab50:
     - !exclude "*"
     - !include hello.c
   submit: cs50/2018/fall/hello
+  check: cs50/2018/fall/hello
