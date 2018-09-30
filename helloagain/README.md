@@ -88,7 +88,7 @@ Recall that, to use `get_string`, you need to include `cs50.h` (in which `get_st
 #include <cs50.h>
 ```
 
-{% next %}
+{% next "Ready to Submit?" %}
 
 ## How to Submit
 
