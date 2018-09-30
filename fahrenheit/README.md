@@ -28,7 +28,7 @@ Let’s do a quick test to make sure things work as expected. Worldwide, the com
 
 {% next %}
 
-So your job is to write a program that converts a temperature in Celsius to Fahrenheit, as per the sample output below, wherein underlined text represents some user’s input.
+So your job is to write a program that converts a temperature in Celsius to Fahrenheit, as per the sample output below, wherein the "100" represents some user’s input.
 
 ```
 $ ./fahrenheit
