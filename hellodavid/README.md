@@ -10,6 +10,23 @@ To the right you should see the first program you just submitted, hello. Let's m
 
 No matter how you compile or execute this program right now, it only ever prints `hello, world`.
 
+There will be a few important differences to create this program. You will need to include another header file called cs50.h. In this file, which we’ll also discuss in more detail later in the course (so don’t be alarmed by some unfamiliar syntax), we’ve declared the data type of string and declared a function called get_string.
+
+A string in computer science essentially refers to a collection of characters—​a word, a sentence, or a phrase. Because when you ask the user for their name it probably consists of more than a single letter, which would be just a character (char), you need to use get_string to collect their input and to store it in a variable whose data type is string.
+
+What else will changed, though? That last line of code. You'll need to add %s in there, and the variable name. Why is that the case?
+
+Essentially, %s is what’s known as a placeholder for a variable. At the time the program is compiled, we don’t know exactly what will be printed out (unlike the original program which will always print out hello, world\n), but we do expect that the program will print hello, followed by whatever the user typed. %s is how we indicate to printf that a string will be printed there.
+
+What string will we print? Well, that’d be name! After we specify what we want printf to print, leaving as many placeholders as necessary, we specify what variables those placeholders refer to in order from left to right, separated by commas. We only have one placeholder in our modified program, a single %s, and so the variable that we’re telling printf to print in place of that %s is whatever the user typed at the prompt. For example:
+
+```
+$ ./hello
+What is your name?
+Alice
+Hello, Alice!
+```
+
 ## Getting User Input
 
 Modify this program in such a way that it first prompts the user for their name and then prints `hello, so-and-so`, where `so-and-so` is their actual name.
@@ -35,6 +52,8 @@ To try out the staff's implementation of this problem, execute
 </pre>
 
 within <a href="https://sandbox.cs50.io/0c8ebcaa-ca6e-45fa-bff2-043e5e6d83ec">this sandbox</a>.
+
+<% hints %>
 
 ### Hints
 
