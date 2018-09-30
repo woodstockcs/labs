@@ -27,6 +27,7 @@ Alice
 Hello, Alice!
 ```
 
+{% next %}
 ## Getting User Input
 
 Modify this program in such a way that it first prompts the user for their name and then prints `hello, so-and-so`, where `so-and-so` is their actual name.
@@ -53,7 +54,7 @@ To try out the staff's implementation of this problem, execute
 
 within <a href="https://sandbox.cs50.io/0c8ebcaa-ca6e-45fa-bff2-043e5e6d83ec">this sandbox</a>.
 
-<% hint %>
+{% spoiler "Hint" %}
 
 ### Hints
 
