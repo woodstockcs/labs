@@ -54,7 +54,7 @@ To try out the staff's implementation of this problem, execute
 
 within <a href="https://sandbox.cs50.io/0c8ebcaa-ca6e-45fa-bff2-043e5e6d83ec">this sandbox</a>.
 
-
+{% spoiler "Hint" %}
 
 ### Hints
 
@@ -87,6 +87,7 @@ Recall that, to use `get_string`, you need to include `cs50.h` (in which `get_st
 ```c
 #include <cs50.h>
 ```
+{% endspoiler %}
 
 {% next "Ready to Submit?" %}
 
