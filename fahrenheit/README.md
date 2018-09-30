@@ -78,7 +78,7 @@ Declare another float to hold degrees Fahrenheit, and assign the result of the t
 
 Finally, print out the result with exactly one decimal place.
 
-{% spoiler "hint"}
+{% spoiler "hint" %}
 
 Printf can be used to specify how many places after the decimal point you wish to display to the user. For example to print a float with 2 decimal places you would type:
 
