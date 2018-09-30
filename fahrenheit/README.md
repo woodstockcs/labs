@@ -1,6 +1,6 @@
 # Fahrenheit
 
-<img href="http://intro.cs50nestm.net/wp-content/uploads/2018/09/thermometer-1.png">
+(http://intro.cs50nestm.net/wp-content/uploads/2018/09/thermometer-1.png)
 
 {% next %}
 
