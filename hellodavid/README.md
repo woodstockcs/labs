@@ -4,7 +4,7 @@
 
 ## Enhancing our first program
 
-To the right you should see the first program you just submitted, hello. Let's make this a bit more interesting now by adding user input and saying hello, followed by whatever name you choose to input. David is the first name of Havard's CS50 Professor, David Malan.
+To the right you should see the first program you just submitted, hello. Let's make this a bit more interesting now by adding user input and saying hello, followed by whatever name you choose to input. 
 
 No matter how you compile or execute this program right now, it only ever prints `hello, world`.
 
