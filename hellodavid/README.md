@@ -2,6 +2,8 @@
 
 {% video https://www.youtube.com/watch?v=eunVUd6E-Bs %}
 
+{% next %}
+
 ## Enhancing our first program
 
 To the right you should see the first program you just submitted, hello. Let's make this a bit more interesting now by adding user input and saying hello, followed by whatever name you choose to input. 
