@@ -70,7 +70,7 @@ Whatever your pseudocode, let's first write only the C code that prompts (and re
 
 First, declare a new floating point variable to hold degrees Celsius.
 
-Do recall that if you include <cs50.h> atop your fahrenheit.c file, you will have access to a function called get_float, which will allow the user to input a floating-point value (a number with a decimal point in it, also known as a real number).The parameters of the get functions will display a prompt for users.
+Do recall that if you include '<cs50.h>' atop your fahrenheit.c file, you will have access to a function called get_float, which will allow the user to input a floating-point value (a number with a decimal point in it, also known as a real number).The parameters of the get functions will display a prompt for users.
 
 Now make sure to assign the value of this input function to your new Celsius variable.
 
