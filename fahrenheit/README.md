@@ -1,6 +1,6 @@
 # Fahrenheit
 
-{% video https://youtu.be/C5vk1APWxsk %}
+{% video https://www.youtube.com/watch?v=C5vk1APWxsk %}
 
 {% next %}
 
