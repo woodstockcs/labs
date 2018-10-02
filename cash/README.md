@@ -95,4 +95,4 @@ Try executing
 ```
 style50 cash.c
 ```
-to see if you could format your code better. Or look at the CS50 Style Guide on the class website for more information.
+to see if you could format your code better. A red block means to eliminate a space, a green block means to add a space. Look at the CS50 Style Guide on the class website for more information.
