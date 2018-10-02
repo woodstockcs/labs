@@ -88,7 +88,7 @@ Execute the below, logging in with your GitHub username and password when prompt
 ```
 submit50 cs50/2018/ap/cash
 ```
-{% spoiler "Not seeing a 5 for style?" %}
+{% next "Not seeing a 5/5 for style?" %}
 
 Try executing
 
@@ -96,5 +96,3 @@ Try executing
 style50 cash.c
 ```
 to see if you could format your code better. Or look at the CS50 Style Guide on the class website for more information.
-
-{% endspoiler %}
