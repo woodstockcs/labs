@@ -1,12 +1,14 @@
 # Fahrenheit
 
-![Thermometer](http://intro.cs50nestm.net/wp-content/uploads/2018/09/thermometer-1.png)
+{% video https://youtu.be/C5vk1APWxsk %}
 
 {% next %}
 
 ## Turning Up The Heat
 
 In the past, if you wanted to know what the outdoor temperature was, you had to look around for one of these, which might have been mounted outside at your house.
+
+![Thermometer](http://intro.cs50nestm.net/wp-content/uploads/2018/09/thermometer-1.png)
 
 Prior to that, you just stood outside, but we digress. Nowadays, it’s a fairly trivial exercise to pull open a weather app on your phone or visit a weather-reporting website to get the current temperature and the five-day forecast. No need to mess around with one of the above circular dials or its tube-of-mercury cousin.
 
