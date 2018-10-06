@@ -1,6 +1,6 @@
 # Pennies
 
-{% video http://intro.cs50nestm.net/wp-content/uploads/2018/10/pennies.mp4 %}
+{% video https://www.youtube.com/watch?v=J6NVOMCV3W0 %}
 
 {% next %}
 
