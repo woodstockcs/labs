@@ -1,6 +1,6 @@
 # Pennies
 
-{% video https://www.youtube.com/watch?v=J6NVOMCV3W0 %}
+{% video https://www.youtube.com/watch?v=cqiRNWH4OfU %}
 
 {% next %}
 
