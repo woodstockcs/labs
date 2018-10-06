@@ -1,6 +1,6 @@
 # Pennies
 
-{% video https://www.youtube.com/watch?v=cqiRNWH4OfU %}
+{% video https://www.youtube.com/watch?v=m-LKy4qduuU %}
 
 {% next %}
 
@@ -68,9 +68,34 @@ So that we can automate some tests of your code, we ask that your program’s la
 
 {% spoiler "Hints" %}
 
-{% video https://www.youtube.com/watch?v=2QZSsaSfB3A %}
+{% video https://www.youtube.com/watch?v=DCVu-BIV_tw %}
 
+First you'll prompt for the days in the month. If the user does not type in 28, 29, 30, or 31, the program should prompt the user to retry.
 
+Then you'll prompt for pennies on the first day. This must be a positive integer.
+
+Do you remember how to validate user input?
+
+{% video https://www.youtube.com/watch?v=LxvTJMYtRnU %}
+
+Remember you'll have to keep track of your total pennies due in a long long, as per the spec above. You can declare a long long like this:
+
+```
+long long total;
+```
+
+and initialze it with a value.
+
+Now you'll have to add the pennies you get on day 2, day 3, and so on until you've added pennies for every day of the month. You can want to use the function:
+
+```c
+pow(2, n)
+```
+in the math.h library if you want to use powers of 2. And of course print out your grand total as dollars and cents, with a dollar sign in front, and exactly two decimal places.
+
+Watch Zamyla's video below for a bit more help!
+
+{% video https://www.youtube.com/watch?v=LY8yD5CJNbw %}
 
 {% endspoiler %}
 
