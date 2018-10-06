@@ -44,7 +44,7 @@ Implement, in a file called pennies.c, a program that first asks the user how ma
 For instance, your program might behave as follows, whereby underlined text represents some user’s input.
 
 ```
-~/workspace/unit1/pennies/ $ ./pennies
+$ ./pennies
 Days in month: 32
 Days in month: 31
 Pennies on first day: 1
