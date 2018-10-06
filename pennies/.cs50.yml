@@ -2,5 +2,4 @@ lab50:
   files:
     - !exclude "*"
     - !include pennies.c
-    - !include cs50nestm_pennies
     - !include pseudocode.txt
