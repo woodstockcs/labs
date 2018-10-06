@@ -17,6 +17,20 @@ $10737418.23
 
 {% next %}
 
+## Double or Nothing
+
+If ever given the choice between $10,000,000 or a month’s worth of pennies, whereby you receive a penny the first day, two pennies the second, four pennies the third, and so forth…​ take the pennies[1].
+
+Anyhow, why the pennies? Exponentiation. Those pennies add up Consider how many pennies you’d receive on the 31st day alone, not to mention on the days leading up to it:
+
+```
+1 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2
+  × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2
+  × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2
+
+  = 1073741824
+```
+
 ## Implementation Details
 
 Implement, in `cash.c` at right, a program that first asks the user how much change is owed and then prints the minimum number of coins with which that change can be made.
