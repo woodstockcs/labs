@@ -110,10 +110,10 @@ Does your code work as prescribed when you input
 
 Here are some values to check for:
 
-28 days, 1 penny on day one yields $2684354.55
-31 days, 1 penny on day one yields $21474836.47
-29 days, 2 pennies on day one yields $10737418.22
-30 days, 30 pennies on day one yields $322122546.90
+* 28 days, 1 penny on day one yields $2684354.55
+* 31 days, 1 penny on day one yields $21474836.47
+* 29 days, 2 pennies on day one yields $10737418.22
+* 30 days, 30 pennies on day one yields $322122546.90
 
 Are your results exactly the same?
 
