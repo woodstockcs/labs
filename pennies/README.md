@@ -70,27 +70,18 @@ So that we can automate some tests of your code, we ask that your program’s la
 
 {% video https://www.youtube.com/watch?v=2QZSsaSfB3A %}
 
+
+
 {% endspoiler %}
 
-### Staff's Solution
-
-To try out the staff's implementation of this problem, execute
-
-```
-./cash
-```
-
-within [this sandbox](https://sandbox.cs50.io/0551a578-189e-4989-9e89-99e41a4f2c6d).
 
 ### How to Test Your Code
 
 Does your code work as prescribed when you input
 
-* `-1.00` (or other negative numbers)?
-* `0.00`?
-* `0.01` (or other positive numbers)?
-* letters or words?
-* no input at all, when you only hit Enter?
+* `32` (or more for days)?
+* `-1` (for pennies on day 1)?
+* no input at all for either prompt, when you only hit Enter?
 
 {% next %}
 
