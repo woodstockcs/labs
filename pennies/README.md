@@ -93,7 +93,7 @@ pow(2, n)
 ```
 in the math.h library if you want to use powers of 2. And of course print out your grand total as dollars and cents, with a dollar sign in front, and exactly two decimal places.
 
-Watch Zamyla's video below for a bit more help!
+Watch Zamyla's video below for a bit more help! And you may just want to jot down her pseudocode!
 
 {% video https://www.youtube.com/watch?v=LY8yD5CJNbw %}
 
