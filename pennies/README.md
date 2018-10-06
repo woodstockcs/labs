@@ -86,7 +86,7 @@ long long total;
 
 and initialze it with a value.
 
-Now you'll have to add the pennies you get on day 2, day 3, and so on until you've added pennies for every day of the month. You can want to use the function:
+Now you'll have to add the pennies you get on day 2, day 3, and so on until you've added pennies for every day of the month. You can use the function:
 
 ```c
 pow(2, n)
