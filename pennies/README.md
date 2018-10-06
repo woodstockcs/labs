@@ -41,7 +41,7 @@ What if you were given more than one penny on that first day? Or the month were 
 
 Implement, in a file called pennies.c, a program that first asks the user how many days there are in the month and then asks the user how many pennies he or she will receive on the first day of that month. The program should then calculate the amount that the user will have received in total by the end of the month (not just on the last day) if that amount is doubled on every day but the first, expressed not as pennies but as dollars and cents. If the user does not type in 28, 29, 30, or 31 for the number of days in the month, the program should prompt the user to retry. If the user does not input a positive integer for the first day’s number of pennies, the program should prompt the user to retry.
 
-For instance, your program might behave as follows, whereby underlined text represents some user’s input.
+For instance, your program might behave as follows.
 
 ```
 $ ./pennies
