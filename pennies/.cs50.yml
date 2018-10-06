@@ -3,3 +3,4 @@ lab50:
     - !exclude "*"
     - !include pennies.c
     - !include pseudocode.txt
+    - !include penniesreflect.txt 
