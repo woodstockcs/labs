@@ -1,13 +1,15 @@
-# Fahrenheit Reflection
+# Cash Reflection
 
 ## What to write
 
-In 150 to 300 words, describe the development process for Fahrenheit, and any aha moments or struggles you may have experienced.
+Describe the development process of Cash, and the struggles and successes you experienced. Describe at least one aha moment during this process. In your description clearly indicate whether the development described was collaborative or independent.
+
+Then answer this question: Why do you think the program spec suggested that you convert the user’s input entirely into cents?
 
 ## How to Submit
 
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 fahrenheitreflect@cs50nestm/checks
+submit50 greedyreflect@cs50nestm/checks
 ```
