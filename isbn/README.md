@@ -30,6 +30,8 @@ x<sub>10</sub> = (1·x<sub>1</sub> + 2·x<sub>2</sub> + 3·x<sub>3</sub> + 4·<s
 
 In other words, to compute an ISBN-10’s tenth digit, multiply its first digit by 1, its second digit by 2, its third digit by 3, its fourth digit by 4, its fifth digit by 5, its sixth digit by 6, its seventh digit by 7, its eighth digit by 8, and its ninth digit by 9. Take the sum of those products and then divide it by 11. The remainder should be the ISBN-10’s tenth digit! If, though, that remainder is 10, the tenth digit should instead be printed as X lest it be confused with a 1 followed by 0.
 
+{% next %}
+
 ## I S BN Calculatin'
 
 Let’s try all this out. The ISBN-10 for the Absolute Beginner’s Guide to C, one of the course’s recommended books, is 0-789-75198-4, the tenth digit of which is, obviously, 4. But is the syllabus right? Well, let’s first take that sum using the ISBN-10’s first nine digits (highlighted in bold):
