@@ -142,7 +142,8 @@ submit50 cs50/2018/ap/isbn
 To make sure you get 5/5 for style, you may want to execute style50 first.
 
 ```
-style50 pennies.c
+style50 isbn.c
 ```
 
+After submitting your code, be sure to check your score on cs50.me. If it's not a 5/5 on correctness, go to submissions, and click on check50 for that program to see which tests succeeded and whih failed. You are welcome to correct any error and resubmit!
 
