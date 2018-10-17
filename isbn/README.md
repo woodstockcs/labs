@@ -1,119 +1,125 @@
-# Pennies
-
-{% video https://www.youtube.com/watch?v=m-LKy4qduuU %}
-
-{% next %}
+# ISBN
 
 ## What to do
 
-Implement a program that calculates the sum of getting a doubled amount of money each day for a month, as below.
+Implement a program to validate ISBN-10 numbers.
 
 ```
-$ ./pennies
-Days in month: 30
-Pennies on first day: 1
-$10737418.23
+./isbn
+ISBN: 0307476464
+YES
 ```
 
 {% next %}
 
-## Double or Nothing
+## Readin' Bookz
 
-If ever given the choice between $10,000,000 or a month’s worth of pennies, whereby you receive a penny the first day, two pennies the second, four pennies the third, and so forth…​ take the pennies.
+As you may know, most any book that you borrow or buy has an International Standard Book Number, otherwise known as an ISBN or ISBN-10, "a 10-digit number that uniquely identifies books and book-like products published internationally."[1] Books published since 2007 might also have an ISBN-13, a 13-digit number with a similar purpose, but never mind those.
 
-Anyhow, why the pennies? Exponentiation. Those pennies add up Consider how many pennies you’d receive on the 31st day alone, not to mention on the days leading up to it:
+It turns out that the last of an ISBN-10’s digits is a "check digit," otherwise known (in binary contexts) as a "checksum," a number related mathematically to its preceding digits. ISBN-10s' digits are supposed to adhere to a formula, not unlike credit card numbers, and this check digit allows you to check whether an ISBN-10’s other nine digits are (most likely) valid without having to check, say, a database of books.
 
-```
-1 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2
-  × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2
-  × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2
-
-  = 1073741824
-```
-
-Put more succinctly, that’s 1 × 2<sup>30</sup>. Convert those pennies to dollars (by dividing by 100) and you get, what, over $10,000,000? On just that day? Crazy.
-
-What if you were given more than one penny on that first day? Or the month were February, in which case you’d get shortchanged a few million? (Best to take the pennies in January, March, May, July, August, October, or December.) Let’s find out.
+Per the International ISBN Agency’s ISBN Users' Manual, "The check digit is the last digit of an ISBN. It is calculated on a modulus 11 with weights 10-2, using X in lieu of 10 where ten would occur as a check digit."
 
 {% next %}
+
+Yes, but what does that mean? The manual elaborates. "This means that each of the first nine digits of the ISBN—​excluding the check digit itself—​is multiplied by a number ranging from 10 to 2 and that the resulting sum of the products, plus the check digit, must be divisible by 11 without a remainder."
+
+Okay, better, but still a bit unclear. Let’s define the check digit in terms of a formula. Fortunately, thanks to "modular arithmetic," we can simplify the Agency’s formal definition using weights ranging from 1 to 9 instead of 10 to 2. In fact, it’s really quite simple. If x1 represents an ISBN-10’s first digit and x10 its last[3], it turns out that:
+
+x<sub>10</sub> = (1·x<sub>1</sub> + 2·x<sub>2</sub> + 3·x<sub>3</sub> + 4·<sub>x4</sub> + 5·x<sub>5</sub> + 6·x<sub>6</sub> + 7·x<sub>7</sub> + 8·x<sub>8</sub> + 9·x<sub>9</sub>) mod 11
+
+In other words, to compute an ISBN-10’s tenth digit, multiply its first digit by 1, its second digit by 2, its third digit by 3, its fourth digit by 4, its fifth digit by 5, its sixth digit by 6, its seventh digit by 7, its eighth digit by 8, and its ninth digit by 9. Take the sum of those products and then divide it by 11. The remainder should be the ISBN-10’s tenth digit! If, though, that remainder is 10, the tenth digit should instead be printed as X lest it be confused with a 1 followed by 0.
+
+## I S BN Calculatin'
+
+Let’s try all this out. The ISBN-10 for the Absolute Beginner’s Guide to C, one of the course’s recommended books, is 0-789-75198-4, the tenth digit of which is, obviously, 4. But is the syllabus right? Well, let’s first take that sum using the ISBN-10’s first nine digits (highlighted in bold):
+
+1·0 + 2·7 + 3·8 + 4·9 + 5·7 + 6·5 + 7·1 + 8·9 + 9·8 = 290
+
+If we now divide that sum by 11, we get 290 ÷ 11 = 26 4/11 (i.e., a remainder of 4)! Well that’s kind of neat, the ISBN is legit! Actually, also thanks to modular arithmetic, we could just include that tenth digit in our sum and multiply it by 10:
+
+1·0 + 2·7 + 3·8 + 4·9 + 5·7 + 6·5 + 7·1 + 8·9 + 9·8 + 10·4 = 330
+
+If we now divide this sum by 11, we get 330 ÷ 11 = 30 with no remainder at all, which is an equivalent way of saying the ISBN-10 is legit! Stated more formally, 0 ≡ 330 (mod 11)!
+
+Hopefully those exclamation points make the math more exciting.
+
+So, computing this check digit’s not hard, but it does get a bit tedious by hand. Let’s write a program.
 
 ## Implementation Details
 
-Implement, in a file called pennies.c, a program that first asks the user how many days there are in the month and then asks the user how many pennies he or she will receive on the first day of that month. The program should then calculate the amount that the user will have received in total by the end of the month (not just on the last day) if that amount is doubled on every day but the first, expressed not as pennies but as dollars and cents. If the user does not type in 28, 29, 30, or 31 for the number of days in the month, the program should prompt the user to retry. If the user does not input a positive integer for the first day’s number of pennies, the program should prompt the user to retry.
+Create a file called isbn.c inside ~/workspace/unit1/isbn, in which you should write a program that prompts the user for an ISBN-10 and then reports (via printf) whether the number’s legit. So that we can automate some tests of your code, we ask that your program’s last line of output be either YES\n or NO\n, nothing more, nothing less.
 
-For instance, your program might behave as follows.
+For simplicity, you may assume that the user’s input will be exactly ten decimal digits (i.e., devoid of hyphens and X), the first of which might even be zero(es), as in the case of our recommended book. But do not assume that the user’s input will fit in an int! Recall, after all, that the largest value that can fit in an int is 232 - 1 = 4,294,967,295 (and, even then, only if declared as unsigned). True, that’s a 10-digit value, but there might still be a problem. (What?) Best to be safe and use get_long from CS50’s library to get users' input. (Why?)
 
-```
-$ ./pennies
-Days in month: 32
-Days in month: 31
-Pennies on first day: 1
-$21474836.47
-```
-
-Notice how this output suggests that the program should indeed re-prompt the user if he or she fails to cooperate with these rules (as by inputting too many days).
-
-How to begin? Odds are you’ll want a couple of loops, one with which to prompt (and potentially re-prompt) the user for a number of days, and another with which to prompt (and potentially re-prompt) the user for a number of first-day pennies. How to get both those numbers? Perhaps the CS50 Library offers some options? You may also find functions in the math.h header file that can help when working on this problem. Have a look at [Reference50](https://reference.cs50.net/) to see which functions those might be. Be sure, if you use any of those functions, to place this line of code near the top of your pennies.c file:
+Okay, so you’ve gotten some input. What should you do? Well, realize that this C program, not unlike Scratch projects, can be reduced to the most basic of building blocks. For the sake of discussion, suppose that some variable x contains a 10-digit long long (with no leading zeroes). How can you get at its tenth (i.e., rightmost) digit? Well how about this?
 
 ```c
-#include <math.h>
+int tenth = x % 10;
 ```
 
-Of course, if you store the user’s amount due in an int (which is only 32 bits), the total will be bounded by (2<sup>31</sup> - 1) pennies. (Why 2<sup>31</sup> and not 2<sup>32</sup>? And why 1 less than 2<sup>31</sup>?) Best, then, to store your total in a long long, so that the user benefits from 64 bits. (Don’t worry if users' totals overflow 64 bits and even go negative; consider it punishment for greed!)
+Do you see why that works? Do not pass Go until it dawns on you why!
 
-Do take care to format the user’s total as dollars and cents (to just 2 decimal places), prefixed with a dollar sign, just as we did in the output above. You do not need to insert commas after every 3 digits to the left of the decimal, as you might normally do.
-
-So that we can automate some tests of your code, we ask that your program’s last line of output be the amount owed to a user, followed by \n. The rest of your program’s personality we leave entirely to you!
-
-
-{% spoiler "Hints" %}
-
-{% video https://www.youtube.com/watch?v=DCVu-BIV_tw %}
-
-First you'll prompt for the days in the month. If the user does not type in 28, 29, 30, or 31, the program should prompt the user to retry.
-
-Then you'll prompt for pennies on the first day. This must be a positive integer.
-
-Do you remember how to validate user input?
-
-{% video https://www.youtube.com/watch?v=LxvTJMYtRnU %}
-
-Remember you'll have to keep track of your total pennies due in a long long, as per the spec above. You can declare a long long like this:
-
-```
-long long total;
-```
-
-and initialze it by assigning it a starting value.
-
-Now you'll have to add to that total the pennies you get on day 2, day 3, and so on until you've added pennies for every day of the month. You can use the function:
+How, now, can you get at that same variable’s ninth digit? Well, why don’t we first get rid of its tenth digit by shifting every other one place to the right?
 
 ```c
-pow(2, n)
+x = x / 10;
 ```
-in the math.h library if you want to use 2 to some power of n in you calculation. And of course print out your grand total as dollars and cents, with a dollar sign in front, and exactly two decimal places.
 
-Watch Zamyla's video below for a bit more help! And you may just want to jot down her pseudocode!
+How about that trick? Do you see why it works? The ninth digit, now, is just:
 
-{% video https://www.youtube.com/watch?v=QoxUQjXiZv0 %}
+```c
+int ninth = x % 10;
+```
 
-{% endspoiler %}
+So we bet there’s a pattern here. And odds are you don’t need to (i.e., shouldn’t) copy/paste lines like the above nine or ten times. Loops are your friend. To be sure, other approaches exist. Proceed as you wish! Perhaps some of these tricks, though, will get you started.
 
+To compile your program, type
+
+```
+make isbn
+```
+
+Assuming your program compiled without errors (or, ideally, warnings) via either command, run your program with the command below.
+
+```
+./isbn
+```
+
+Consider the below representative of how your own program should behave when passed a valid ISBN-10 (sans hyphens); underlined is some user’s input.
+
+```
+$ ./isbn
+ISBN: 0789751984
+YES
+```
+
+Of course, get_long(“ISBN: “) itself will reject an ISBN-10’s hyphens (and more) anyway:
+
+```
+~/workspace/unit1/isbn/ $ ./isbn
+ISBN: 0-789-75198-4
+Retry: foo
+Retry: 0789751984
+YES
+```
+
+But it’s up to you to catch inputs that are not ISBN-10s (e.g., Jenny’s phone number), even if ten digits.
+
+```
+$ ./isbn
+ISBN: 5558675309
+NO
+```
 
 ### How to Test Your Code
 
-Does your code work as prescribed when you input
-
-* `32` (or more for days)?
-* `-1` (for pennies on day 1)?
-* no input at all for either prompt, when you only hit Enter?
-
 Here are some values to check for:
 
-* 28 days, 1 penny on day one yields $2684354.55
-* 31 days, 1 penny on day one yields $21474836.47
-* 29 days, 2 pennies on day one yields $10737418.22
-* 30 days, 30 pennies on day one yields $322122546.90
+* Beginners Guide (0789751984) valid
+* Beginners Guide fake (0789751985) invalid
+* Programming in C (0321776410) valid
+* Jennys number (6178675309) invalid
 
 Are your results exactly the same?
 
@@ -124,7 +130,7 @@ Are your results exactly the same?
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/2018/ap/pennies
+submit50 cs50/2018/ap/isbn
 ```
 
 To make sure you get 5/5 for style, you may want to execute style50 first.
