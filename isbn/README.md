@@ -14,7 +14,7 @@ YES
 
 ## Readin' Bookz
 
-As you may know, most any book that you borrow or buy has an International Standard Book Number, otherwise known as an ISBN or ISBN-10, "a 10-digit number that uniquely identifies books and book-like products published internationally."[1] Books published since 2007 might also have an ISBN-13, a 13-digit number with a similar purpose, but never mind those.
+As you may know, most any book that you borrow or buy has an International Standard Book Number, otherwise known as an ISBN or ISBN-10, "a 10-digit number that uniquely identifies books and book-like products published internationally." Books published since 2007 might also have an ISBN-13, a 13-digit number with a similar purpose, but never mind those.
 
 It turns out that the last of an ISBN-10’s digits is a "check digit," otherwise known (in binary contexts) as a "checksum," a number related mathematically to its preceding digits. ISBN-10s' digits are supposed to adhere to a formula, not unlike credit card numbers, and this check digit allows you to check whether an ISBN-10’s other nine digits are (most likely) valid without having to check, say, a database of books.
 
@@ -46,6 +46,8 @@ Hopefully those exclamation points make the math more exciting.
 
 So, computing this check digit’s not hard, but it does get a bit tedious by hand. Let’s write a program.
 
+{% next %}
+
 ## Implementation Details
 
 Create a file called isbn.c inside ~/workspace/unit1/isbn, in which you should write a program that prompts the user for an ISBN-10 and then reports (via printf) whether the number’s legit. So that we can automate some tests of your code, we ask that your program’s last line of output be either YES\n or NO\n, nothing more, nothing less.
@@ -72,6 +74,8 @@ How about that trick? Do you see why it works? The ninth digit, now, is just:
 int ninth = x % 10;
 ```
 
+{% next %}
+
 So we bet there’s a pattern here. And odds are you don’t need to (i.e., shouldn’t) copy/paste lines like the above nine or ten times. Loops are your friend. To be sure, other approaches exist. Proceed as you wish! Perhaps some of these tricks, though, will get you started.
 
 To compile your program, type
@@ -97,7 +101,7 @@ YES
 Of course, get_long(“ISBN: “) itself will reject an ISBN-10’s hyphens (and more) anyway:
 
 ```
-~/workspace/unit1/isbn/ $ ./isbn
+$ ./isbn
 ISBN: 0-789-75198-4
 Retry: foo
 Retry: 0789751984
@@ -111,6 +115,8 @@ $ ./isbn
 ISBN: 5558675309
 NO
 ```
+
+{% next %}
 
 ### How to Test Your Code
 
