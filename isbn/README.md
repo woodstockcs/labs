@@ -110,7 +110,7 @@ Retry: 0789751984
 YES
 ```
 
-But it’s up to you to catch inputs that are not ISBN-10s (e.g., Jenny’s phone number), even if ten digits.
+But it’s up to you to catch inputs that are not ISBN-10s (e.g., [Jenny’s](https://en.wikipedia.org/wiki/867-5309/Jenny) phone number), even if ten digits.
 
 ```
 $ ./isbn
