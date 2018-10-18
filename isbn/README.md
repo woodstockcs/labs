@@ -36,11 +36,11 @@ In other words, to compute an ISBN-10’s tenth digit, multiply its first digit 
 
 Let’s try all this out. The ISBN-10 for the *Absolute Beginner’s Guide to C*, one of the course’s recommended books, is 0-789-75198-4, the tenth digit of which is, obviously, 4. But is the syllabus right? Well, let’s first take that sum using the ISBN-10’s first nine digits (highlighted in bold):
 
-1·**0** + 2·**7** + 3·**8** + 4·9 + 5·7 + 6·5 + 7·1 + 8·9 + 9·8 = 290
+1·**0** + 2·**7** + 3·**8** + 4·**9** + 5·**7** + 6·**5** + 7·**1** + 8·**9** + 9·**8** = 290
 
 If we now divide that sum by 11, we get 290 ÷ 11 = 26 4/11 (i.e., a remainder of 4)! Well that’s kind of neat, the ISBN is legit! Actually, also thanks to modular arithmetic, we could just include that tenth digit in our sum and multiply it by 10:
 
-1·0 + 2·7 + 3·8 + 4·9 + 5·7 + 6·5 + 7·1 + 8·9 + 9·8 + 10·4 = 330
+1·**0** + 2·**7** + 3·**8** + 4·**9** + 5·**7** + 6·**5** + 7·**1** + 8·**9** + 9·**8** + 10·**4** = 330
 
 If we now divide this sum by 11, we get 330 ÷ 11 = 30 with no remainder at all, which is an equivalent way of saying the ISBN-10 is legit! Stated more formally, 0 ≡ 330 (mod 11)!
 
