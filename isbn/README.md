@@ -24,7 +24,7 @@ Per the International ISBN Agency’s ISBN Users' Manual, "The check digit is th
 
 Yes, but what does that mean? The manual elaborates. "This means that each of the first nine digits of the ISBN—​excluding the check digit itself—​is multiplied by a number ranging from 10 to 2 and that the resulting sum of the products, plus the check digit, must be divisible by 11 without a remainder."
 
-Okay, better, but still a bit unclear. Let’s define the check digit in terms of a formula. Fortunately, thanks to "modular arithmetic," we can simplify the Agency’s formal definition using weights ranging from 1 to 9 instead of 10 to 2. In fact, it’s really quite simple. If x1 represents an ISBN-10’s first digit and x10 its last[3], it turns out that:
+Okay, better, but still a bit unclear. Let’s define the check digit in terms of a formula. Fortunately, thanks to "modular arithmetic," we can simplify the Agency’s formal definition using weights ranging from 1 to 9 instead of 10 to 2. In fact, it’s really quite simple. If x<sub>1</sub> represents an ISBN-10’s first digit and x<sub>10</sub> its last, it turns out that:
 
 x<sub>10</sub> = (1·x<sub>1</sub> + 2·x<sub>2</sub> + 3·x<sub>3</sub> + 4·<sub>x4</sub> + 5·x<sub>5</sub> + 6·x<sub>6</sub> + 7·x<sub>7</sub> + 8·x<sub>8</sub> + 9·x<sub>9</sub>) mod 11
 
@@ -34,9 +34,9 @@ In other words, to compute an ISBN-10’s tenth digit, multiply its first digit 
 
 ## I S BN Calculatin'
 
-Let’s try all this out. The ISBN-10 for the Absolute Beginner’s Guide to C, one of the course’s recommended books, is 0-789-75198-4, the tenth digit of which is, obviously, 4. But is the syllabus right? Well, let’s first take that sum using the ISBN-10’s first nine digits (highlighted in bold):
+Let’s try all this out. The ISBN-10 for the *Absolute Beginner’s Guide to C*, one of the course’s recommended books, is 0-789-75198-4, the tenth digit of which is, obviously, 4. But is the syllabus right? Well, let’s first take that sum using the ISBN-10’s first nine digits (highlighted in bold):
 
-1·0 + 2·7 + 3·8 + 4·9 + 5·7 + 6·5 + 7·1 + 8·9 + 9·8 = 290
+1·**0** + 2·**7** + 3·**8** + 4·9 + 5·7 + 6·5 + 7·1 + 8·9 + 9·8 = 290
 
 If we now divide that sum by 11, we get 290 ÷ 11 = 26 4/11 (i.e., a remainder of 4)! Well that’s kind of neat, the ISBN is legit! Actually, also thanks to modular arithmetic, we could just include that tenth digit in our sum and multiply it by 10:
 
@@ -52,7 +52,7 @@ So, computing this check digit’s not hard, but it does get a bit tedious by ha
 
 ## Implementation Details
 
-Create a file called isbn.c inside ~/workspace/unit1/isbn, in which you should write a program that prompts the user for an ISBN-10 and then reports (via printf) whether the number’s legit. So that we can automate some tests of your code, we ask that your program’s last line of output be either YES\n or NO\n, nothing more, nothing less.
+In a file named isbn.c, write a program that prompts the user for an ISBN-10 and then reports (via printf) whether the number’s legit. So that we can automate some tests of your code, we ask that your program’s last line of output be either YES\n or NO\n, nothing more, nothing less.
 
 For simplicity, you may assume that the user’s input will be exactly ten decimal digits (i.e., devoid of hyphens and X), the first of which might even be zero(es), as in the case of our recommended book. But do not assume that the user’s input will fit in an int! Recall, after all, that the largest value that can fit in an int is 232 - 1 = 4,294,967,295 (and, even then, only if declared as unsigned). True, that’s a 10-digit value, but there might still be a problem. (What?) Best to be safe and use get_long from CS50’s library to get users' input. (Why?)
 
