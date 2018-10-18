@@ -1,5 +1,9 @@
 # ISBN
 
+{% video https://www.youtube.com/watch?v=AJ9MFMQbhhw %}
+
+{% next %}
+
 ## What to do
 
 Implement a program to validate ISBN-10 numbers.
