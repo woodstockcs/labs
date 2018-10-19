@@ -119,6 +119,16 @@ Are your results exactly the same?
 
 {% next %}
 
+### Staff's Solution
+
+To try out the staff's implementation of this problem, execute
+
+```
+./pennies
+```
+
+within [this sandbox](http://bit.ly/2NQ36U4).
+
 ## How to Submit
 
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
