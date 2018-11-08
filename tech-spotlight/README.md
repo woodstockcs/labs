@@ -2,11 +2,13 @@
 
 ## What to write
 
+[Read full description of this assignment here.](https://docs.cs50.net/2018/ap/problems/tech/tech.html) 
+
 0. In 600 words, describe a piece of technology. Consider:
 
-⋅⋅* What is this technology called?
+⋅⋅⋅What is this technology called?
 
-⋅⋅* What does it do?
+- What does it do?
 
 ⋅⋅* How does someone use this technology?
 
