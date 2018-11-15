@@ -1,6 +1,8 @@
 # Initials
 
-## tl;dr
+{% video https://www.youtube.com/watch?time_continue=9&v=UItYCp0Ivqg %}
+
+## What to do?
 
 Implement a program that, given a person’s name, prints a person’s initials, per the below.
 
@@ -18,13 +20,34 @@ First, take a self-paced tour through a few coding examples that are likely to p
 
 Here is the first of those videos. Note: GetString() has been replaced with get_string("prompt").
 
+{% video https://www.youtube.com/watch?v=sELkIJyRHWg&index=5&list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU %}
+
+{% spoiler "More on strings" %}
+
+{% video https://www.youtube.com/watch?list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU&time_continue=2&v=a2n7vKdRWKE %}
+
+{% video https://www.youtube.com/watch?v=p1e_6lkMGDg&list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU&index=17 %}
+
+{% endspoiler %}
+
+{% video https://www.youtube.com/watch?v=sELkIJyRHWg&index=5&list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU %}
+
+{% spoiler "More on ASCII" %}
+
+{% video https://www.youtube.com/watch?v=ifCoAx0r3es&list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU&index=6 %}
+
+{% endspoiler %}
+
+{% video https://www.youtube.com/watch?v=vp3TBL4WTbc&index=7&list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU %}
+
+{% spoiler "More on Capitalize" %}
+
+{% video https://www.youtube.com/watch?v=h0hcz5zCBhU&list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU&index=8 %}
+{% video https://www.youtube.com/watch?v=wYvnyO2PbT0&index=9&list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU %}
+
+{% endspoiler %}
+
 {% video https://www.youtube.com/watch?v=BYbuuUntOZ4&feature=youtu.be&list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU %}
-
-{% video https://www.youtube.com/watch?v=sELkIJyRHWg&index=5&list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU %}
-
-{% video https://www.youtube.com/watch?v=sELkIJyRHWg&index=5&list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU %}
-
-Others can be found at: 
 
 {% next %}
 
