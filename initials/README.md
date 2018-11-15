@@ -22,7 +22,7 @@ First, take a self-paced tour through a few coding examples that are likely to p
 
 Here is the first of those videos. Note: GetString() has been replaced with get_string("prompt").
 
-{% video https://www.youtube.com/watch?v=sELkIJyRHWg&index=5&list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU %}
+{% video https://www.youtube.com/watch?v=BYbuuUntOZ4&feature=youtu.be&list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU %}
 
 {% spoiler "More on strings" %}
 
@@ -49,7 +49,7 @@ Here is the first of those videos. Note: GetString() has been replaced with get_
 
 {% endspoiler %}
 
-{% video https://www.youtube.com/watch?v=BYbuuUntOZ4&feature=youtu.be&list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU %}
+
 
 {% next %}
 
