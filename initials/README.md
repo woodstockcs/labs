@@ -18,7 +18,7 @@ RAB
 
 ## Getting Ready
 
-First, take a self-paced tour through a few coding examples that are likely to prove quite useful to you as you work on this and some future problems in this unit, the source code for which can be found at http://bit.ly/2zPo948.
+First, take a self-paced tour through a few coding examples that are likely to prove quite useful to you as you work on this and some future problems in this unit, the source code for which can be found in [this sandbox](http://bit.ly/2zPo948).
 
 Here is the first of those videos. Note: GetString() has been replaced with get_string("prompt").
 
