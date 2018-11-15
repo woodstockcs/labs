@@ -87,12 +87,12 @@ RTB
 
 To iterate through a string, use a for loop like this:
 
-``c
+```c
 for (int i = 0; i < strlen(s); i++)
 {
   // do something
 }
-``c
+```
 
 {% endspoiler %}
 
