@@ -65,6 +65,20 @@ Your program should print the user’s initials (i.e., the first letter of each 
 
 You may assume that the only spaces in the user’s input will be single spaces between words.
 
+## Pseudocode
+
+First, write in pseudocode.txt at right some pseudocode that implements this program, even if not (yet!) sure how to write it in code. Remember a computer cannot see the entire name at one time like a human. Your program will have to analyze the name one character at a time.
+
+{% spoiler "Spoiler" %}
+
+1. Start out by using get_string() to promts a user for a name.
+1. Print out the first character of the name as an upper case char.
+1. Then iterate through the remaining characters of the string.
+    1. Does the char you are looking at tell you then next char is an initial? If so, print out the next char using upper case.
+
+{% endspoiler %}
+
+
 {% next %}
 
 ## Usage
