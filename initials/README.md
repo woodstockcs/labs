@@ -1,39 +1,20 @@
-# Pennies
+# Initials
 
-{% video https://www.youtube.com/watch?v=m-LKy4qduuU %}
+## tl;dr
 
-{% next %}
-
-## What to do
-
-Implement a program that calculates the sum of getting a doubled amount of money each day for a month, as below.
+Implement a program that, given a person’s name, prints a person’s initials, per the below.
 
 ```
-$ ./pennies
-Days in month: 30
-Pennies on first day: 1
-$10737418.23
+$ ./initials
+Regulus Arcturus Black
+RAB
 ```
 
 {% next %}
 
-## Double or Nothing
+## Getting Ready
 
-If ever given the choice between $10,000,000 or a month’s worth of pennies, whereby you receive a penny the first day, two pennies the second, four pennies the third, and so forth…​ take the pennies.
-
-Anyhow, why the pennies? Exponentiation. Those pennies add up Consider how many pennies you’d receive on the 31st day alone, not to mention on the days leading up to it:
-
-```
-1 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2
-  × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2
-  × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2 × 2
-
-  = 1073741824
-```
-
-Put more succinctly, that’s 1 × 2<sup>30</sup>. Convert those pennies to dollars (by dividing by 100) and you get, what, over $10,000,000? On just that day? Crazy.
-
-What if you were given more than one penny on that first day? Or the month were February, in which case you’d get shortchanged a few million? (Best to take the pennies in January, March, May, July, August, October, or December.) Let’s find out.
+First, take a self-paced tour through a few coding examples that are likely to prove quite useful to you as you work on this and some future problems in this unit, the source code for which can be found at http://bit.ly/2zPo948.
 
 {% next %}
 
