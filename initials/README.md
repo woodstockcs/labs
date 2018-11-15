@@ -16,36 +16,25 @@ RAB
 
 First, take a self-paced tour through a few coding examples that are likely to prove quite useful to you as you work on this and some future problems in this unit, the source code for which can be found at http://bit.ly/2zPo948.
 
+Here is the first of those videos.
+
+{% video https://www.youtube.com/watch?v=BYbuuUntOZ4&feature=youtu.be&list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU %}
+
+Others can be found at: 
+
 {% next %}
 
 ## Implementation Details
 
-Implement, in a file called pennies.c, a program that first asks the user how many days there are in the month and then asks the user how many pennies he or she will receive on the first day of that month. The program should then calculate the amount that the user will have received in total by the end of the month (not just on the last day) if that amount is doubled on every day but the first, expressed not as pennies but as dollars and cents. If the user does not type in 28, 29, 30, or 31 for the number of days in the month, the program should prompt the user to retry. If the user does not input a positive integer for the first day’s number of pennies, the program should prompt the user to retry.
+Design and implement a program, initials, that, given a person’s name, prints a person’s initials.
 
-For instance, your program might behave as follows.
+Implement your program in a file called initials.c.
 
-```
-$ ./pennies
-Days in month: 32
-Days in month: 31
-Pennies on first day: 1
-$21474836.47
-```
+Your program should prompt a user for their name using get_string to obtain their name as a string.
 
-Notice how this output suggests that the program should indeed re-prompt the user if he or she fails to cooperate with these rules (as by inputting too many days).
+You may assume that the user’s input will contain only letters (uppercase and/or lowercase) plus single spaces between words. You don’t need to worry about names like Joseph Gordon-Levitt, Conan O’Brien, or David J. Malan!
 
-How to begin? Odds are you’ll want a couple of loops, one with which to prompt (and potentially re-prompt) the user for a number of days, and another with which to prompt (and potentially re-prompt) the user for a number of first-day pennies. How to get both those numbers? Perhaps the CS50 Library offers some options? You may also find functions in the math.h header file that can help when working on this problem. Have a look at [Reference50](https://reference.cs50.net/) to see which functions those might be. Be sure, if you use any of those functions, to place this line of code near the top of your pennies.c file:
-
-```c
-#include <math.h>
-```
-
-Of course, if you store the user’s amount due in an int (which is only 32 bits), the total will be bounded by (2<sup>31</sup> - 1) pennies. (Why 2<sup>31</sup> and not 2<sup>32</sup>? And why 1 less than 2<sup>31</sup>?) Best, then, to store your total in a long long, so that the user benefits from 64 bits. (Don’t worry if users' totals overflow 64 bits and even go negative; consider it punishment for greed!)
-
-Do take care to format the user’s total as dollars and cents (to just 2 decimal places), prefixed with a dollar sign, just as we did in the output above. You do not need to insert commas after every 3 digits to the left of the decimal, as you might normally do.
-
-So that we can automate some tests of your code, we ask that your program’s last line of output be the amount owed to a user, followed by \n. The rest of your program’s personality we leave entirely to you!
-
+Your program should print the user’s initials (i.e., the first letter of each word in their name) with no spaces or periods, followed by a newline (\n).
 
 {% spoiler "Hints" %}
 
