@@ -2,6 +2,8 @@
 
 {% video https://www.youtube.com/watch?time_continue=9&v=UItYCp0Ivqg %}
 
+{% next %}
+
 ## What to do?
 
 Implement a program that, given a person’s name, prints a person’s initials, per the below.
