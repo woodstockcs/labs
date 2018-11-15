@@ -49,8 +49,6 @@ Here is the first of those videos. Note: GetString() has been replaced with get_
 
 {% endspoiler %}
 
-
-
 {% next %}
 
 ## Implementation Details
@@ -87,7 +85,14 @@ RTB
 
 {% spoiler "Hints" %}
 
-{% video https://www.youtube.com/watch?time_continue=9&v=UItYCp0Ivqg %}
+To iterate through a string, use a for loop like this:
+
+``c
+for (int i = 0; i < strlen(s); i++)
+{
+  // do something
+}
+```
 
 {% endspoiler %}
 
