@@ -16,9 +16,13 @@ RAB
 
 First, take a self-paced tour through a few coding examples that are likely to prove quite useful to you as you work on this and some future problems in this unit, the source code for which can be found at http://bit.ly/2zPo948.
 
-Here is the first of those videos.
+Here is the first of those videos. Note: GetString() has been replaced with get_string("prompt").
 
 {% video https://www.youtube.com/watch?v=BYbuuUntOZ4&feature=youtu.be&list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU %}
+
+{% video https://www.youtube.com/watch?v=sELkIJyRHWg&index=5&list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU %}
+
+{% video https://www.youtube.com/watch?v=sELkIJyRHWg&index=5&list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU %}
 
 Others can be found at: 
 
@@ -42,7 +46,7 @@ You may assume that the only spaces in the user’s input will be single spaces 
 
 ## Usage
 
-Your program should behave per the examples below. Assumed that the underlined text is what some user has typed.
+Your program should behave per the examples below. 
 
 ```
 $ ./initials
