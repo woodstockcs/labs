@@ -1,15 +1,15 @@
-# Cash Reflection
+# Initials Reflection
 
 ## What to write
 
-Describe the development process of Cash, and the struggles and successes you experienced. Describe at least one aha moment during this process. In your description clearly indicate whether the development described was collaborative or independent.
-
-Then answer this question: Why do you think the program spec suggested that you convert the user’s input entirely into cents?
+Describe the development process of Initials, and the struggles and successes you experienced. Describe at least one aha moment during this process. Describe in detail the algorithm you used to find the initials and capitalize them. 
 
 ## How to Submit
+
+Make sure reflection is saved in intialsreflect.txt.
 
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 greedyreflect@cs50nestm/checks
+submit50 submit50 initialsreflect@cs50nestm/checks
 ```
