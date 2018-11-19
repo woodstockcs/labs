@@ -1,6 +1,6 @@
 # Old Friends: Hello
 
-Improve upon older programs.
+Improve upon older programs. This lab is the first of three that will convert three older programs to use command-line arguments.
 
 ```
 $ ./hello Milo
@@ -17,13 +17,13 @@ Even better, to ensure everyone is on a level playing field while solving this p
 
 {% next %}
 
-When you click on your folder icon, you should indeed see an old friend!
+When you click on your folder icon, you should indeed see your first old friend!
 
 ```
 hello.c
 ```
 
-How nice to see them again!
+How nice to see you again!
 
 Lastly, have a look at Christopher’s short video on command-line arguments. Since we’ll be converting all three of the programs listed above to accept command-line arguments (none of them currently do!), this video should come in handy.
 
