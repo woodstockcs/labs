@@ -17,10 +17,10 @@ Even better, to ensure everyone is on a level playing field while solving this p
 
 {% next %}
 
-When you click on your folder icon, you should indeed see a few old friends!
+When you click on your folder icon, you should indeed see an old friend!
 
 ```
-fahrenheit.c  hello.c  pennies.c
+hello.c
 ```
 
 How nice to see them again!
