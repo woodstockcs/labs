@@ -1,101 +1,100 @@
-# Fahrenheit
+# Old Friends: Hello
 
-{% video https://www.youtube.com/watch?v=C5vk1APWxsk %}
-
-{% next %}
-
-## Turning Up The Heat
-
-In the past, if you wanted to know what the outdoor temperature was, you had to look around for one of these, which might have been mounted outside at your house.
-
-![Thermometer](http://intro.cs50nestm.net/wp-content/uploads/2018/10/thermometersm.png)
-
-Prior to that, you just stood outside, but we digress. Nowadays, it’s a fairly trivial exercise to pull open a weather app on your phone or visit a weather-reporting website to get the current temperature and the five-day forecast. No need to mess around with one of the above circular dials or its tube-of-mercury cousin.
-
-Depending on where you live in the world, your country uses one of two major temperature scales. If you live in the United States (and don’t spend most of your day working in a science lab), it’s likely that you’re familiar with the Fahrenheit scale, and so if you hear that it’s 30° outside you’re probably putting on a heavy coat and warm pants and bracing yourself for the possibility of snow, because that means it’s quite cold, given that the freezing point of water is 32°. On the other hand, it’s not until the temperature hits 212° that water boils.
-
-{% next %}
-
-In practically every other country of the world (or if you live in the United States and do in fact spend most of your day working in a science lab), you’re probably most familiar with the Celsius or centigrade scale. In that case, if you hear that it’s 30° outside you’re probably going to rummage through your closet for a swimsuit and put on some sunblock, because it’s a beautiful beach day. On the Celsius scale, 0° is the freezing point of water, and 100° is the boiling point.
-
-We acknowledge that with most apps that tell you the weather, it’s fairly simple to press that switch that switches the temperature display from Fahrenheit to Celsius (or vice versa), but before that process was automated for us, one either had to memorize some of the more common conversion points or had to use a mathematical formula to convert from one scale to another, which is important if you plan on traveling internationally.
-
-For this problem, we’re going to focus on converting in just one direction: from Celsius to Fahrenheit. As it happens, the formula for this conversion isn’t terribly complex. (Phew!) One simply takes the current temperature in degrees Celsius (°C), multiplies it by 9, divides by 5, and then adds 32. The result is the equivalent temperature in degrees Fahrenheit (°F). Not bad, right? For the more visually inclined, this translates to this formula:
+Improve upon older programs.
 
 ```
-F = ((C * 9) / 5) + 32
-```
-
-Let’s do a quick test to make sure things work as expected. Worldwide, the commonly accepted value for normal human body temperature is 37°C. If we plug "37" into that formula where °C goes and do the math (37 multiplied by 9 is 333, 333 divided by 5 is 66.6, 66.6 + 32 is 98.6) we get 98.6°F which is what folks in the United States know as normal human body temperature. So that checks out. Similarly if we plug in 0°C (the freezing point of water) into that formula does it convert to 32°F, and 100°C (the boiling point of water) is apparently equivalent to 212°F. Seems like things are going well.
-
-{% next %}
-
-So your job is to write a program that converts a temperature in Celsius to Fahrenheit, as per the sample output below, wherein the "100" represents some user’s input.
-
-```
-$ ./fahrenheit
-C: 100
-F: 212.0
+$ ./hello Milo
+Hello, Milo!
 ```
 
 {% next %}
 
-## Pseudocode
+## Well Distributed
 
-First, write in `pseudocode.txt` at right some pseudocode that implements this program, even if not (yet!) sure how to write it in code. 
+Here’s some good news for you right off the bat: you’ve seen almost everything we’re going to talk about in this problem once before. We’re going to revisit three old programs and rewrite them so that instead of taking input from the user while the program is running, they will instead accept input from the user at the command-line, before the program is even run.
 
-Odds are your pseudocode will use (or imply using!) one or more functions, operators, and variables.
-
-{% spoiler %}
-
-<p>
-  There's more than one way to do this, so here's just one!
-</p>
-
-<ol>
-  <li>Prompt for degrees Celsius and save this in a variable</li>
-  <li>Use this value to calculate degrees Fahrenheit and save in another variable</li>
-  <li>Print out the result</li>
-</ol>
-
-<p>
-  It's okay to edit your own after seeing this pseudocode here, but don't simply copy/paste ours into your own!
-</p>
-
-{% endspoiler %}
+Even better, to ensure everyone is on a level playing field while solving this problem, you’ll be using some "distribution code" (otherwise known as a "distro"), written by us, and make modifications to it. You’re welcome of course to use the code you wrote for a prior problem (if it worked!) and re-work it for this problem, but if you struggled with the problems we’ll be reimplementing this time around, know that we will otherwise be supplying you with fully-functional code. All you have to do is change the way that the user inputs data.
 
 {% next %}
 
-## Prompting for Input
+When you click on your folder icon, you should indeed see a few old friends!
 
-Whatever your pseudocode, let's first write only the C code that prompts (and re-prompts, as needed) the user for input. 
+```
+fahrenheit.c  hello.c  pennies.c
+```
 
-First, declare a new floating point variable to hold degrees Celsius.
+How nice to see them again!
 
-Do recall that if you include `<cs50.h>` atop your fahrenheit.c file, you will have access to a function called get_float, which will allow the user to input a floating-point value (a number with a decimal point in it, also known as a real number).The parameters of the get functions will display a prompt for users.
+Lastly, have a look at Christopher’s short video on command-line arguments. Since we’ll be converting all three of the programs listed above to accept command-line arguments (none of them currently do!), this video should come in handy.
 
-Now make sure to assign the value of this input function to your new Celsius variable.
 
-Declare another float to hold degrees Fahrenheit, and assign the result of the temperature conversion formula (given above). 
+{% video https://www.youtube.com/watch?v=X8PmYwnbLKM&feature=youtu.be %}
 
-Finally, print out the result with exactly one decimal place.
+If you happen to see (and are confused by!) char * in this and other shorts, know for now that char * simply means string. But more on that soon!
 
-{% spoiler "hint" %}
+{% next %}
 
-Printf can be used to specify how many places after the decimal point you wish to display to the user. For example to print a float with 2 decimal places you would type:
+## Hello, again!
+
+In Hello you were asked to write a program that very simply printed the message hello, world\n to the screen when run. It’s not too much of a leap to extend this program to say hello to a specific person by asking for the user to type a name at the prompt instead, so the program behaves like this.
+
+```
+$ ./hello
+Your name: Zamyla
+hello, Zamyla
+```
+
+In fact, the distro contains a file, hello.c, with exactly this behavior. What we want, though, is a program that has this behavior instead:
+
+```
+$ ./hello Zamyla
+hello, Zamyla
+```
+
+See the slight difference? Instead of prompting the user for information after the program has started running, we collect the desired information from the user before they run the program, and then use that information once the program has started. How do we do so?
+
+Recall that our programs are capable of knowing information about what the user typed at the command line by modifying the way we write the start of our main function. Instead of
 
 ```c
-printf("%.2f\n", number);
+int main(void)
 ```
 
-Can you see why this prints with 2 decimal places? Now adapt this to print degrees Fahrenheit (don't forget to start the output with "F: ") to exactly one decimal place.
+if we start main off by typing
 
-{% endspoiler %}
+```c
+int main(int argc, string argv[])
+```
+
+we then have access to two special variables that we can use inside of main. First is argc, which is an integer variable that tells us how many things the user typed in at the command line, and second is argv, which is an array of strings representing exactly what the user typed.
+
+Knowing this, and from the information in Christopher’s short, can you now modify hello.c so that it prints out the name provided at the command line, instead of collecting a string from the user after the program has started?
+
+One more wrinkle. How do you make sure the user in fact did provide you with one (and only one) additional argument, so that you can print it out? Well remember that’s what our new friend argc can manage for us. If the user doesn’t supply a command-line argument, best to terminate the program and have them try again. One way to accomplish this might be to have this near the top of our code:
+
+```c
+if (argc != 2)
+{
+    printf("Usage: ./hello <name>\n");
+    return 1;
+}
+```
+
+Note what this accomplishes? We check to make sure that the user has supplied the proper number of command-line arguments. If not, we tell the user how they should run the program, and then we return 1;, which is our way of indicating that our program finished running, but not successfully. We use nonzero return values from main, also known as exit codes, to report back to the system that something went awry.
+
+{% next %}
 
 ## How to Submit
 
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/2018/ap/fahrenheit
+submit50 cs50/2018/ap/friends/hello
 ```
+## Style
+
+```
+style50 hello.c
+```
+
+
+
