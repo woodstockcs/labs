@@ -11,5 +11,5 @@ Make sure reflection is saved in intialsreflect.txt.
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 submit50 initialsreflect@cs50nestm/checks
+submit50 initialsreflect@cs50nestm/checks
 ```
