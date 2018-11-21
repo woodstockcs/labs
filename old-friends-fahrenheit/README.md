@@ -41,6 +41,41 @@ Here is Doug's short video on command-line arguments. It's a big longer than Chr
 
 {% next %}
 
+Remember how to get started? You'll have to change the main function to be able to accept command line arguments.
+
+{% spoiler "Hints" %}
+
+Recall that our programs are capable of knowing information about what the user typed at the command line by modifying the way we write the start of our main function. Instead of
+
+```c
+int main(void)
+```
+
+if we start main off by typing
+
+```c
+int main(int argc, string argv[])
+```
+
+we then have access to two special variables that we can use inside of main. First is argc, which is an integer variable that tells us how many things the user typed in at the command line, and second is argv, which is an array of strings representing exactly what the user typed.
+
+{% endspoiler %}
+
+Remember how to check for the correct number of command line arguments?
+
+{% spoiler "Hints" %}
+
+```c
+if (argc != 2)
+{
+    printf("Usage: ./hello <celsius temp>\n");
+    return 1;
+}
+```
+  
+{% endspoiler %}
+
+{% next %}
 
 ## How to Submit
 
