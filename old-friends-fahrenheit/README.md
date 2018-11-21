@@ -1,10 +1,18 @@
-# Old Friends: Hello
+# Old Friends: Fahrenheit
 
-Improve upon older programs. This lab is the first of three that will convert three older programs to use command-line arguments.
+In Fahrenheit you were asked to write a program that asked the user for a temperature in Celsius (which they provided via get_float) and which then printed out the equivalent temperature on the Fahrenheit scale.
 
 ```
-$ ./hello Milo
-Hello, Milo!
+$ ./fahrenheit
+C: 0
+F: 32.0
+```
+
+In fahrenheit.c you will find a fully-functioning version of the code you were tasked with writing in that problem. Convert that program so that it accepts the Celsius temperature from the command line instead.
+
+```
+$ ./fahrenheit 0
+F: 32.0
 ```
 
 {% next %}
