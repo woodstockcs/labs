@@ -17,91 +17,42 @@ F: 32.0
 
 {% next %}
 
-## Well Distributed
+## Chill Out
 
-Here’s some good news for you right off the bat: you’ve seen almost everything we’re going to talk about in this problem once before. We’re going to revisit three old programs and rewrite them so that instead of taking input from the user while the program is running, they will instead accept input from the user at the command-line, before the program is even run.
+There’s a catch, though.
 
-Even better, to ensure everyone is on a level playing field while solving this problem, you’ll be using some "distribution code" (otherwise known as a "distro"), written by us, and make modifications to it. You’re welcome of course to use the code you wrote for a prior problem (if it worked!) and re-work it for this problem, but if you struggled with the problems we’ll be reimplementing this time around, know that we will otherwise be supplying you with fully-functional code. All you have to do is change the way that the user inputs data.
+Just because the user types a real number at the prompt, that doesn’t mean their input will be automatically stored in a float. Actually, it will be stored as a string that just so happens to look like an float; after all, remember the data type of argv? It’s an array where each element is a string! And so you’ll need to convert that string to an actual float. As luck would have it, a function, atof, exists for exactly that purpose! Here’s how you might use it:
+
+```c
+float celsius = atof(argv[1]);
+```
+
+Notice, this time, we’ve declared celsius as an actual float so that you can do some arithmetic with it. Incidentally, you can assume that the user will only type real numbers at the command line.
+
+Because atof is declared in stdlib.h, you’ll want to #include that header file atop your own code. And, as with hello.c earlier, you’ll want to make sure the user provides exactly the correct number of command-line arguments to your program before doing any calculations, returning 1 should they fail to.
 
 {% next %}
 
-When you click on your folder icon, you should indeed see your first old friend!
 
-```
-hello.c
-```
-
-How nice to see you again!
-
-Lastly, have a look at Christopher’s short video on command-line arguments. Since we’ll be converting all three of the programs listed above to accept command-line arguments (none of them currently do!), this video should come in handy.
+Here is Doug's short video on command-line arguments. It's a big longer than Christopher's but it may be helpful to see things from different perspectives!
 
 
-{% video https://www.youtube.com/watch?v=X8PmYwnbLKM&feature=youtu.be %}
-
-If you happen to see (and are confused by!) char * in this and other shorts, know for now that char * simply means string. But more on that soon!
+{% video https://www.youtube.com/watch?v=AI6Ccfno6Pk %}
 
 {% next %}
 
-## Hello, again!
-
-In Hello you were asked to write a program that very simply printed the message hello, world\n to the screen when run. It’s not too much of a leap to extend this program to say hello to a specific person by asking for the user to type a name at the prompt instead, so the program behaves like this.
-
-```
-$ ./hello
-Your name: Zamyla
-hello, Zamyla
-```
-
-In fact, the distro contains a file, hello.c, with exactly this behavior. What we want, though, is a program that has this behavior instead:
-
-```
-$ ./hello Zamyla
-hello, Zamyla
-```
-
-See the slight difference? Instead of prompting the user for information after the program has started running, we collect the desired information from the user before they run the program, and then use that information once the program has started. How do we do so?
-
-Recall that our programs are capable of knowing information about what the user typed at the command line by modifying the way we write the start of our main function. Instead of
-
-```c
-int main(void)
-```
-
-if we start main off by typing
-
-```c
-int main(int argc, string argv[])
-```
-
-we then have access to two special variables that we can use inside of main. First is argc, which is an integer variable that tells us how many things the user typed in at the command line, and second is argv, which is an array of strings representing exactly what the user typed.
-
-Knowing this, and from the information in Christopher’s short, can you now modify hello.c so that it prints out the name provided at the command line, instead of collecting a string from the user after the program has started?
-
-One more wrinkle. How do you make sure the user in fact did provide you with one (and only one) additional argument, so that you can print it out? Well remember that’s what our new friend argc can manage for us. If the user doesn’t supply a command-line argument, best to terminate the program and have them try again. One way to accomplish this might be to have this near the top of our code:
-
-```c
-if (argc != 2)
-{
-    printf("Usage: ./hello <name>\n");
-    return 1;
-}
-```
-
-Note what this accomplishes? We check to make sure that the user has supplied the proper number of command-line arguments. If not, we tell the user how they should run the program, and then we return 1;, which is our way of indicating that our program finished running, but not successfully. We use nonzero return values from main, also known as exit codes, to report back to the system that something went awry.
-
-{% next %}
 
 ## How to Submit
 
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/2018/ap/friends/hello
+submit50 cs50/2018/ap/friends/fahrenheit
 ```
 ## Style
 
 ```
-style50 hello.c
+style50 fahrenheit.c
 ```
 
 
