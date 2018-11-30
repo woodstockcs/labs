@@ -1,85 +1,46 @@
-# Old Friends: Hello
+# Old Friends: Pennies
 
-Improve upon older programs. This lab is the first of three that will convert three older programs to use command-line arguments.
+In Pennies you were asked to write a program that demonstrated the power of exponentiation by showing how much money you would have if a person gave you x pennies on a particular day, and then doubled the amount they gave you every day for a period of y days.
 
 ```
-$ ./hello Milo
-Hello, Milo!
+$ ./pennies
+Days in month: 31
+Pennies on first day: 1
+$21474836.47
 ```
+As you might expect, we’d now like the program to work as follows.
+
+```
+$ ./pennies 31 1
+$21474836.47
+```
+
 
 {% next %}
 
-## Well Distributed
+## Makin' Bank
 
-Here’s some good news for you right off the bat: you’ve seen almost everything we’re going to talk about in this problem once before. We’re going to revisit three old programs and rewrite them so that instead of taking input from the user while the program is running, they will instead accept input from the user at the command-line, before the program is even run.
+Notice a few differences with this program from the previous two. How many command line arguments does this one accept? Be sure to modify your check against argc accordingly. And also know that in stdlib.h alongside of the function atof exists another, atoi, that converts a string to an int in much the same way that atof converts a string to a float.
 
-Even better, to ensure everyone is on a level playing field while solving this problem, you’ll be using some "distribution code" (otherwise known as a "distro"), written by us, and make modifications to it. You’re welcome of course to use the code you wrote for a prior problem (if it worked!) and re-work it for this problem, but if you struggled with the problems we’ll be reimplementing this time around, know that we will otherwise be supplying you with fully-functional code. All you have to do is change the way that the user inputs data.
-
-{% next %}
-
-When you click on your folder icon, you should indeed see your first old friend!
-
-```
-hello.c
-```
-
-How nice to see you again!
-
-Lastly, have a look at Christopher’s short video on command-line arguments. Since we’ll be converting all three of the programs listed above to accept command-line arguments (none of them currently do!), this video should come in handy.
-
-
-{% video https://www.youtube.com/watch?v=X8PmYwnbLKM&feature=youtu.be %}
-
-If you happen to see (and are confused by!) char * in this and other shorts, know for now that char * simply means string. But more on that soon!
+Incidentally, you can assume that the user will only type integers at the command line; there’s no need for you to anticipate a rogue user this time around!
 
 {% next %}
 
-## Hello, again!
+## Implementation
 
-In Hello you were asked to write a program that very simply printed the message hello, world\n to the screen when run. It’s not too much of a leap to extend this program to say hello to a specific person by asking for the user to type a name at the prompt instead, so the program behaves like this.
+Before starting to modify this program, think about how you will validate the number of days and starting pennies. You probably don't want to reprompt. Better to include a check that the days and pennies are in an acceptable range and print out an error messsage and return 1 if they are not.
 
-```
-$ ./hello
-Your name: Zamyla
-hello, Zamyla
-```
+What else do you need to do?
 
-In fact, the distro contains a file, hello.c, with exactly this behavior. What we want, though, is a program that has this behavior instead:
+{% spoiler "Pseudocode" %}
+1. Remember to change the main function to accept command line arguments.
+1. Check for the correct number of command line arguments. Print a usage message and return 1 if not correct.
+1. Change the do while loops so that incorrect inputs do not reprompt. Use if statements similar to the command line check to insure days are in the range [28, 31] and pennies is a positive number.
+1. You do not have to change the algorithm that calculates or prints out the total pennies. 
+1. Compile and run!
 
-```
-$ ./hello Zamyla
-hello, Zamyla
-```
+{% endspoiler %}
 
-See the slight difference? Instead of prompting the user for information after the program has started running, we collect the desired information from the user before they run the program, and then use that information once the program has started. How do we do so?
-
-Recall that our programs are capable of knowing information about what the user typed at the command line by modifying the way we write the start of our main function. Instead of
-
-```c
-int main(void)
-```
-
-if we start main off by typing
-
-```c
-int main(int argc, string argv[])
-```
-
-we then have access to two special variables that we can use inside of main. First is argc, which is an integer variable that tells us how many things the user typed in at the command line, and second is argv, which is an array of strings representing exactly what the user typed.
-
-Knowing this, and from the information in Christopher’s short, can you now modify hello.c so that it prints out the name provided at the command line, instead of collecting a string from the user after the program has started?
-
-One more wrinkle. How do you make sure the user in fact did provide you with one (and only one) additional argument, so that you can print it out? Well remember that’s what our new friend argc can manage for us. If the user doesn’t supply a command-line argument, best to terminate the program and have them try again. One way to accomplish this might be to have this near the top of our code:
-
-```c
-if (argc != 2)
-{
-    printf("Usage: ./hello <name>\n");
-    return 1;
-}
-```
-
-Note what this accomplishes? We check to make sure that the user has supplied the proper number of command-line arguments. If not, we tell the user how they should run the program, and then we return 1;, which is our way of indicating that our program finished running, but not successfully. We use nonzero return values from main, also known as exit codes, to report back to the system that something went awry.
 
 {% next %}
 
@@ -88,12 +49,12 @@ Note what this accomplishes? We check to make sure that the user has supplied th
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/2018/ap/friends/hello
+submit50 cs50/2018/ap/friends/pennies
 ```
 ## Style
 
 ```
-style50 hello.c
+style50 pennies.c
 ```
 
 
