@@ -2,5 +2,5 @@
 lab50:
   files:
     - !exclude "*"
-    - !include initials.c
-    - !include pennies.txt
+    - !include pennies.c
+    - !include psuedocode.txt
