@@ -1,17 +1,15 @@
-# Pennies Reflection
+# Old Friends Reflection
 
 ## What to write
 
-Describe the process you went through to develop this program, including any struggles or aha moments that you experienced. Then discuss how these were resolved or incorporated.
+In a file named friendsreflect.txt, describe the development process of Old Friends, and the struggles and successes you experienced. Describe at least one aha moment during this process.
 
-Explain what would happen if you chose to use an int datatype for the variable that holds the total number of pennies for the month.
-
-Explain in detail the algorithm you used (including a loop if you used one)  to correctly calculate the sum of the pennies over all the days of the month.
+Also answer the following question: Why do you need to use argc and argv[] in your main function and what does it do?
 
 ## How to Submit
 
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 penniesreflect@cs50nestm/checks
+submit50 friendsreflect@cs50nestm/checks
 ```
