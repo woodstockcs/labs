@@ -1,4 +1,4 @@
 lab50:
   files:
     - !exclude "*"
-    - !include friendsreflect.txt
+    - !include penniesreflect.txt
