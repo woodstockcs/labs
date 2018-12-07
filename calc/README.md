@@ -153,8 +153,8 @@ So:
 
 1. Start out by checking for the correct number of command line arguments
 1. Save `argv[1]` as a float in a new float varialbe (i.e. `float a = atof(argv[1])`)
-1. Save the second input arguement in another float variable (possibly b)
-1. Save the first character in the operator in a `char` for easy comparison (you can't easily compare two `strings` in C)
+1. Save the second numeric arguement (the 3 in the example above) in another float variable (possibly b)
+1. Save the first character in the operator (`argv[2][0]`) in a `char` for easy comparison (you can't easily compare two `strings` in C)
 1. Use an if...else statement to determine which operator this `char` represents so you can perform the appropriate operation.
 1. Finally, print the output as a float. No need to control the number of decimal places.
 
