@@ -1,17 +1,12 @@
-# Initials
-
-{% video https://www.youtube.com/watch?time_continue=9&v=UItYCp0Ivqg %}
-
-{% next %}
+# Calc
 
 ## What to do?
 
-Implement a program that, given a person’s name, prints a person’s initials, per the below.
+Implement a program that implements a command line calculator.
 
 ```
-$ ./initials
-Regulus Arcturus Black
-RAB
+$ ./calc 50 x 28
+1400.000000
 ```
 
 {% next %}
