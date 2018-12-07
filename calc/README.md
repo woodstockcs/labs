@@ -58,7 +58,14 @@ Similarly, if we have another `string` which just so happens to be called `argv[
 printf("%c\n", argv[2][0]); // prints the first character of argv[2]
 ```
 
-And that also means we can compare `argv[2][0]` against a variety of possible values (such as `+`, `-`, `x`, `/` or `%`, for example) and make certain decisions in our program based on what that character is, perhaps by making use of some Boolean expressions and conditional statements. (Of course, since there are only a small number of characters that we care about in `argv[2][0]`, you might also find this a good opportunity to use a switch statement for perhaps the first time.)
+And that also means we can compare `argv[2][0]` against a variety of possible values (such as `+`, `-`, `x`, `/` or `%`, for example) and make certain decisions in our program based on what that character is, perhaps by making use of some Boolean expressions and conditional statements. (Of course, since there are only a small number of characters that we care about in `argv[2][0]`, you might also find this a good opportunity to use a `switch` statement for perhaps the first time.)
+
+{% spoiler "more on switch" %}
+
+{% video https://www.youtube.com/watch?v=ch4I--dGpOM %}
+
+{% endspoiler %}
+
 
 Note above that we suggest using a lowercase `x` instead of the typical asterisk used to represent multiplication. The reason for that is that the asterisk means something special at the command line, and so ordinarily it will not be processed correctly. So just be sure when you encounter an `x` at the command line that you actually perform a multiplication!
 
@@ -82,7 +89,7 @@ Why are you seeing this? Well as it turns out, the modulo operator is not well-d
 
 Rather, it turns out that modulo is only defined (in C, anyway) for **integers**. How, then, can we implement the operator while still allowing the user to input floating point values at the command line? Seems like we’re going to have to do some extra work. After all, if modulo is really just the remainder after dividing the number on the left of the operator by the number on the right, a quick long division will tell us that `10.7 % 3.28` should equal `0.86`, the remainder after calculating `10.7 / 3.28`.
 
-That leads to a discussion of today’s Arithmetic Fun Fact™[2]. If
+That leads to a discussion of today’s Arithmetic Fun Fact™. If
 
 ```c
 x % y = z
