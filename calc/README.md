@@ -115,14 +115,36 @@ So that is one way to implement the modulo operator by using other operators tha
 
 {% next %}
 
+## Subtract the Confusion
+To be clear, you may make the following assumptions with respect to your calculator.
+
+argv[1], should it be present, is guaranteed to consist only of digit characters, possibly a decimal point, and possibly a negative sign. You do not need to check otherwise.
+
+argv[2], should it be present, is not guaranteed to be +, -, x, / or %. Your program should respond somehow if the user provides an invalid operator and return 1;.
+
+argv[3], should it be present, is guaranteed to consist only of digit characters, possibly a decimal point, and possibly a negative sign. You do not need to check otherwise.
+
+You needn’t worry about floating-point imprecision with your calculator, and you needn’t print out the correct answer to more than six decimal places.
+
 ## Pseudocode
 
-First, write in pseudocode.txt at right some pseudocode that implements this program, even if not (yet!) sure how to write it in code. Remember a computer cannot see the entire name at one time like a human. Your program will have to analyze the name one character at a time.
+Let's break this down into small steps. Write in the file pseudocode.txt how you think you should break this program down.
 
 {% spoiler "Spoiler" %}
 
-1. Start out by using get_string() to promts a user for a name.
-1. Print out the first character of the name as an upper case char.
+Remember the program works by typing in:
+
+```
+./calc 2 + 3
+```
+
+where 2 and 3 are any two floating poing numbers, and the operation, here +, could be not only + but also -, x (times), /, or % (modulo).
+
+So:
+
+1. Start out by checking for the correct number of command line arguments. 
+1. Save argv[1] as a float in a new float varialbe (i.e. float a = atof(argv[1]))
+1. Save the second input
 1. Then iterate through the remaining characters of the string.
     1. Does the char you are looking at tell you then next char is an initial? If so, print out the next char using upper case.
 
