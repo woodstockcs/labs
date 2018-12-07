@@ -11,38 +11,54 @@ $ ./calc 50 x 28
 
 {% next %}
 
-## Getting Ready
+## Divide and Conquer
+In this problem, you will be tasked with implementing a very simple command-line based calculator program. Your program will accept inputs like this (wherein underlined text represents user input):
 
-First, take a self-paced tour through a few coding examples that are likely to prove quite useful to you as you work on this and some future problems in this unit, the source code for which can be found in [this sandbox](http://bit.ly/2zPo948).
+```
+$ ./calc 4 + 5
+9.000000
+```
 
-Here is the first of those videos. Note: GetString() has been replaced with get_string("prompt").
+or, indeed like this (allowing the user to perform some basic floating-point arithmetic)
 
-{% video https://www.youtube.com/watch?v=BYbuuUntOZ4&feature=youtu.be&list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU %}
+```
+$ ./calc 8.38 - 5.12
+3.260000
+```
+such that the user can perform all five of the basic math operations that C permits — addition, subtraction, multiplication, division, and modulo.
 
-{% spoiler "More on strings" %}
+Notice that unlike many other programs you’ve likely written up to this point, and just like Old Friends, users are not entering any information after the program has started running. Rather, they are providing all of their input to the program at the command line, before the program has begun.
 
-{% video https://www.youtube.com/watch?list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU&time_continue=2&v=a2n7vKdRWKE %}
+Recall that if we collect information from the user at the command line, we can use two special parameters passed into main (conventionally called argc and argv) which represent the number of arguments the user provided and the actual data the user provided, respectively. Given the example use case above, how many command-line arguments is the user expected to provide?
 
-{% video https://www.youtube.com/watch?v=p1e_6lkMGDg&list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU&index=17 %}
+If they fail to provide the correct number, your program should exit (possibly printing out an error message that tells them how they should have run the program) and return 1; so that we can automate testing of your code.
 
-{% endspoiler %}
+Assuming we have the right number of command-line arguments, we’re well on our way. There’s a catch, though.
 
-{% video https://www.youtube.com/watch?v=sELkIJyRHWg&index=5&list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU %}
+Just because the user types a real number at the command line, that doesn’t mean their input will be automatically stored in a float. Actually, it will be stored as a string that just so happens to look like an float; after all, remember the data type of argv? It’s an array where each element is a string! And so you’ll need to convert that string to an actual float. As luck would have it, a function, atof, exists for exactly that purpose! Here’s how you might use it:
 
-{% spoiler "More on ASCII" %}
+```c
+float a = atof(argv[1]);
+```
 
-{% video https://www.youtube.com/watch?v=ifCoAx0r3es&list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU&index=6 %}
+There are two values that need to be converted from a string to a float (argv[1] and argv[3], specifically). So that just leaves dealing with the operator. Recall from the shorts on arrays and strings that a string in C is really just an array of characters. And we can access individual elements of an array by using square bracket notation to index into that array.
 
-{% endspoiler %}
+```c
+string s = "Calculator";
+printf("%c\n", s[0]); // prints 'C'
+```
 
-{% video https://www.youtube.com/watch?v=vp3TBL4WTbc&index=7&list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU %}
+Similarly, if we have another string which just so happens to be called argv[2] can we index into its first element, which will be a single character (char).
 
-{% spoiler "More on Capitalize" %}
+```c
+printf("%c\n", argv[2][0]); // prints the first character of argv[2]
+```
 
-{% video https://www.youtube.com/watch?v=h0hcz5zCBhU&list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU&index=8 %}
-{% video https://www.youtube.com/watch?v=wYvnyO2PbT0&index=9&list=PLhQjrBD2T380sc-fXwl1sviA-twxFduVU %}
+And that also means we can compare argv[2][0] against a variety of possible values (such as +, -, x, / or %, for example) and make certain decisions in our program based on what that character is, perhaps by making use of some Boolean expressions and conditional statements. (Of course, since there are only a small number of characters that we care about in argv[2][0], you might also find this a good opportunity to use a switch statement for perhaps the first time.)
 
-{% endspoiler %}
+Note above that we suggest using a lowercase x instead of the typical asterisk used to represent multiplication. The reason for that is that the asterisk means something special at the command line, and so ordinarily it will not be processed correctly. So just be sure when you encounter an x at the command line that you actually perform a multiplication!
+
+Once you’ve performed the arithmetic, just print out the result to the user on its own line, so we can automate testing of your code. By default, C will print out floating point values to six decimal places. Might as well leave it that way, there’s plenty to do otherwise in this problem!
 
 {% next %}
 
