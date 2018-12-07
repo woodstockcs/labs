@@ -29,6 +29,10 @@ such that the user can perform all five of the basic math operations that C perm
 
 Notice that unlike many other programs you’ve likely written up to this point, and just like Old Friends, users are not entering any information after the program has started running. Rather, they are providing all of their input to the program at the command line, before the program has begun.
 
+{% next %}
+
+## Implementation Details
+
 Recall that if we collect information from the user at the command line, we can use two special parameters passed into main (conventionally called argc and argv) which represent the number of arguments the user provided and the actual data the user provided, respectively. Given the example use case above, how many command-line arguments is the user expected to provide?
 
 If they fail to provide the correct number, your program should exit (possibly printing out an error message that tells them how they should have run the program) and return 1; so that we can automate testing of your code.
