@@ -66,19 +66,54 @@ Once you’ve performed the arithmetic, just print out the result to the user on
 
 {% next %}
 
-## Implementation Details
 
-Design and implement a program, initials, that, given a person’s name, prints a person’s initials.
+## The Mod Squad
+If you’re reading this section after you’ve already tried to implement modulo (%) in your calculator, you’ve likely noticed an error when compiling that looks something like the following:
 
-Implement your program in a file called initials.c.
+```
+error: invalid operands to binary expression ('float' and 'float')
+```
 
-Your program should prompt a user for their name using get_string to obtain their name as a string.
+Why are you seeing this? Well as it turns out, the modulo operator is not well-defined for floating point numbers. That is to say, there’s no defined value for an expression like:
 
-You may assume that the user’s input will contain only letters (uppercase and/or lowercase) plus single spaces between words. You don’t need to worry about names like Joseph Gordon-Levitt, Conan O’Brien, or David J. Malan!
+```
+10.7 % 3.28
+```
 
-Your program should print the user’s initials (i.e., the first letter of each word in their name) with no spaces or periods, followed by a newline (\n).
+Rather, it turns out that modulo is only defined (in C, anyway) for integers. How, then, can we implement the operator while still allowing the user to input floating point values at the command line? Seems like we’re going to have to do some extra work. After all, if modulo is really just the remainder after dividing the number on the left of the operator by the number on the right, a quick long division[1] will tell us that 10.7 % 3.28 should equal 0.86, the remainder after calculating 10.7 / 3.28.
 
-You may assume that the only spaces in the user’s input will be single spaces between words.
+That leads to a discussion of today’s Arithmetic Fun Fact™[2]. If
+
+```c
+x % y = z
+```
+then that means that
+
+```c
+x / y = q rem z
+```
+
+or put differently
+
+```c
+q = (int) (x / y);
+z = x - (y * q);
+```
+
+Perhaps best to illustrate this with an example, as the formulas are perhaps a bit on the intimidating side. Let’s return to our prior example of calculating 10.7 % 3.28.
+
+```c
+q = (int) (10.7 / 3.28);
+q = (int) 3.262195;
+q = 3
+mod = 10.7 - (3.28 * 3);
+mod = 10.7 - 9.84
+mod = 0.86
+```
+
+So that is one way to implement the modulo operator by using other operators that C has defined for floats. To be sure, there are others, but this one should do the trick!
+
+{% next %}
 
 ## Pseudocode
 
