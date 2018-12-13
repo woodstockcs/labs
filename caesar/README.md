@@ -75,18 +75,6 @@ $ ./caesar 1 2 3
 Usage: ./caesar key
 ```
 
-{% spoiler "Try It" %}
-
-To try out the staff's implementation of this problem, execute
-
-```
-./cs50caesar key
-```
-
-substituting a valid integer in place of `key`, right in the terminal for this lab.
-
-{% endspoiler %}
-
 How to begin? Let's approach this problem one step at a time.
 
 {% next %}
