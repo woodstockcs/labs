@@ -3,4 +3,3 @@ lab50:
     - !exclude "*"
     - !include caesar.c
     - !include pseudocode.txt
-    - !include cs50caesar
