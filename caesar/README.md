@@ -64,18 +64,11 @@ Notice that the case of the original message has been preserved. Lowercase lette
 And what if a user doesn't cooperate?
 
 ```
-$ ./caesar HELLO
-Usage: ./caesar key
-```
-
-Or really doesn't cooperate?
-
-```
 $ ./caesar
 Usage: ./caesar key
 ```
 
-Or even...
+Or really doesn't cooperate?
 
 ```
 $ ./caesar 1 2 3
@@ -90,7 +83,7 @@ To try out the staff's implementation of this problem, execute
 ./caesar key
 ```
 
-substituting a valid integer in place of `key`, within [this sandbox](https://sandbox.cs50.io/84a23ab4-95c6-4db1-9d80-356c3318616d).
+substituting a valid integer in place of `key`, right in the terminal for this lab.
 
 {% endspoiler %}
 
