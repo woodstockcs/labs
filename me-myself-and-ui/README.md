@@ -1,33 +1,24 @@
-# Tech Spotlight
+# Me, Myself, and UI
 
 ## What to write
 
-[Read full description of this assignment here.](https://docs.cs50.net/2018/ap/problems/tech/tech.html) 
+[Please read the full description of this assignment here.](https://docs.cs50.net/2018/ap/problems/ui/ui.html) 
 
-0. In 600 words, describe a piece of technology. Consider:
+0. The Good, The Bad ...
+This part of your essay should be approximately 300 to 400 words. Pick two different types of user interface and juxtapose them. You aren’t limited to the types mentioned in the program spec, there are numerous others. How are your chosen interfaces alike, and how are they different?
 
-- What is this technology called?
+Be sure to do a bit our research, beyond watching the videos in the program spec, and include at least one citation for full credit.
 
-- What does it do?
+1. ... and the Future
+In this part you will write about 200 words making a prediction about the future of user intervaces.
 
-- How does someone use this technology?
-
-- How is its quality of performance commonly measured? (e.g. in megabytes (MB), gigahertz (GHz), etc.)
-
-- How does the recent news about the technology change the product or service?
-
-- What older form of technology does it replace, if any?
-
-- How has this technology impacted your life, for better or worse?
-
-- How has this technology impacted society at large, for better or worse?
-
-1. Submit your essay.
 
 ## How to Submit
 
-Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
+Make sure your essay is saved in a file named: ui.txt.
+
+Then execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/2018/ap/tech
+submit50 cs50/2018/ap/ui
 ```
