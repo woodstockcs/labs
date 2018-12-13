@@ -162,59 +162,16 @@ Usage: ./caesar key
 
 Now that your program is (hopefully!) accepting input as prescribed, it's time for another step.
 
-Recall that in our program, we must defend against users who technically provide a single command-line argument (the key), but provide something that isn't actually an integer, for example:
-
-```
-$ ./caesar xyz
-```
-
-Before we start to analyze the key for validity, though, let's make sure we can actually read it. Further modify `caesar.c` at right such that it not only checks that the user has provided just one command-line argument, but after verifying that, prints out that single command-line argument. So, for example, the behavior might look like this:
-
-```
-$ ./caesar 20
-Success
-20
-```
+You can assume that, if a user does provide a command-line argument, it will be a non-negative integer (e.g., 1). No need to check that it’s indeed numeric. But remember, you should convert that string (recall that `argv` is an array of strings, even if those strings happen to look like numbers) to an actual integer. There is a function you've used before (remember `atoi`?) that can do this for you!
 
 {% spoiler "Hints" %}
 
 * Recall that `argc` and `argv` give you information about what was provided at the command line.
 * Recall that `argv` is an array of strings.
-* Recall that with `printf` we can print a string using `%s` as the placeholder.
 * Recall that computer scientists like counting starting from 0.
 * Recall that we can access individual elements of an array, such as `argv` using square brackets, for example: `argv[0]`.
-
-{% endspoiler %}
-
-{% next %}
-
-## Validating the Key
-
-Now that you know how to read the key, let's analyze it. Modify `caesar.c` at right such that instead of printing out the command-line argument provided, your program instead checks to make sure that each character of that command line argument is a decimal digit (i.e., `0`, `1`, `2`, etc.) and, if any of them are not, terminates after printing the message `Usage: ./caesar key`. But if the argument consists solely of digit characters, you should convert that string (recall that `argv` is an array of strings, even if those strings happen to look like numbers) to an actual integer, and print out the *integer*, as via `%i` with `printf`. So, for example, the behavior might look like this:
-
-```
-$ ./caesar 20
-Success
-20
-```
-
-or
-
-```
-$ ./caesar 20x
-Usage: ./caesar key
-```
-
-{% spoiler "Hints" %}
-
-* Recall that `argv` is an array of strings.
-* Recall that a string, meanwhile, is just an array of `char`s.
-* Recall that the `string.h` header file contains a number of useful functions that work with strings.
-* Recall that we can use a loop to iterate over each character of a string if we know its length.
-* Recall that the `ctype.h` header file contains a number of useful functions that tell us things about characters.
-* Recall that we can `return` nonzero values from `main` to indicate that our program did not finish successfully.
-* Recall that with `printf` we can print an integer using `%i` as the placeholder.
 * Recall that the `atoi` function converts a string that looks like a number into that number.
+
 
 {% endspoiler %}
 
@@ -263,5 +220,5 @@ Now it's time to tie everything together! Instead of shifting the characters by 
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/2018/fall/caesar
+submit50 cs50/2018/ap/caesar
 ```
