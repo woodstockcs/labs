@@ -88,7 +88,6 @@ First, write in `pseudocode.txt` at right some pseudocode that implements this p
 There's more than one way to do this, so here's just one!
 
 1. Check that program was run with one command-line argument
-1. Iterate over the provided argument to make sure all characters are digits
 1. Convert that command-line argument from a `string` to an `int`
 1. Prompt user for plaintext
 1. Iterate over each character of the plaintext:
