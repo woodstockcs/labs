@@ -80,7 +80,7 @@ Usage: ./caesar key
 To try out the staff's implementation of this problem, execute
 
 ```
-./caesar key
+./cs50caesar key
 ```
 
 substituting a valid integer in place of `key`, right in the terminal for this lab.
