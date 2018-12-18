@@ -1,5 +1,9 @@
 # Calc
 
+{% video https://youtu.be/bcPPCgPPjDg %}
+
+{% next %}
+
 ## What to do?
 
 Implement a program that implements a command line calculator.
