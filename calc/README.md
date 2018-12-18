@@ -1,6 +1,6 @@
 # Calc
 
-{% video https://youtu.be/bcPPCgPPjDg %}
+{% video https://www.youtube.com/watch?v=bcPPCgPPjDg&feature=youtu.be %}
 
 {% next %}
 
