@@ -16,7 +16,7 @@ $ ./calc 50 x 28
 {% next %}
 
 ## Divide and Conquer
-In this problem, you will be tasked with implementing a very simple command-line based calculator program. Your program will accept inputs like this (wherein underlined text represents user input):
+In this problem, you will be tasked with implementing a very simple command-line based calculator program. Your program will accept inputs like this, and output the result as a float:
 
 ```
 $ ./calc 4 + 5
@@ -38,6 +38,12 @@ Notice that unlike many other programs you’ve likely written up to this point,
 ## Implementation Details
 
 Recall that if we collect information from the user at the command line, we can use two special parameters passed into `main` (conventionally called `argc` and `argv`) which represent the number of arguments the user provided and the actual data the user provided, respectively. Given the example use case above, how many command-line arguments is the user expected to provide?
+
+{% spoiler "Hint" %}
+
+Remember the number of command-line arguments is just the number of words (or words and numbers) entered at the command line, including the program name itself!
+
+{% endspoiler %}
 
 If they fail to provide the correct number, your program should exit (possibly printing out an error message that tells them how they should have run the program) and `return 1`; so that we can automate testing of your code.
 
