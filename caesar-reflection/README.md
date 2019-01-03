@@ -6,7 +6,7 @@ Describe the development process of Caesar, and the struggles and successes you 
 
 Also describe the algorithm you created to rotate each letter in the plaintext. Why can’t you use the algorithm
 
-ci = (pi + k) mod 26
+c<sub>i</sub> = (p<sub>i</sub> + k) % 26
 
 exactly as given in the program spec?
 
