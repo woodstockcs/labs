@@ -202,7 +202,7 @@ $ ./calc 8 % 5
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 submit50 cs50/2018/ap/calc
+submit50 cs50/2018/ap/calc
 ```
 
 To make sure you get 5/5 for style, you may want to execute style50 first.
