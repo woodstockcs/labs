@@ -4,11 +4,11 @@
 
 Describe the development process of Caesar, and the struggles and successes you experienced. Describe at least one aha moment during this process. Was it done alone, or did you collaborate?
 
-Also describe the algorithm you created to rotate each letter in the plaintext. Why can’t you use the algorithm
+Also describe the algorithm you created to rotate each letter in the plaintext. Explain the algorithsm:
 
 c<sub>i</sub> = (p<sub>i</sub> + k) % 26
 
-exactly as given in the program spec?
+as given in the program spec, and how the lesson using the interactive rotational cipher helped you understand this.
 
 ## How to Submit
 
