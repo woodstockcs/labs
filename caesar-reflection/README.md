@@ -8,7 +8,7 @@ Also describe the algorithm you created to rotate each letter in the plaintext. 
 
 c<sub>i</sub> = (p<sub>i</sub> + k) % 26
 
-as given in the program spec, and how the lesson using the interactive rotational cipher helped you understand this.
+as given in the program spec, and how the lesson using the [interactive rotational cipher](http://cipher.cs50nestm.net) helped you understand this.
 
 ## How to Submit
 
