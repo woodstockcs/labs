@@ -2,7 +2,4 @@ lab50:
   files:
     - !exclude "*"
     - !include index.html
-  windows:
-    - editor
-    - readme
-    - terminal
+
