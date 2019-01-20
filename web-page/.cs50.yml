@@ -3,3 +3,9 @@ lab50:
     - !exclude "*"
     - !include index.html
     - !include pseudocode.txt
+    
+lab50:
+  windows:
+    - editor
+    - readme
+    - terminal   
