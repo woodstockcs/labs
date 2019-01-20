@@ -1,11 +1,5 @@
 lab50:
   files:
     - !exclude "*"
-    - !include index.html
+    - !include test.html
     - !include pseudocode.txt
-    
-lab50:
-  windows:
-    - editor
-    - readme
-    - terminal   
