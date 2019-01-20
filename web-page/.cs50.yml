@@ -3,8 +3,3 @@ lab50:
     - !exclude "*"
     - !include test.html
     - !include pseudocode.txt
-  windows:
-    - editor
-    - readme
-    - terminal
-    - browser
