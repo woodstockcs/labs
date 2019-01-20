@@ -1,5 +1,5 @@
 lab50:
   files:
     - !exclude "*"
-    - !include fahrenheit.c
+    - !include index.html
     - !include pseudocode.txt
