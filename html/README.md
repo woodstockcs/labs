@@ -14,8 +14,6 @@ And consider reviewing some of David’s examples. There are a lot of videos her
 
 {% video https://www.youtube.com/watch?v=1TgTA4o_AM8&feature=youtu.be %}
 
-Learn more about images, links, headings, paragraphs, list and tables 
-
 {% spoiler "Learn more about images, links, headings, paragraphs, list and tables" %}
 
 {% endspoiler %}
