@@ -12,13 +12,17 @@ First consider joining Daven for a tour of HTML.
 
 And consider reviewing some of David’s examples. There are a lot of videos here, so don’t feel like you have to watch them all if you are comfortable with the topics they cover!
 
-Click below for more detail on images, links 
-
 {% video https://www.youtube.com/watch?v=1TgTA4o_AM8&feature=youtu.be %}
 
 {% spoiler "More examples by David" %}
 
-{% video https://www.youtube.com/watch?v=1TgTA4o_AM8&feature=youtu.be %}
+{% video https://www.youtube.com/watch?v=dW4giTKrgzo&feature=youtu.be %}
+
+{% video https://www.youtube.com/watch?v=GgpyVgkW_xk&feature=youtu.be %}
+
+{% video https://www.youtube.com/watch?time_continue=2&v=whYnf7PFZ74 %}
+
+{% video https://www.youtube.com/watch?v=s1_kxTs5GfI %}
 
 
 {% endspoiler %}
