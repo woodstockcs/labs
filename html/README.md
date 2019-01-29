@@ -10,6 +10,16 @@ First consider joining Daven for a tour of HTML.
 
 {% next %}
 
+And consider reviewing some of David’s examples. There are a lot of videos here, so don’t feel like you have to watch them all if you are comfortable with the topics they cover!
+
+{% video https://www.youtube.com/watch?v=1TgTA4o_AM8&feature=youtu.be %}
+
+Learn more about images, links, headings, paragraphs, list and tables 
+
+{% spoiler "Learn more about images, links, headings, paragraphs, list and tables" %}
+
+{% endspoiler %}
+
 # Ready to Start?
 
 Hopefully, you should now be ready to go! Your assignment is simply to create a web page. You should have one HTML file (named whatever you’d like, it does not need to be index.html) containing the web page’s structure, and one CSS file for styling. Other than that, there are no restrictions on other things you’d like to include.
