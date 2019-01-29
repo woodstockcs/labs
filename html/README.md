@@ -12,9 +12,14 @@ First consider joining Daven for a tour of HTML.
 
 And consider reviewing some of David’s examples. There are a lot of videos here, so don’t feel like you have to watch them all if you are comfortable with the topics they cover!
 
+Click below for more detail on images, links 
+
 {% video https://www.youtube.com/watch?v=1TgTA4o_AM8&feature=youtu.be %}
 
-{% spoiler "Learn more about images, links, headings, paragraphs, list and tables" %}
+{% spoiler "More examples by David" %}
+
+{% video https://www.youtube.com/watch?v=1TgTA4o_AM8&feature=youtu.be %}
+
 
 {% endspoiler %}
 
