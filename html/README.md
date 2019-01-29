@@ -61,6 +61,10 @@ Feel free to be creative with this assignment. Make something that is meaningful
 
 Because this assignment will result in something different for each person, there’s no check50 for this one. Make sure that you’ve included everything listed above and you have no broken links or permission issues and you should be good to go.
 
+## How to View Your Web Page
+
+Type http-server in the terminal and click on the link. You will open a new browser window with your web page!
+
 ## How to Submit
 
 More info about submission to come!
