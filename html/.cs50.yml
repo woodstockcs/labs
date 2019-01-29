@@ -1,7 +1,7 @@
 lab50:
   files:
     - !exclude "*"
-    - !include test.html
+    - !include mypage.html
   windows:
     - editor
     - readme
