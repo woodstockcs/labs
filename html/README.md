@@ -1,7 +1,18 @@
 # Hello, HTML
 
+## Getting Ready
+
+Beyond introducing you to web programming, the overarching goal of this problem is to empower you to teach yourself new languages so that you can stand on your own at the end of the year. We’ll guide you through each, but if you nonetheless find yourself Googling and asking lots of questions of classmates and staff, rest assured you’re doing it right!
+
+First consider joining Daven for a tour of HTML.
+
+{% video https://www.youtube.com/watch?v=dM5V1epAbSs&feature=youtu.be %}
+
 {% next %}
-Finally, you should be ready to go! Your assignment is simply to create a web page. You should have one HTML file (named whatever you’d like, it does not need to be index.html) containing the web page’s structure, and one CSS file for styling. Other than that, there are no restrictions on other things you’d like to include.
+
+# Ready to Start?
+
+Hopefully, you should now be ready to go! Your assignment is simply to create a web page. You should have one HTML file (named whatever you’d like, it does not need to be index.html) containing the web page’s structure, and one CSS file for styling. Other than that, there are no restrictions on other things you’d like to include.
 
 Feel free to be creative with this assignment. Make something that is meaningful to you - it could be a blog post, a pseudo-shopping website, or a family tree. The sky is the limit! At the bare minimum, your page MUST include the following:
 
