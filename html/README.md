@@ -84,6 +84,12 @@ Because this assignment will result in something different for each person, ther
 
 Type http-server in the terminal and click on the link. You will open a new browser window with your web page!
 
+## To get more help with HTML and CSS
+
+* [HTML](https://www.w3schools.com/html/)
+
+* [CSS](https://www.w3schools.com/css/)
+
 ## How to Submit
 
 To ensure that your page is well formed, you can use the [W3Schools HTML Validator service](https://validator.w3.org/#validate_by_input), copying and pasting your HTML directly into the provided text box. 
