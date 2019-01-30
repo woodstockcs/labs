@@ -86,5 +86,10 @@ Type http-server in the terminal and click on the link. You will open a new brow
 
 ## How to Submit
 
-More info about submission to come!
+To ensure that your page is well formed, you can use the [W3Schools HTML Validator service](https://validator.w3.org/#validate_by_input), copying and pasting your HTML directly into the provided text box. 
+
+You may then submit by typing in at the command line:
+
+submit50 cs50/2018/ap/unit5
+
 
