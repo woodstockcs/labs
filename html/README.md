@@ -32,7 +32,7 @@ And consider reviewing some of David’s examples. There are a lot of videos her
 
 Next consider joining Joseph again for a tour of CSS, the language with which web pages can be stylized.
 
-{% video https://www.youtube.com/watch?v=DQLbgo7Rzpg %}
+{% video https://www.youtube.com/watch?time_continue=1&v=kg0ZOmUREwc %}
 
 And consider reviewing some of David’s examples.
 
