@@ -1,17 +1,11 @@
-# ISBN Reflection
+# Hello, HTML Reflection
 
 ## What to write
 
-In isbnreflect.txt, describe the development process of ISBN, and the struggles and successes you experienced. Describe at least one aha moment during this process.
-
-If you used repetitive code to separate the digits, do you think you could have accomplished the same thing in a more efficient way?
-
-If you used a more efficient technique (not repetitive code) describe your algorithms.
+In about 300 words, describe your journey creating your first (at least in this class!) web page! What did you enjoy, what did you find frustrating, what were your struggles and what were your aha moments.
 
 ## How to Submit
 
-Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
+Make sure the file is named “webpagereflect.txt” and submit as follows:
 
-```
-submit50 isbnreflect@cs50nestm/checks
-```
+submit50 webpagereflect@cs50nestm/checks
