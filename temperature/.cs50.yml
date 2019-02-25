@@ -1,7 +1,7 @@
 lab50:
   files:
     - !exclude "*"
-    - !include temp.html
+    - !include temperature.html
   windows:
     - editor
     - readme
