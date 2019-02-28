@@ -76,5 +76,5 @@ document.querySelector("result").innerHTML = newValue
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/2018submit50 temperature@cs50nestm/checks
+submit50 temperature@cs50nestm/checks
 ```
