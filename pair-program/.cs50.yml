@@ -1,0 +1,7 @@
+lab50:
+  files:
+    - !exclude "*"
+    - !include *.html
+    - !include *.css
+    - !include *.js
+
