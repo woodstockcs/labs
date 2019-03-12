@@ -2,7 +2,7 @@
 
 ## Getting Ready
 
-For this project, you will work with a partner, using the pair programming protocol described in class. You may create a program using HTML, CSS and JavaScript. The program should be at least as complex as the Skittles program below.
+For this project, you will work with a partner, using the pair programming protocol described in class. You will create a program using HTML, CSS and JavaScript. The program should be at least as complex as the Skittles program below.
 
 {% video https://www.youtube.com/watch?time_continue=2&v=oxRwAUQMZgM %}
 
