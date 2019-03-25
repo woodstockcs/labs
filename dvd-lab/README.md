@@ -4,44 +4,15 @@
 
 For this project you will p5.js, a JavaScript library that has a full set of drawing and animation tools. Note that in this lab there are separate HTML and JavaScript files. The HTML does nothing more than import the required p5 libararies as well as the JavaScript files you will create so that you can run your animations. You do not need (or want) to change the HTML at this point, all your programming will be done in your sketch.js files.
 
-
 {% next %}
 
-And consider reviewing some of David’s examples. There are a lot of videos here, so don’t feel like you have to watch them all if you are comfortable with the topics they cover!
+Ths goal of this lab is to create a DVD animation as seen in this episode of The Office.
 
-{% video https://www.youtube.com/watch?v=1TgTA4o_AM8&feature=youtu.be %}
+{% video https://www.youtube.com/watch?v=QOtuX0jL85Y&t=3s %}
 
-{% spoiler "More HTML by David" %}
+But first we need to become familiar with drawing with p5.js.
 
-{% video https://www.youtube.com/watch?v=dW4giTKrgzo&feature=youtu.be %}
-
-{% video https://www.youtube.com/watch?v=GgpyVgkW_xk&feature=youtu.be %}
-
-{% video https://www.youtube.com/watch?time_continue=2&v=whYnf7PFZ74 %}
-
-{% video https://www.youtube.com/watch?v=s1_kxTs5GfI %}
-
-{% video https://www.youtube.com/watch?v=qyJXI2v7N8k %}
-
-{% video https://www.youtube.com/watch?v=DQLbgo7Rzpg %}
-
-{% endspoiler %}
-
-Next consider joining Joseph again for a tour of CSS, the language with which web pages can be stylized.
-
-{% video https://www.youtube.com/watch?time_continue=1&v=kg0ZOmUREwc %}
-
-And consider reviewing some of David’s examples.
-
-{% video https://www.youtube.com/watch?v=TKZlfZDF8Y4 %}
-
-{% spoiler "More CSS by David" %}
-
-{% video https://www.youtube.com/watch?v=VwCSw2ts388 %}
-
-{% video https://www.youtube.com/watch?v=-7wiXVMh4XY %}
-
-{% endspoiler %}
+{% next %}
 
 # Ready to Start?
 
