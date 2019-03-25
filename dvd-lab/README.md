@@ -1,11 +1,5 @@
 # DVD Animation
 
-## Getting Ready
-
-For this project you will p5.js, a JavaScript library that has a full set of drawing and animation tools. Note that in this lab there are separate HTML and JavaScript files. The HTML does nothing more than import the required p5 libararies as well as the JavaScript files you will create so that you can run your animations. You do not need (or want) to change the HTML at this point, all your programming will be done in your sketch.js files.
-
-{% next %}
-
 Ths goal of this lab is to create a DVD animation as seen in this episode of The Office.
 
 {% video https://www.youtube.com/watch?v=QOtuX0jL85Y&t=3s %}
@@ -14,39 +8,28 @@ But first we need to become familiar with drawing with p5.js.
 
 {% next %}
 
-# Ready to Start?
+## Getting Ready
 
-Hopefully, you should now be ready to go! Your assignment is simply to create a web page. You should have one HTML file (named whatever you’d like, it does not need to be index.html) containing the web page’s structure, and one CSS file for styling. Other than that, there are no restrictions on other things you’d like to include.
+For this project you will p5.js, a JavaScript library that has a full set of drawing and animation tools. Note that in this lab there are separate HTML and JavaScript files. The HTML does nothing more than import the required p5 libararies as well as the JavaScript files you will create so that you can run your animations. You do not need to change the HTML at this point, all your programming will be done in your sketch.js files.
 
-Feel free to be creative with this assignment. Make something that is meaningful to you - it could be a blog post, a pseudo-shopping website, or a family tree. The sky is the limit! At the bare minimum, your page MUST include the following:
+{% next %}
 
-* A table
+A typical p5.js sketch starts with a p5 function, setup(). Instructions in the setup() function are run once when the program starts. It's used to define initial environment properties such as screen size and background color and to load media such as images and fonts as the program starts. 
 
-* A link to an external website
+```javascript
+function setup() {
+  createCanvas(600, 400)
+}
+```
 
-* A button (which needn’t actually have a function, but should exist on the page)
+This will create your "canvas" as a rectangular area on your web page, with a width of 600 and a height of 400.
 
-* At least two divs, with div IDs
+Another p5 function you will be using is draw(). The draw() function runs immediately after setup(), and it runs repeatedly, allowing for moving animation.  A single execution of the draw() function from top to bottom represents a single “frame” of an animation.  The number of times draw() executes in each second may be controlled with the frameRate() function. The default frame rate is 60 frames per second. There can only be one draw() function for each sketch. 
 
-* A list
-
-* A heading
-
-* A paragraph
-
-* At least three images, either externally linked or contained within your ~/workspace/unit5 directory
-
-* At least one block of text that is not left-aligned
-
-* At least two different fonts
-
-* At least three different colors of text
-
-* At least two other extra features, one in HTML and one in CSS
-
-* Of course, you can do many more of each of the above; and to make a neat website, you’ll have to!
-
-Because this assignment will result in something different for each person, there’s no check50 for this one. Make sure that you’ve included everything listed above and you have no broken links or permission issues and you should be good to go.
+```javascript
+function draw() {
+  // put your code for drawing here
+}
 
 ## How to View Your Web Page
 
