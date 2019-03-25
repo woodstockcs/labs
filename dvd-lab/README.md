@@ -1,12 +1,9 @@
-# Hello, HTML (aka </Unit 5>)
+# DVD Animation
 
 ## Getting Ready
 
-Beyond introducing you to web programming, the overarching goal of this problem is to empower you to teach yourself new languages so that you can stand on your own at the end of the year. We’ll guide you through each, but if you nonetheless find yourself Googling and asking lots of questions of classmates and staff, rest assured you’re doing it right!
+For this project you will p5.js, a JavaScript library that has a full set of drawing and animation tools. Note that in this lab there are separate HTML and JavaScript files. The HTML does nothing more than import the required p5 libararies as well as the JavaScript files you will create so that you can run your animations. You do not need (or want) to change the HTML at this point, all your programming will be done in your sketch.js files.
 
-First consider joining Daven for a tour of HTML. Don't worry at this point about setting permissions. Your web page should work fine without having to use chmod.
-
-{% video https://www.youtube.com/watch?v=dM5V1epAbSs&feature=youtu.be %}
 
 {% next %}
 
