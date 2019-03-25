@@ -30,6 +30,7 @@ Another p5 function you will be using is draw(). The draw() function runs immedi
 function draw() {
   // put your code for drawing here
 }
+```
 
 ## How to View Your Web Page
 
