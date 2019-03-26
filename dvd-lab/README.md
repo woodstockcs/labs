@@ -86,7 +86,7 @@ You’ll be making this “spaceship” below.
 1. (no coding)  Assume that the center  of the circle is given by(x,y)and the width of the square is 50 pixels.  Figure out the coordinates of the vertices of the triangle relative to x and y.  
 2. Code it. Use the code below as starter code and complete the missing pieces:
 
-```javascript
+```javascipt
 let x = 200
 let y = 250
 
