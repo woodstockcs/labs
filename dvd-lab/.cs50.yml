@@ -1,0 +1,9 @@
+lab50:
+  files:
+    - !exclude "*"
+    - !include search.html
+  windows:
+    - editor
+    - readme
+    - terminal
+    - browser
