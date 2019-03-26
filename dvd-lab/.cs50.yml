@@ -1,7 +1,14 @@
 lab50:
   files:
     - !exclude "*"
-    - !include search.html
+    - !include page1.html
+    - !include page2.html
+    - !include dvd.html
+    - !include sketch1.js
+    - !include sketch2.js
+    - !include dvd.js
+    
+    
   windows:
     - editor
     - readme
