@@ -103,7 +103,7 @@ function draw() {
 
 ## DVD Logo Challenge
 
-1. Start by creating a rectangle and have it bounce off the sides of the screen.
+1. Working in the file dvd.js, start by creating a rectangle and have it bounce off the sides of the screen.
 1. Have the rectangle change colors when bouncing off the side of a screen (this can be random, or a predetermined set of colors)
 1. Have rectangle play a “boing” sound when it bounces off the side of a wall (you might want to look at p5-sound to achieve this)
 1. When the rectangle hits a corner of the screen, have it stop the animation and display some sort of celebratory gif or message on the screen.
