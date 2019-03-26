@@ -45,6 +45,8 @@ A few of the p5.js functions you will find useful include:
 
 More functions and details on these functions can be found at https://p5js.org/reference.
 
+{% next %}
+
 ## Warmup #1
 
 1. Open up `sketch1.js` and type in the following:
@@ -73,13 +75,16 @@ function draw() {
 1. Remove the if(mousePressed){ from Line 7 and also remove its ending } on Line 11.
 C1. ut the background command from Line 3 and paste it onto Line 7, so that it is in between function draw(){ and fill(0, 255, 0).
 
+{% next %}
+
 ## Warmup #2
 
 You’ll be making this “spaceship” below.
 
 1. (no coding)  Assume that the center  of the circle is given by(x,y)and the width of the square is 50 pixels.  Figure out the coordinates of the vertices of the triangle relative to x and y.  
 2. Code it. Use the code below as starter code and complete the missing pieces:
-```javscript
+
+```javascript
 let x = 200
 let y = 250
 
@@ -92,7 +97,7 @@ function draw() {
   // TODO 
 }
 ```
-1. Once you have a working spaceship: in the draw() function add the command `y = y – 1`;
+3. Once you have a working spaceship: in the draw() function add the command `y = y – 1`;
 
 
 ## How to Submit
