@@ -66,14 +66,14 @@ function draw() {
 ```
 1. To see what this code does, open http-server and open the file page1.html. Make sure you press and move the mouse over the canvas.
 1. Once you have your first program working, make each change described below.  After each individual change,  press and move the mouse over the canvas to see what happens.
-1. On Line 2, change createCanvas(400,400) to createCanvas(600, 400)
-1. On Line 3, change background(0, 0, 255) to background(255, 0, 255)
-1. On Line 8, change fill(255, 0, 0) to fill(0, 255, 0)
-1. On Line 9, change noStroke() to stroke(0, 0, 255)
-1. Change Line 10 to be ellipse(mouseX, 0, 40, 40)
-1. Change Line 10 to be ellipse(mouseX, mouseY, 100, 50)
-1. Remove the if(mousePressed){ from Line 7 and also remove its ending } on Line 11.
-C1. ut the background command from Line 3 and paste it onto Line 7, so that it is in between function draw(){ and fill(0, 255, 0).
+1. Change `createCanvas(400,400)` to `createCanvas(600, 400)`
+1. Change `background(0, 0, 255)` to `background(255, 0, 255)`
+1. Change `fill(255, 0, 0)` to `fill(0, 255, 0)`
+1. Cange `noStroke()` to `stroke(0, 0, 255)`
+1. Change the ellipse function to `ellipse(mouseX, 0, 40, 40)`
+1. Then change it to `ellipse(mouseX, mouseY, 100, 50)`
+1. Remove the `if (mousePressed){` from Line 7 and also remove its ending `}`.
+1. Cut the background command in the `setup()` function and paste it into the top of the `draw()` function.
 
 {% next %}
 
