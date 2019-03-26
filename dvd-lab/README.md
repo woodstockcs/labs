@@ -14,7 +14,7 @@ For this project you will p5.js, a JavaScript library that has a full set of dra
 
 {% next %}
 
-A typical p5.js sketch starts with a p5 function, setup(). Instructions in the setup() function are run once when the program starts. It's used to define initial environment properties such as screen size and background color and to load media such as images and fonts as the program starts. 
+A typical p5.js sketch starts with a p5 function, `setup()`. Instructions in the `setup()` function are run once when the program starts. It's used to define initial environment properties such as screen size and background color and to load media such as images and fonts as the program starts. 
 
 ```javascript
 function setup() {
@@ -24,7 +24,7 @@ function setup() {
 
 This will create your "canvas" as a rectangular area on your web page, with a width of 600 and a height of 400.
 
-Another p5 function you will be using is draw(). The draw() function runs immediately after setup(), and it runs repeatedly, allowing for moving animation.  A single execution of the draw() function from top to bottom represents a single “frame” of an animation.  The number of times draw() executes in each second may be controlled with the frameRate() function. The default frame rate is 60 frames per second. There can only be one draw() function for each sketch. 
+Another p5 function you will be using is `draw()`. The `draw()` function runs immediately after `setup()`, and it runs repeatedly, allowing for moving animation.  A single execution of the `draw()` function from top to bottom represents a single “frame” of an animation.  The number of times `draw()` executes in each second may be controlled with the `frameRate()` function. The default frame rate is 60 frames per second. There can only be one `draw()` function for each sketch. 
 
 ```javascript
 function draw() {
