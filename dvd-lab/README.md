@@ -38,7 +38,7 @@ Here is a representation of pixels on a 400 x 400 canvas. Note that the y-axis i
 ![Canvas](http://intro.cs50nestm.net/wp-content/uploads/2019/03/canvas.png)
 
 A few of the p5.js functions you will find useful include:
-1. `fill(color)` which sets the color that all subsequent shapes are filled with. For example, `fill(50)` fills shapes with grayscale, while `fill(204, 102, 0)` fills shapes with orange. [p5.js fill reference](https://p5js.org/reference/#/p5/fill)
+1. `fill(color)` which sets the color that all subsequent shapes are filled with. For example, `fill(50)` fills shapes with grayscale, while `fill(204, 102, 0)` fills shapes with orange. [p5js.org fill() reference](https://p5js.org/reference/#/p5/fill)
 1. `ellipse(x, y, width, height)` draws an ellipse, specifying the coordinates (x,y) of the center, width, and height.  
 1. `rect(x, y, width, height)` draws a rectangle, specifying the coordinates (x,y) of the top left corner, width, and height. [Check out `rectMode()` here](https://p5js.org/reference/#/p5/rectMode).
 1. `triangle(x1, y1, x2, y2, x3, y3)` draws a triangle, specifying the coordinates of three vertices: (x1,y1), (x2,y2), and (x3,y3)
