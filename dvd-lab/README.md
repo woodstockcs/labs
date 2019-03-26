@@ -84,7 +84,7 @@ You’ll be making this “spaceship” below.
 ![Spaceship](http://intro.cs50nestm.net/wp-content/uploads/2019/03/Screen-Shot-2019-03-25-at-6.48.21-AM.png)
 
 1. (no coding)  Assume that the center  of the circle is given by(x,y)and the width of the square is 50 pixels.  Figure out the coordinates of the vertices of the triangle relative to x and y.  
-2. Code it. Use the code below as starter code and complete the missing pieces:
+2. Open the file sketch2.js and code it. Use the code below as starter code and complete the missing pieces:
 
 ```javascript
 let x = 200
