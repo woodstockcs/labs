@@ -38,24 +38,65 @@ Here is a representation of pixels on a 400 x 400 canvas. Note that the y-axis i
 ![Canvas](http://intro.cs50nestm.net/wp-content/uploads/2019/03/canvas.png)
 
 A few of the p5.js functions you will find useful include:
-1. `fill()` which fills any object drawn after this in the `draw()` function 
+1. `fill(color)` which sets the color that all subsequent shapes are filled with. For example, `fill(50)` fills shapes with grayscale, while `fill(204, 102, 0)` fills shapes with orange. https://p5js.org/reference/#/p5/fill
+1. `ellipse(x, y, width, height)` draws an ellipse, specifying the coordinates (x,y) of the center, width, and height.  
+1. `rect(x, y, width, height)` draws a rectangle, specifying the coordinates (x,y) of the top left corner, width, and height. Check out `rectMode()` here: https://p5js.org/reference/#/p5/rectMode
+1. `triangle(x1, y1, x2, y2, x3, y3)` draws a triangle, specifying the coordinates of three vertices: (x1,y1), (x2,y2), and (x3,y3)
 
-## How to View Your Web Page
+More functions and details on these functions can be found at https://p5js.org/reference.
 
-Type http-server in the terminal and click on the link. You will open a new browser window with your web page!
+## Warmup #1
 
-## To get more help with HTML and CSS
+1. Open up `sketch1.js` and type in the following:
 
-* [HTML](https://www.w3schools.com/html/)
+```javascipt
+function setup() {
+  create Canvas(400, 400)
+  background(0, 0, 255)
+}
 
-* [CSS](https://www.w3schools.com/css/)
+function draw() {
+  if (mousePressed) {
+    fill(255, 0, 0)
+    ellipse(mouseX, mouseY, 40, 40)    
+  }
+}
+```
+1. To see what this code does, open http-server and open the file page1.html. Make sure you press and move the mouse over the canvas.
+1. Once you have your first program working, make each change described below.  After each individual change,  press and move the mouse over the canvas to see what happens.
+1. On Line 2, change createCanvas(400,400) to createCanvas(600, 400)
+1. On Line 3, change background(0, 0, 255) to background(255, 0, 255)
+1. On Line 8, change fill(255, 0, 0) to fill(0, 255, 0)
+1. On Line 9, change noStroke() to stroke(0, 0, 255)
+1. Change Line 10 to be ellipse(mouseX, 0, 40, 40)
+1. Change Line 10 to be ellipse(mouseX, mouseY, 100, 50)
+1. Remove the if(mousePressed){ from Line 7 and also remove its ending } on Line 11.
+C1. ut the background command from Line 3 and paste it onto Line 7, so that it is in between function draw(){ and fill(0, 255, 0).
+
+## Warmup #2
+
+You’ll be making this “spaceship” below.
+
+1. (no coding)  Assume that the center  of the circle is given by(x,y)and the width of the square is 50 pixels.  Figure out the coordinates of the vertices of the triangle relative to x and y.  
+2. Code it. Use the code below as starter code and complete the missing pieces:
+```javscript
+let x = 200
+let y = 250
+
+function setup() {
+  createCanvas(400, 400)
+  rectMode(CENTER)
+}
+
+function draw() {
+  // TODO 
+}
+```
+1. Once you have a working spaceship: in the draw() function add the command `y = y – 1`;
+
 
 ## How to Submit
 
-To ensure that your page is well formed, you can use the [W3Schools HTML Validator service](https://validator.w3.org/#validate_by_input), copying and pasting your HTML directly into the provided text box. 
-
-You may then submit by typing in at the command line:
-
-submit50 cs50/2018/ap/unit5
+Submission information to come soon!
 
 
