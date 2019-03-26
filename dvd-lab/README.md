@@ -53,7 +53,7 @@ More functions and details on these functions can be found at [https://p5js.org/
 
 ```javascript
 function setup() {
-  create Canvas(400, 400)
+  createCanvas(400, 400)
   background(0, 0, 255)
 }
 
