@@ -35,8 +35,10 @@ function draw() {
 
 Here is a representation of pixels on a 400 x 400 canvas. Note that the y-axis is flipped compared to yuor math class!
 
-!{Canvas](http://intro.cs50nestm.net/wp-content/uploads/2019/03/canvas.png)
+![Canvas](http://intro.cs50nestm.net/wp-content/uploads/2019/03/canvas.png)
 
+A few of the p5.js functions you will find useful include:
+1. `fill()` which fills any object drawn after this in the `draw()` function 
 
 ## How to View Your Web Page
 
