@@ -102,6 +102,12 @@ function draw() {
 ```
 3. Once you have a working spaceship: in the `draw()` function add the command `y = y – 1`;
 
+## Submit this part
+
+When done with this part submit to: 
+
+submit50 p5_spaceship@cs50nestm/checks
+
 ## DVD Logo Challenge
 
 1. Working in the file dvd.js, start by creating a rectangle and have it bounce off the sides of the screen.
@@ -112,8 +118,8 @@ function draw() {
 
 1. **Extension:** Have rectangle play a “boing” sound when it bounces off the side of a wall (If working in CS50Lab, add the line `<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.js"></script>` after line 8 in dvd.html to import the p5 sound library, then look at the p5-sound reference to achieve this)
 
-## How to Submit
+## Submit DVD Screen Saver
 
-Submission information to come soon!
+submit50 dvd_screen_saver@cs50nestm/checks
 
 
