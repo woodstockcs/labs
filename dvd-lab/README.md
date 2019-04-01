@@ -60,6 +60,7 @@ function setup() {
 function draw() {
   if (mouseIsPressed) {
     fill(255, 0, 0)
+    noStroke()
     ellipse(mouseX, mouseY, 40, 40)    
   }
 }
@@ -69,7 +70,7 @@ function draw() {
 1. Change `createCanvas(400,400)` to `createCanvas(600, 400)`
 1. Change `background(0, 0, 255)` to `background(255, 0, 255)`
 1. Change `fill(255, 0, 0)` to `fill(0, 255, 0)`
-1. Cange `noStroke()` to `stroke(0, 0, 255)`
+1. Change `noStroke()` to `stroke(0, 0, 255)`
 1. Change the ellipse function to `ellipse(mouseX, 0, 40, 40)`
 1. Then change it to `ellipse(mouseX, mouseY, 100, 50)`
 1. Remove the `if (mousePressed){` from Line 7 and also remove its ending `}`.
@@ -105,7 +106,7 @@ function draw() {
 
 1. Working in the file dvd.js, start by creating a rectangle and have it bounce off the sides of the screen.
 1. Have the rectangle change colors when bouncing off the side of a screen (this can be random, or a predetermined set of colors)
-1. Have rectangle play a “boing” sound when it bounces off the side of a wall (you might want to look at p5-sound to achieve this)
+1. *Extension:* Have rectangle play a “boing” sound when it bounces off the side of a wall (If working in CS50Lab, add the line `<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.js"></script>` after line 8 in dvd.html to import the p5 sound library, then look at the p5-sound reference to achieve this)
 1. When the rectangle hits a corner of the screen, have it stop the animation and display some sort of celebratory gif or message on the screen.
 1. Load the DVD logo into your sketch and replace the rectangle with this logo: [https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8j2ZvogClZN_eBG7qKeZUCcHweqjjsulAsOGOzKvhkQ2iEEzF](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8j2ZvogClZN_eBG7qKeZUCcHweqjjsulAsOGOzKvhkQ2iEEzF)
 
