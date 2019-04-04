@@ -1,101 +1,173 @@
-# Hello, HTML (aka </Unit 5>)
+# JavaScript Objects
 
-## Getting Ready
+![bubbles](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/monkey-bubbles.gif)
 
-Beyond introducing you to web programming, the overarching goal of this problem is to empower you to teach yourself new languages so that you can stand on your own at the end of the year. We’ll guide you through each, but if you nonetheless find yourself Googling and asking lots of questions of classmates and staff, rest assured you’re doing it right!
+During this next exercise, we'll be making some bubbles that wobble over the screen! If that doesn't excite you on it's own you should definitely get excited about all the learning you will be doing because by then end you will have some really powerful tools in your programmer's tool belt.
 
-First consider joining Daven for a tour of HTML. Don't worry at this point about setting permissions. Your web page should work fine without having to use chmod.
-
-{% video https://www.youtube.com/watch?v=dM5V1epAbSs&feature=youtu.be %}
-
-{% next %}
-
-And consider reviewing some of David’s examples. There are a lot of videos here, so don’t feel like you have to watch them all if you are comfortable with the topics they cover!
-
-{% video https://www.youtube.com/watch?v=1TgTA4o_AM8&feature=youtu.be %}
-
-{% spoiler "More HTML by David" %}
-
-{% video https://www.youtube.com/watch?v=dW4giTKrgzo&feature=youtu.be %}
-
-{% video https://www.youtube.com/watch?v=GgpyVgkW_xk&feature=youtu.be %}
-
-{% video https://www.youtube.com/watch?time_continue=2&v=whYnf7PFZ74 %}
-
-{% video https://www.youtube.com/watch?v=s1_kxTs5GfI %}
-
-{% video https://www.youtube.com/watch?v=qyJXI2v7N8k %}
-
-{% video https://www.youtube.com/watch?v=DQLbgo7Rzpg %}
-
-{% endspoiler %}
-
-Next consider joining Joseph again for a tour of CSS, the language with which web pages can be stylized.
-
-{% video https://www.youtube.com/watch?time_continue=1&v=kg0ZOmUREwc %}
-
-And consider reviewing some of David’s examples.
-
-{% video https://www.youtube.com/watch?v=TKZlfZDF8Y4 %}
-
-{% spoiler "More CSS by David" %}
-
-{% video https://www.youtube.com/watch?v=VwCSw2ts388 %}
-
-{% video https://www.youtube.com/watch?v=-7wiXVMh4XY %}
-
-{% endspoiler %}
-
-# Ready to Start?
-
-Hopefully, you should now be ready to go! Your assignment is simply to create a web page. You should have one HTML file (named whatever you’d like, it does not need to be index.html) containing the web page’s structure, and one CSS file for styling. Other than that, there are no restrictions on other things you’d like to include.
-
-Feel free to be creative with this assignment. Make something that is meaningful to you - it could be a blog post, a pseudo-shopping website, or a family tree. The sky is the limit! At the bare minimum, your page MUST include the following:
-
-* A table
-
-* A link to an external website
-
-* A button (which needn’t actually have a function, but should exist on the page)
-
-* At least two divs, with div IDs
-
-* A list
-
-* A heading
-
-* A paragraph
-
-* At least three images, either externally linked or contained within your ~/workspace/unit5 directory
-
-* At least one block of text that is not left-aligned
-
-* At least two different fonts
-
-* At least three different colors of text
-
-* At least two other extra features, one in HTML and one in CSS
-
-* Of course, you can do many more of each of the above; and to make a neat website, you’ll have to!
-
-Because this assignment will result in something different for each person, there’s no check50 for this one. Make sure that you’ve included everything listed above and you have no broken links or permission issues and you should be good to go.
-
-## How to View Your Web Page
-
-Type http-server in the terminal and click on the link. You will open a new browser window with your web page!
-
-## To get more help with HTML and CSS
-
-* [HTML](https://www.w3schools.com/html/)
-
-* [CSS](https://www.w3schools.com/css/)
-
-## How to Submit
-
-To ensure that your page is well formed, you can use the [W3Schools HTML Validator service](https://validator.w3.org/#validate_by_input), copying and pasting your HTML directly into the provided text box. 
-
-You may then submit by typing in at the command line:
-
-submit50 cs50/2018/ap/unit5
+![learning](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/info.gif)
 
 
+## A First Attempt
+
+![bubbles](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/bubbles.gif)
+
+That image shows several bubbles, but let's start with one:
+
+```javascript
+let bubbleSize = 20;
+
+var bubble1X, bubble1Y;
+
+function setup() {
+  createCanvas(500,400);
+  bubble1X = random(0, width);
+  bubble1Y = random(0, height);
+}
+
+function draw() {
+  background(0);
+  fill(250);
+
+  circle(bubble1X, bubble1Y, bubbleSize);
+
+  bubble1X += random(-2, 2);
+  bubble1Y += random(-2, 2);
+}
+```
+
+Now go ahead and add a 100 bubbles...
+
+Just kidding, that would take ages, your hands would be cramped, and you probably wouldn't learn all that much.
+
+One thing that I'm thinking ahead about is that it seems like every time I'd want to add one new bubble, it would require two new variables. But, those two variables are clearly associated with each other. `bubble2X` and `bubble2Y` for example. Every new bubble adds (at least) 2 new variables.
+
+What if we could group those related variables together into one. A bubble is *one thing*, so shouldn't we have it represented in our code as *one variable*. Ideally, a single variable `bubble1` could *store both pieces of data* the `x` and `y`. That would cut our number of variables in half, or even less!
+
+## JavaScript Objects
+
+The way we can do this is with **JavaScript Objects**. An object is *one thing* that can be stored in one variable. An object can have many **properties**, think of these as additional variables stored inside the larger object.
+
+That sounds pretty abstract, but it's not so bad, let's make a an object called `brick`:
+
+![first object](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/object-intro.gif)
+
+Nice, the object we created with this code has two properties, `x` and `y`.
+
+```javascript
+let brick = {x: 10, y: 100};
+```
+#### Creating Objects
+
+We create objects using curly braces
+
+```javascript
+var emptyObject = {};
+```
+
+#### Properties, {key: value}
+
+Properties are added inside of an object. A property has two main parts, a *name* and a *value*.  This is very much like a variable, `x = 3`, the name is `x` the value is `3`.
+
+With objects the name to a property is called a **key**.  You will often hear people refer to properties and their values as *key-value pairs*. The object below has one key-value pair, the key is `firstName` and the value is `"Jenny"`:
+
+```javascript
+var student = {firstName: "Jenny"};
+```
+
+#### Multiple Properties
+
+When there are multiple properties in an object, they are separated by commas. Often objects will be written across multiple lines. Either way is fine as long as your commas and braces are in the right place.
+
+```javascript
+var student = {firstName: "Jenny", grade: 11};
+// or
+var student = {
+  firstName: "Jenny",
+  grade: 11
+};
+```
+
+#### \* Your Turn \*
+Make an object that represents you!  You can write it in the text editor, but better would be to open up the chrome console so you can interact with your object.
+
+It should have *at least 5* key-value pairs. Some ideas for the keys might be: name, age, date of birth, grade, favorite food, favorite color, mood, or number of siblings. Some of the vales can also be Boolean values, `true` or `false`, something like`{hasGlasses: true}` or `{tiredToday: false}`.
+
+Read the section below on how to access and change the properties. Change one of the properties on your "me" object.
+
+#### Accessing Properties
+
+We've seen how new objects are created, but we will also need to *access* the values inside of objects. We do this with a dot (a period `.`) after the object name.
+
+`student.firstName` gives us back the value `"Jenny"`.
+
+`student.grade` gives us back the value `11`.
+
+#### Adding Properties
+
+You can also use the same *dot* after the object name plus an `=` to add additional properties to an object after it's created or to change existing properties
+
+![adding properties](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/add-to-object.gif)
+
+## Now with Objects
+
+Here's the same program built with objects. This may not seem like a huge change from before, but we're headed in the right direction.
+
+```javascript
+var bubbleSize = 40;
+
+var bubble1;
+
+function setup() {
+  createCanvas(500,400);
+  bubble1 = {
+    x: random(0, width),
+    y: random(0, height)
+  };
+}
+
+function draw() {
+  background(0);
+  fill(250);
+
+  ellipse(bubble1.x, bubble1.y, bubbleSize, bubbleSize);
+
+  bubble1.x += random(-2, 2);
+  bubble1.y += random(-2, 2);
+}
+```
+## Why are Objects Important
+
+Objects are a super important concept in programming and we've just scratched the surface here.
+
+Objects allow us to group together into one container all the useful data that makes sense to be together.  This makes sense because it's like the real world, an object called `dog` might have `age`, `name`, `color`, and `weight` properties.
+
+JavaScript objects are fundamental to how data from the internet is structured and retrieved.  If you wanted to make an app that used information about the current weather, movies playing near your zip-code, or just about any data you can imagine that comes from the internet, it is very, very likely that that data will be in the form of a big JavaScript object. With an understanding of objects, you're on your way to becoming an awesome developer.
+
+## Mini-Challenge
+1. Add at least one more bubble, make it an object.
+
+2. Add a `size` property to each bubble object. The size can be random or hard-coded in.
+
+3. Add a `color` property to every bubble object that is a random number between `0` and `255`. Use that number to make the bubbles `fill` a random grayscale color.
+
+  You don't have to worry that the property `color` will conflict with p5's built-in `color` function.  This is because you will be accessing it by something like `bubble1.color`. The property `color` is sort of protected inside the object.
+
+4. Wouldn't it be cool if the bubbles were a random color that wasn't gray. One way to do this would be to make 3 new properties inside each object. The keys could be `r`, `g`, and `b` perhaps, and the values a random value.
+
+  If you're up for a challenge, one interesting thing is that a key of an object can have a value that is *another object*.  What if you're bubble looked like:
+  ```javascript
+  bubble = {
+    x: ...,
+    y: ...,
+    colors: {
+      r: ...,
+      g: ...,
+      b: ...
+    }
+  }
+  ```
+
+  The way you would access the `g` key would be `bubble.colors.g`.  Give it a shot!
+
+## Resources
+- Watch Dan Shiffman explain the bubbles in a video over at the [Coding Train](https://www.youtube.com/watch?v=pGkSHeEZLMU&index=23&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA)
