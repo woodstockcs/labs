@@ -49,7 +49,7 @@ The way we can do this is with **JavaScript Objects**. An object is *one thing* 
 
 That sounds pretty abstract, but it's not so bad, let's make a an object called `brick`:
 
-![first object](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/object-intro.gif)
+![first object](http://intro.cs50nestm.net/wp-content/uploads/2019/04/brick.gif)
 
 Nice, the object we created with this code has two properties, `x` and `y`.
 
@@ -106,7 +106,7 @@ We've seen how new objects are created, but we will also need to *access* the va
 
 You can also use the same *dot* after the object name plus an `=` to add additional properties to an object after it's created or to change existing properties
 
-![adding properties](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/add-to-object.gif)
+![adding properties](http://intro.cs50nestm.net/wp-content/uploads/2019/04/objects.gif)
 
 ## Now with Objects
 
