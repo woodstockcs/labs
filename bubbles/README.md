@@ -159,7 +159,7 @@ JavaScript objects are fundamental to how data from the internet is structured a
   bubble = {
     x: ...,
     y: ...,
-    colors: {
+    color: {
       r: ...,
       g: ...,
       b: ...
@@ -167,7 +167,6 @@ JavaScript objects are fundamental to how data from the internet is structured a
   }
   ```
 
-  The way you would access the `g` key would be `bubble.colors.g`.  Give it a shot!
+The way you would access the `g` key would be `bubble.color.g`.  Give it a shot!
 
-## Resources
-- Watch Dan Shiffman explain the bubbles in a video over at the [Coding Train](https://www.youtube.com/watch?v=pGkSHeEZLMU&index=23&list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA)
+(Lesson above was adapted from a front-end design class given by Upperline Code)
