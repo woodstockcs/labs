@@ -16,7 +16,7 @@ That image shows several bubbles, but let's start with one:
 ```javascript
 let bubbleSize = 20;
 
-var bubble1X, bubble1Y;
+let bubble1X, bubble1Y;
 
 function setup() {
   createCanvas(500,400);
@@ -61,7 +61,7 @@ let brick = {x: 10, y: 100};
 We create objects using curly braces
 
 ```javascript
-var emptyObject = {};
+let emptyObject = {};
 ```
 
 #### Properties, {key: value}
@@ -71,7 +71,7 @@ Properties are added inside of an object. A property has two main parts, a *name
 With objects the name to a property is called a **key**.  You will often hear people refer to properties and their values as *key-value pairs*. The object below has one key-value pair, the key is `firstName` and the value is `"Jenny"`:
 
 ```javascript
-var student = {firstName: "Jenny"};
+let student = {firstName: "Jenny"};
 ```
 
 #### Multiple Properties
@@ -79,9 +79,9 @@ var student = {firstName: "Jenny"};
 When there are multiple properties in an object, they are separated by commas. Often objects will be written across multiple lines. Either way is fine as long as your commas and braces are in the right place.
 
 ```javascript
-var student = {firstName: "Jenny", grade: 11};
+let student = {firstName: "Jenny", grade: 11};
 // or
-var student = {
+let student = {
   firstName: "Jenny",
   grade: 11
 };
@@ -113,9 +113,9 @@ You can also use the same *dot* after the object name plus an `=` to add additio
 Here's the same program built with objects. This may not seem like a huge change from before, but we're headed in the right direction.
 
 ```javascript
-var bubbleSize = 40;
+let bubbleSize = 20;
 
-var bubble1;
+let bubble1;
 
 function setup() {
   createCanvas(500,400);
@@ -129,7 +129,7 @@ function draw() {
   background(0);
   fill(250);
 
-  ellipse(bubble1.x, bubble1.y, bubbleSize, bubbleSize);
+  circle(bubble1.x, bubble1.y, bubbleSize);
 
   bubble1.x += random(-2, 2);
   bubble1.y += random(-2, 2);
