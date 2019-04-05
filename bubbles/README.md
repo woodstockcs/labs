@@ -87,7 +87,7 @@ let student = {
 };
 ```
 
-#### \* Your Turn \*
+#### Your Turn
 Make an object that represents you!  You can write it in the text editor, but better would be to open up the chrome console so you can interact with your object.
 
 It should have *at least 5* key-value pairs. Some ideas for the keys might be: name, age, date of birth, grade, favorite food, favorite color, mood, or number of siblings. Some of the vales can also be Boolean values, `true` or `false`, something like`{hasGlasses: true}` or `{tiredToday: false}`.
