@@ -35,12 +35,24 @@ For simplicity, you may assume that the user will input a positive integer, so n
 
 Since we want the user input to be an integer, we can use the CS50 function get_int. This works in a very similar way as get_string did in your last problem, but it will only accept integers as input, and if you input anything else, it will ask you to retry.
 
-{% spoiler "Do you remember how to import a function from the CS50 Module?" %}
+Remember, you'll have to import get_int from the CS50 Module first.
+
+{% spoiler "Hint" %}
 
 At the top of your program, you should have the following code:
 
 ```python
 from cs50 import get_int
+```
+
+{% endspoiler %}
+
+Now go ahead and asign the output from get_int to a variable to store the number of minutes.
+
+{% spoiler "Hint" %}
+
+```python
+n = get_int("Minutes: )
 ```
 
 {% endspoiler %}
