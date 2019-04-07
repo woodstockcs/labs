@@ -73,7 +73,18 @@ In Python, you have access to standard artithmetic operations such as:
 * multiply: num1 * num2
 * divide:   num1 / num2
 
-Now we'll leave it to you to figure out how to express the equivalent number of bottles in Python.
+We'll leave it to you to figure out how to express the equivalent number of bottles in Python.
 
+Finally, use the Python print function to print out the number of bottles.
 
+{% spoiler "Hint" %}
+In your last program, you printed out multiple variables, by separating them with a comma.
+
+```python
+print("hello,", name)
+```
+{% endspoiler %}
+
+{% next %}
+Remember to test out your code with lots of different inputs. Once your inputs and outputs behave like the program spec, you've completed water!
 
