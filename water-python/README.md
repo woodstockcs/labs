@@ -38,23 +38,19 @@ Since we want the user input to be an integer, we can use the CS50 function get_
 Remember, you'll have to import get_int from the CS50 Module first.
 
 {% spoiler "Hint" %}
-
 At the top of your program, you should have the following code:
 
 ```python
 from cs50 import get_int
 ```
-
 {% endspoiler %}
 
 Now go ahead and asign the output from get_int to a variable to store the number of minutes.
 
 {% spoiler "Hint" %}
-
 ```python
 n = get_int("Minutes: )
 ```
-
 {% endspoiler %}
 
 Once we get the user input, we'll want to calculate the number of bottles used. This may be very obvious to you at first, but it's a good idea to get into the habit of detecting patterns to write algorithms to solve problems. We're told, per the spec, that one minute is the equivalent of 12 bottles of water. So then two minutes would be equivalent to 24.
