@@ -45,7 +45,7 @@ from cs50 import get_int
 ```
 {% endspoiler %}
 
-Now go ahead and asign the output from get_int to a variable to store the number of minutes.
+Now go ahead and assign the output from get_int to a variable to store the number of minutes.
 
 {% spoiler "Hint" %}
 ```python
