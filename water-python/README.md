@@ -38,7 +38,7 @@ Since we want the user input to be an integer, we can use the CS50 function get_
 Remember, you'll have to import get_int from the CS50 Module first.
 
 {% spoiler "Hint" %}
-At the top of your program, you should have the following code:
+At the top of your program, write the following code:
 
 ```python
 from cs50 import get_int
