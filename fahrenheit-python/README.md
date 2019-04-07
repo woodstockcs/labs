@@ -1,4 +1,4 @@
-# Fahrenheit (in Python)
+# Fahrenheit (Python)
 
 {% video https://www.youtube.com/watch?v=C5vk1APWxsk %}
 
