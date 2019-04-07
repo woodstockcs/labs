@@ -63,7 +63,8 @@ Here is some pseudocode which might help. Be free to write your own pseudocode a
 3. Since this original amount will be in dollars, convert this to cents as indicated above, and round to the nearest whole number
 4. Create a new variable for your number of coins, and initialize it to 0
 4. There are two different ways to solve from here. One way is to use a series of while loops adding on to the number of coins as you go along. The other way is to use a combination of floor division, (as in `cents // 25`) to determine how may quarters, and modulo (the remainder operator, as in `cents % 25`) to determine how much is then left after you've taken out all the quarters.
-5. Print out the total number of coins and your done!
+5. Print out the total number of coins
+6. Test your code and debug any errors
 
 
 {% endspoiler %}
