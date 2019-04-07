@@ -41,11 +41,14 @@ from cs50 import get_string
 
 A string in computer science essentially refers to a collection of characters—​a word, a sentence, or a phrase. Because when you ask the user for their name, you would use get_string to collect their input and to store it in a variable whose data type is string.
 
-We can use get_string, and assign the input to a variable, such as `name` like this:
+We can use get_string("Name: "), where "Name: " is the user prompt, and assign the input to a variable, such as `name`.
+
+{% spoiler "Hint" %}
 
 ```python
 name = get_string("Name: ")
 ```
+{% endspoiler %}
 
 Now the user input (hopefully a name!), will be stored in the variable `name`.
 
