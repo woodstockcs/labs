@@ -60,7 +60,7 @@ print("hello,", name)
 ```
 {% next %}
 
-When you  be sure to execute your program, testing it a few times with different inputs, with:
+When you are done be sure to execute your program, testing it a few times with different inputs, with:
 
 ```
 python hello.py
