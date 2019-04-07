@@ -56,11 +56,16 @@ What else will change, though? Well, we need to change the print statement to in
 
 In Python, we can pass in multiple variables into the print function, which will print them for us on the same line, separated by a space automatically.
 
-So if the variable `name` contains the string, `Alice`, I can print out `hello, Alice` like this:
+{% spoiler "Hint" %}
+
+If the variable `name` contains the string, `Alice`, I can print out `hello, Alice` like this:
 
 ```python
 print("hello,", name)
 ```
+
+{% endspoiler %}
+
 {% next %}
 
 When you are done be sure to execute your program, testing it a few times with different inputs, with:
