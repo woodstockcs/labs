@@ -1,0 +1,5 @@
+lab50:
+  files:
+    - !exclude "*"
+    - !include cash.py
+    - !include pseudocode.txt
