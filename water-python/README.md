@@ -29,43 +29,43 @@ Bottles: 120
 
 ## Specification
 
-Write, in a file called water.py, a program that prompts the user for the length of his or her shower in minutes (as a positive integer) and then prints the equivalent number of bottles of water (as an integer)
+Write, in a file called water.py, a program that prompts the user for the length of his or her shower in minutes (as an integer) and then prints the equivalent number of bottles of water (as an integer)
 
 For simplicity, you may assume that the user will input a positive integer, so no need for error-checking (or any loops) this time! And no need to worry about overflow!
 
-To get 
+Since we want the user input to be an integer, we can use the CS50 function get_int. This works in a very similar way as get_string did in your last problem, but it will only accept integers as input, and if you input anything else, it will ask you to retry.
 
-{% spoiler "Hint" %}
+{% spoiler "Do you remember how to import a function from the CS50 Module?" %}
 
-```python
-name = get_string("Name: ")
-```
-{% endspoiler %}
-
-Now the user input (hopefully a name!), will be stored in the variable `name`.
-
-What else will change, though? Well, we need to change the print statement to include the name! 
-
-In Python, we can pass in multiple variables into the print function, which will print them for us on the same line, separated by a space automatically.
-
-{% spoiler "Hint" %}
-
-If the variable `name` contains the string, `Alice`, I can print out `hello, Alice` like this:
+At the top of your program, you should have the following code:
 
 ```python
-print("hello,", name)
+from cs50 import get_int
 ```
 
 {% endspoiler %}
+
+Once we get the user input, we'll want to calculate the number of bottles used. This may be very obvious to you at first, but it's a good idea to get into the habit of detecting patterns to write algorithms to solve problems. We're told, per the spec, that one minute is the equivalent of 12 bottles of water. So then two minutes would be equivalent to 24.
+
+#### Per the spec
+* 1 min = 12 bottles of water
+* 2 min = 24 bottles of water
+* ...
+* 5 min = 60 bottles of water
+
+* n min = ?? bottles of water
+
+So for n minutes, how many bottles of water would be used in terms of n.
 
 {% next %}
 
-When you are done be sure to execute your program, testing it a few times with different inputs, with:
+In Python, you have access to standard artithmetic operations such as:
+* add:      num1 + num2
+* subtract: num1 - num2
+* multiply: num1 * num2
+* divide:   num1 / num2
 
-```
-python hello.py
-```
+Now we'll leave it to you to figure out how to express the equivalent number of bottles in Python.
 
-Congratulations! You've completed your first Python program!
 
 
