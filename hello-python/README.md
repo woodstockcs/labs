@@ -58,8 +58,9 @@ So if the variable `name` contains the string, `Alice`, I can print out `hello, 
 ```python
 print("hello,", name)
 ```
+{% next %}
 
-And be sure to execute your program, testing it a few times with different inputs, with:
+When you  be sure to execute your program, testing it a few times with different inputs, with:
 
 ```
 python hello.py
@@ -67,4 +68,4 @@ python hello.py
 
 Congratulations! You've completed your first Python program!
 
-{% next %}
+
