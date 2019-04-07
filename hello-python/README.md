@@ -59,5 +59,12 @@ So if the variable `name` contains the string, `Alice`, I can print out `hello, 
 print("hello,", name)
 ```
 
+And be sure to execute your program, testing it a few times with different inputs, with:
 
+```
+python hello.py
+```
 
+Congratulations! You've completed your first Python program!
+
+{% next %}
