@@ -33,7 +33,7 @@ Let’s do a quick test to make sure things work as expected. Worldwide, the com
 So your job is to write a program that converts a temperature in Celsius to Fahrenheit, as per the sample output below, wherein the "100" represents some user’s input.
 
 ```
-$ ./fahrenheit
+$ python fahrenheit.py
 C: 100
 F: 212.0
 ```
@@ -68,34 +68,30 @@ Odds are your pseudocode will use (or imply using!) one or more functions, opera
 
 ## Prompting for Input
 
-Whatever your pseudocode, let's first write only the C code that prompts (and re-prompts, as needed) the user for input. 
+Whatever your pseudocode, let's first write the python code that prompts the user for input. 
 
-First, declare a new floating point variable to hold degrees Celsius.
+First, declare a variable to hold degrees Celsius.
 
-Do recall that if you include `<cs50.h>` atop your fahrenheit.c file, you will have access to a function called get_float, which will allow the user to input a floating-point value (a number with a decimal point in it, also known as a real number).The parameters of the get functions will display a prompt for users.
+Recall that in our last problem, we imported get_string from the CS50 module. In the same way, if you write `from cs50 import get_float` atop your fahrenheit.py file, you will have access to a function called get_float, which will allow the user to input a floating-point value (a number with a decimal point in it, also known as a real number).The parameters of the get functions will display a prompt for users.
 
 Now make sure to assign the value of this input function to your new Celsius variable.
 
-Declare another float to hold degrees Fahrenheit, and assign the result of the temperature conversion formula (given above). 
+Declare variable to hold degrees Fahrenheit, and assign the result of the temperature conversion formula (given above). 
 
-Finally, print out the result with exactly one decimal place.
+Finally, print out the result.
 
 {% spoiler "hint" %}
 
-Printf can be used to specify how many places after the decimal point you wish to display to the user. For example to print a float with 2 decimal places you would type:
+Remember we can print out multiple variables, by separating them with a comma.
 
-```c
-printf("%.2f\n", number);
+```python
+print("hello,", name)
 ```
-
-Can you see why this prints with 2 decimal places? Now adapt this to print degrees Fahrenheit (don't forget to start the output with "F: ") to exactly one decimal place.
 
 {% endspoiler %}
 
-## How to Submit
+{% next %}
 
-Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
+Be sure to test your code with different types of inputs. Try using numbers with and without decimals. What happens if you type in a word instead?
 
-```
-submit50 cs50/2018/ap/fahrenheit
-```
+In any case, once your output looks like the example above, you are done! Congratulations!
