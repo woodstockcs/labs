@@ -1,47 +1,39 @@
-# Hello (in Python!)
+# Water
 
-{% video https://www.youtube.com/embed/5ueXMnDE-y8 %}
-
-{% next %}
-
-## Hello, Python!
-
-If you've taken CS50 Intro this year, you've already created Hello in C. If you haven't, no worries, just ignore the C code referenced here. In either case, will be writing what might be your first Python program!
+{% video https://youtu.be/Vpa3s-tnrMA %}
 
 {% next %}
 
-You will write your hello program in the file to the right, hello.py. Since Python is an interpreted language, there is no need to compile! To run your code, simply type in 
+## Background
+
+Suffice it to say that the longer you shower, the more water you use. But just how much? Even if you have a "low-flow" showerhead, odds are your shower spits out 1.5 gallons of water per minute. A gallon, meanwhile, is 128 ounces, and so that shower spits out 1.5 × 128 = 192 ounces of water per minute. A typical bottle of water (that you might have for a drink, not a shower), meanwhile, might be 16 ounces. So taking a 1-minute shower is akin to using 192 ÷ 16 = 12 bottles of water. Taking (more realistically, perhaps!) a 10-minute shower, then, is like using 120 bottles of water. Deer Park, that’s a lot of water! Of course, bottled water itself is wasteful; best to use reusable containers when you can. But it does put into perspective what’s being spent in a shower!
+
+{% next %}
+
+In this lab, you will write a program that reports a user's water usage, converting the number of minutes spent in the shower, to bottles of drinking water.
+
+For example, if the user inputs 1 minute, the output should be 12 bottles as below. If the minutes is input as 10, then the output should be 120 bottles.
 
 ```
-python hello.py
-```
-in the lower terminal window.
+python water.py
+Minutes: 1
+Bottles: 12
 
-{% next "Ready for the next step?" %}
-
-Now that was almost too easy!
-
-Let's make this a bit more interesting now by adding user input and saying hello, followed by whatever name you choose to input.
-
-No matter how you execute this program right now, it only ever prints hello, world.
-
-Let's change this code to interact with the user like this, when executed.
+python water.py
+Minutes: 10
+Bottles: 120
 
 ```
-python hello.py
-Name: Alice
-hello, Alice
-```
 
-There will be a few important differences to create this program. You will need to get user input, and CS50 makes some easy to use functions to help you with this. To access these user input functions you will have to import them from a special cs50 module. In this case you will want to import a name, which is considered a `string` so you will want to import get_string.
+{% next %}
 
-```python
-from cs50 import get_string
-```
+## Specification
 
-A string in computer science essentially refers to a collection of characters—​a word, a sentence, or a phrase. Because when you ask the user for their name, you would use get_string to collect their input and to store it in a variable whose data type is string.
+Write, in a file called water.py, a program that prompts the user for the length of his or her shower in minutes (as a positive integer) and then prints the equivalent number of bottles of water (as an integer)
 
-We can now use get_string("Name: "), where "Name: " is the user prompt, and assign the user's input to a variable, such as `name`.
+For simplicity, you may assume that the user will input a positive integer, so no need for error-checking (or any loops) this time! And no need to worry about overflow!
+
+To get 
 
 {% spoiler "Hint" %}
 
