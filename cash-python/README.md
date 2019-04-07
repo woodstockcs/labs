@@ -1,4 +1,4 @@
-# Cash
+# Cash (Python)
 
 {% video https://www.youtube.com/watch?v=sxXQ-jgUIg8 %}
 
