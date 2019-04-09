@@ -45,7 +45,7 @@ In `credit.py` at right, write a program that prompts the user for a credit card
 Consider the below representative of how your own program should behave when passed a valid credit card number (sans hyphens).
 
 ```
-$ ./credit
+$ python credit.py
 Number: 4003600000000014
 VISA
 ```
@@ -53,7 +53,7 @@ VISA
 Now, `get_long` itself will reject hyphens (and more) anyway:
 
 ```
-$ ./credit
+$ python credit.py
 Number: 4003-6000-0000-0014
 Number: foo
 Number: 4003600000000014
