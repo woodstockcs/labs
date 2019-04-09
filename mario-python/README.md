@@ -94,13 +94,15 @@ How to begin? Let's approach this problem one step at a time.
 
 ## Walkthrough
 
+First, check out this walkthrough with Zamyla. You'll get lots of hints on how to move forward implement this in Python, including how to translate from C.
+
 {% video https://www.youtube.com/watch?v=syt3NZhllwc %}
 
 {% next %}
 
 ## Pseudocode
 
-First, write in `pseudocode.txt` at right some pseudocode that implements this program, even if not (yet!) sure how to write it in code. There's no one right way to write pseudocode, but short English sentences suffice. Odds are your pseudocode will use (or imply using!) one or more functions, conditions, Boolean expressions, loops, and/or variables.
+Then, write in `pseudocode.txt` at right some pseudocode that implements this program, even if not (yet!) sure how to write it in code. There's no one right way to write pseudocode, but short English sentences suffice. Odds are your pseudocode will use (or imply using!) one or more functions, conditions, Boolean expressions, loops, and/or variables.
 
 {% spoiler %}
 
@@ -224,7 +226,7 @@ Does your code work as prescribed when you input
 * letters or words?
 * no input at all, when you only hit Enter?
 
-Now make sure to test inputting different heights as well! Once your pyramid matches the spec above, you are done! Congratulations!
+Once your pyramid matches the spec above, you are done! Congratulations!
 
 
 
