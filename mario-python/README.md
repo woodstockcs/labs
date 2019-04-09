@@ -176,6 +176,8 @@ for i in range(height):
    print()
 ```
 
+Do note that whenever you use the print() statement in Python, a new line character is automatically inserted at the end. So if you want to print two or more characters next to each other, you would need to use `end="` at the end of the print statement.
+
 {% endspoiler %}
 
 {% next %}
