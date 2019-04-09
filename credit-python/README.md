@@ -40,7 +40,7 @@ So, validating credit card numbers isn't hard, but it does get a bit tedious by 
 
 ## Implementation Details 
 
-In `credit.c` at right, write a program that prompts the user for a credit card number and then reports (via `printf`) whether it is a valid American Express, MasterCard, or Visa card number, per the definitions of each's format herein. So that we can automate some tests of your code, we ask that your program's last line of output be `AMEX\n` or `MASTERCARD\n` or `VISA\n` or `INVALID\n`, nothing more, nothing less. For simplicity, you may assume that the user's input will be entirely numeric (i.e., devoid of hyphens, as might be printed on an actual card). But do not assume that the user's input will fit in an `int`! Best to use `get_long` from CS50's library to get users' input. (Why?)
+In `credit.py` at right, write a program that prompts the user for a credit card number and then reports (via `print`) whether it is a valid American Express, MasterCard, or Visa card number, per the definitions of each's format herein. For simplicity, you may assume that the user's input will be entirely numeric (i.e., devoid of hyphens, as might be printed on an actual card). And since Python doesn't 
 
 Consider the below representative of how your own program should behave when passed a valid credit card number (sans hyphens).
 
@@ -63,32 +63,15 @@ VISA
 But it's up to you to catch inputs that are not credit card numbers (e.g., a phone number), even if numeric:
 
 ```
-$ ./credit
+$ python credit.py
 Number: 6176292929
 INVALID
 ```
 
 Test out your program with a whole bunch of inputs, both valid and invalid. (We certainly will!) Here are a [few card numbers](https://developer.paypal.com/docs/classic/payflow/payflow-pro/payflow-pro-testing/#credit-card-numbers-for-testing) that PayPal recommends for testing.
 
-If your program behaves incorrectly on some inputs (or doesn't compile at all), time to debug!
-
-{% spoiler "Staff's Solution" %}
-
-To try out the staff's own implementation of `credit`, execute
-
-```
-./credit
-```
-within [this sandbox](http://bit.ly/2NQ36U4).
-
-{% endspoiler %}
+If your program behaves incorrectly on some inputs, time to debug!
 
 {% next %}
 
-## How to Submit
 
-Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
-
-```
-submit50 cs50/2018/fall/credit
-```
