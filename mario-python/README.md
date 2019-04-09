@@ -1,8 +1,13 @@
-# Mario
+# Mario (Python)
 
 {% video https://www.youtube.com/watch?v=C-5-22ZvW40 %}
 
 {% next %}
+
+## Mario Redux?
+
+If you've already completed Mario in C, feel free to skip over of the passage below. You will be recreating the Mario Lab, but this time in Python. You may open you C version of Python and reuse the logic from before, but the syntax of course will be different.
+
 
 ## World 1-1
 
@@ -10,7 +15,7 @@ Toward the end of World 1-1 in Nintendo's Super Mario Brothers, Mario must ascen
 
 ![screenshot of Mario jumping up a right-aligned pyramid](pyramid.png)
 
-Let's recreate that pyramid in C, albeit in text, using hashes (`#`) for bricks, a la the below. Each hash is a bit taller than it is wide, so the pyramid itself is also be taller than it is wide.
+Let's recreate that pyramid in Python, albeit in text, using hashes (`#`) for bricks, a la the below. Each hash is a bit taller than it is wide, so the pyramid itself is also be taller than it is wide.
 
 ```
        #
@@ -28,7 +33,7 @@ The program we'll write will be called `mario`. And let's allow the user to deci
 Here's how the program might work if the user inputs `8` when prompted:
 
 ```
-$ ./mario
+$ python mario.py
 Height: 8
        #
       ##
@@ -43,7 +48,7 @@ Height: 8
 Here's how the program might work if the user inputs `4` when prompted:
 
 ```
-$ ./mario
+$ python mario.py
 Height: 4
    #
   ##
@@ -54,7 +59,7 @@ Height: 4
 Here's how the program might work if the user inputs `2` when prompted:
 
 ```
-$ ./mario
+$ python mario.py
 Height: 2
  #
 ##
@@ -63,7 +68,7 @@ Height: 2
 And here's how the program might work if the user inputs `1` when prompted:
 
 ```
-$ ./mario
+$ python mario.py
 Height: 1
 #
 ```
@@ -71,7 +76,7 @@ Height: 1
 If the user doesn't, in fact, input a positive integer between 1 and 8, inclusive, when prompted, the program should re-prompt the user until they cooperate:
 
 ```
-$ ./mario
+$ $ python mario.py
 Height: -1
 Height: 0
 Height: 42
@@ -83,25 +88,19 @@ Height: 4
 ####
 ```
 
-{% spoiler "Try It" %}
-
-To try out the staff's implementation of this problem, execute
-
-```
-./mario
-```
-
-within [this sandbox](http://bit.ly/2NQ36U4).
-
-{% endspoiler %}
-
 How to begin? Let's approach this problem one step at a time.
+
+{% next %}
+
+## Walkthrough
+
+{% video https://www.youtube.com/watch?v=syt3NZhllwc %}
 
 {% next %}
 
 ## Pseudocode
 
-First, write in `pseudocode.txt` at right some pseudocode that implements this program, even if not (yet!) sure how to write it in code. There's no one right way to write pseudocode, but short English sentences suffice. Recall how we wrote pseudocode for [finding Mike Smith](https://cdn.cs50.net/2018/fall/lectures/0/lecture0.pdf). Odds are your pseudocode will use (or imply using!) one or more functions, conditions, Boolean expressions, loops, and/or variables.
+First, write in `pseudocode.txt` at right some pseudocode that implements this program, even if not (yet!) sure how to write it in code. There's no one right way to write pseudocode, but short English sentences suffice. Odds are your pseudocode will use (or imply using!) one or more functions, conditions, Boolean expressions, loops, and/or variables.
 
 {% spoiler %}
 
@@ -120,12 +119,12 @@ It's okay to edit your own after seeing this pseudocode here, but don't simply c
 
 ## Prompting for Input
 
-Whatever your pseudocode, let's first write only the C code that prompts (and re-prompts, as needed) the user for input. 
+Whatever your pseudocode, let's first write only the Python code that prompts (and re-prompts, as needed) the user for input. 
 
-Specifically, modify `mario.c` at right in such a way that it prompts the user for the pyramid's height, storing their input in a variable, re-prompting the user again and again as needed if their input is not a positive integer between 1 and 8, inclusive. Then, simply print the value of that variable, thereby confirming (for yourself) that you've indeed stored the user's input successfully, a la the below.
+Specifically, modify `mario.py` at right in such a way that it prompts the user for the pyramid's height, storing their input in a variable, re-prompting the user again and again as needed if their input is not a positive integer between 1 and 8, inclusive. Then, simply print the value of that variable, thereby confirming (for yourself) that you've indeed stored the user's input successfully, a la the below.
 
 ```
-$ ./mario
+$ python mario.py
 Height: -1
 Height: 0
 Height: 42
@@ -136,11 +135,8 @@ Stored: 4
 
 {% spoiler "Hints" %}
 
-* Recall that you can compile your program with `make`.
-* Recall that you can print an `int` with `printf` using `%i`.
 * Recall that you can get an integer from the user with `get_int`.
-* Recall that `get_int` is declared in `cs50.h`.
-* Recall that we prompted the user for a positive integer in class via [`positive.c`](https://sandbox.cs50.io/b56865fd-c861-425f-aad7-4adcf6831139).
+* Recall that you need to type in: `from cs50 import get_int` at the top of your file to use `get_int`
 
 {% endspoiler %}
 
@@ -163,24 +159,20 @@ It turns out it's a bit easier to build a left-aligned pyramid than right-, a la
 
 So let's build a left-aligned pyramid first and then, once that's working, right-align it instead!
 
-Modify `mario.c` at right such that it no longer simply prints the user's input but instead prints a left-aligned pyramid of that height.
+Modify `mario.py` at right such that it no longer simply prints the user's input but instead prints a left-aligned pyramid of that height.
 
 {% spoiler "Hints" %}
 
-* Keep in mind that a hash is just a character like any other, so you can print it with `printf`.
-* Just as Scratch has a [Repeat](https://cdn.cs50.net/2018/fall/lectures/0/lecture0.pdf) block, so does C have a [`for`](https://cdn.cs50.net/2018/fall/lectures/1/lecture1.pdf) loop, via which you can iterate some number times. Perhaps on each iteration, *i*, you could print that many hashes?
+* Keep in mind that a hash is just a character like any other, so you can print it with `print`.
+* Just as Scratch has a [Repeat](https://cdn.cs50.net/2018/fall/lectures/0/lecture0.pdf) block, so does Python have a [`for` loop, via which you can iterate some number times. Perhaps on each iteration, *i*, you could print that many hashes?
 * You can actually "nest" loops, iterating with one variable (e.g., `i`) in the "outer" loop and another (e.g., `j`) in the "inner" loop. For instance, here's how you might print a square of height and width `n`, below. Of course, it's not a square that you want to print!
 
-    ```
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < n; j++)
-        {
-            printf("#");
-        }
-        printf("\n");
-    }
-    ```
+```python
+for i in range(height):
+   for j in range(height):
+       print("#", end="")
+   print()
+```
 
 {% endspoiler %}
 
@@ -201,13 +193,25 @@ Let's now right-align that pyramid by pushing its hashes to the right by prefixi
 ########
 ```
 
-Modify `mario.c` in such a way that it does exactly that!
+Modify `mario.py` in such a way that it does exactly that!
 
 {% spoiler "Hint" %}
 
 Notice how the number of dots needed on each line is the "opposite" of the number of that line's hashes. For a pyramid of height 8, like the above, the first line has but 1 hash and thus 7 dots. The bottom line, meanwhile, has 8 hashes and thus 0 dots. Via what formula (or arithmetic, really) could you print that many dots?
 
 {% endspoiler %}
+
+## Removing the Dots
+
+All that remains now is a finishing flourish! Modify `mario.py` in such a way that it prints spaces instead of those dots!
+
+{% spoiler "Hint" %}
+
+A space is just a press of your space bar, just as a period is just a press of its key! Just remember that `printf` requires that you surround both with double quotes!
+
+{% endspoiler %}
+
+{% next %}
 
 ### How to Test Your Code
 
@@ -220,24 +224,7 @@ Does your code work as prescribed when you input
 * letters or words?
 * no input at all, when you only hit Enter?
 
-{% next %}
+Now make sure to test inputting different heights as well! Once your pyramid matches the spec above, you are done! Congratulations!
 
-## Removing the Dots
 
-All that remains now is a finishing flourish! Modify `mario.c` in such a way that it prints spaces instead of those dots!
 
-{% spoiler "Hint" %}
-
-A space is just a press of your space bar, just as a period is just a press of its key! Just remember that `printf` requires that you surround both with double quotes!
-
-{% endspoiler %}
-
-{% next %}
-
-## How to Submit
-
-Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
-
-```
-submit50 cs50/2018/fall/mario/less
-```
