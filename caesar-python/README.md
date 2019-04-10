@@ -140,7 +140,7 @@ Now it's time to tie everything together! And be sure to preserve case! Uppercas
 * Best to use the modulo (i.e., remainder) operator, `%`, to handle wraparound from Z to A! But how?
 * Recall that ASCII maps all printable characters to numbers.
 * Recall that the ASCII value of `A` is 65. The ASCII value of `a`, meanwhile, is 97.
-* If you're not seeing any output at all when you call `printf`, odds are it's because you're printing characters outside of the valid ASCII range from 0 to 127. 
+* If you're not seeing any output at all when you call `print`, odds are it's because you're printing characters outside of the valid ASCII range from 0 to 127. 
 
 {% endspoiler %}
 
