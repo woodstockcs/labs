@@ -106,7 +106,8 @@ from sys import argv
 * Do not assume that k will be less than or equal to 26. Your program should work for all non-negative integral values of k. But, even if k is greater than 26, alphabetical characters in your program’s input should remain alphabetical characters in your program’s output. For instance, if k is 27, A should not become [ even though [ is 27 positions away from A in ASCII, per asciichart.com; A should become B, since B is 27 positions away from A, provided you wrap around from Z to A.
 
 {% spoiler "Hints" %}
-Once you have both k and some plaintext, p, it’s time to encrypt the latter with the former. Recall that you can iterate over the characters in a string, printing each one at a time, with code like the below:
+
+Note that in Python, you can iterate over the characters in a string, printing each one at a time, with code like the below:
 
 ```python
 for c in p:
