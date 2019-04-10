@@ -2,5 +2,5 @@
 lab50:
   files:
     - !exclude "*"
-    - !include page.html
+    - !include bubbles.html
     - !include sketch.js
