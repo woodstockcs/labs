@@ -82,7 +82,7 @@ Finally, print out the result with exactly one decimal place.
 
 {% spoiler "Hint" %}
 
-You can specify the number of decimal places by usind Python's round function. For example, to print out a variable named `number` with exactly two decimal places, you would type:
+You can specify the number of decimal places by using Python's round function. For example, to print out a variable named `number` with exactly two decimal places, you would type:
 
 ```python
 print("Number:", round(number, 2))
