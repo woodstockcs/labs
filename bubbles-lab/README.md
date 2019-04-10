@@ -6,6 +6,7 @@ During this next exercise, we'll be making some bubbles that wobble over the scr
 
 ![learning](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/info.gif)
 
+{% next %}
 
 ## A First Attempt
 
@@ -35,6 +36,8 @@ function draw() {
 }
 ```
 
+{% next %}
+
 Now go ahead and add a 100 bubbles...
 
 Just kidding, that would take ages, your hands would be cramped, and you probably wouldn't learn all that much.
@@ -42,6 +45,8 @@ Just kidding, that would take ages, your hands would be cramped, and you probabl
 One thing that I'm thinking ahead about is that it seems like every time I'd want to add one new bubble, it would require two new variables. But, those two variables are clearly associated with each other. `bubble2X` and `bubble2Y` for example. Every new bubble adds (at least) 2 new variables.
 
 What if we could group those related variables together into one. A bubble is *one thing*, so shouldn't we have it represented in our code as *one variable*. Ideally, a single variable `bubble1` could *store both pieces of data* the `x` and `y`. That would cut our number of variables in half, or even less!
+
+{% next %}
 
 ## JavaScript Objects
 
@@ -87,6 +92,8 @@ let student = {
 };
 ```
 
+{% next %}
+
 #### Your Turn
 Make an object that represents you!  You can write it in the text editor, but better would be to open up the chrome console so you can interact with your object.
 
@@ -107,6 +114,8 @@ We've seen how new objects are created, but we will also need to *access* the va
 You can also use the same *dot* after the object name plus an `=` to add additional properties to an object after it's created or to change existing properties
 
 ![adding properties](http://intro.cs50nestm.net/wp-content/uploads/2019/04/objects.gif)
+
+{% next %}
 
 ## Now with Objects
 
@@ -135,6 +144,9 @@ function draw() {
   bubble1.y += random(-2, 2);
 }
 ```
+
+{% next %}
+
 ## Why are Objects Important
 
 Objects are a super important concept in programming and we've just scratched the surface here.
@@ -168,5 +180,11 @@ JavaScript objects are fundamental to how data from the internet is structured a
   ```
 
 The way you would access the `g` key would be `bubble.color.g`.  Give it a shot!
+
+{% next %}
+
+## To Submit
+
+submit50 bubbles_challenge@cs50nestm/checks
 
 (Lesson above was adapted from a front-end design class given by Upperline Code)
