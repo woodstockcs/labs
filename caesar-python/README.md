@@ -148,4 +148,14 @@ Now it's time to tie everything together! And be sure to preserve case! Uppercas
 
 ## Now be sure to test your code
 
-Try out different types of plaintext to encrypt into ciphertext. Make sure you include lower and upper case letter, as well as non-alphabetic characters. Once your outputs match the examples above you have succeeded! Congratulations!
+Try out different types of plaintext to encrypt into ciphertext. Make sure you include lower and upper case letter, as well as non-alphabetic characters. 
+
+When all looks good, you are ready to run your code through check50. In the terminal type the following:
+
+```
+check50 cs50/2018/ap/sentimental/caesar
+```
+
+inputting your GitHub username and GitHub password as prompted.
+
+When you get all green smiley faces, you have succeeded! Congratulations!
