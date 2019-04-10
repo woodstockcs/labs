@@ -89,41 +89,24 @@ Usage: ./vigenere keyword
 
 Let's for now assume that the user is providing single-character keywords. Can we convert that character into the correct shift value? Let's do so by writing a _function_.
 
-Near the top of your file, below the `#include` lines, let's _declare_ the _prototype_ for a new function whose purpose is to do just that. It will take a single character as input, and it will output the shift value for that character.
+Near the top of your file, above the code you write to get the user input and do the actual encryption, write a function whose purpose is to do just that. It will take a single character as input, and it will output the shift value for that character.
 
-```
-int shift(char c);
+```python
+def shift(c):
+   # TODO
 ```
 
 Now we've declared a function called `shift` that takes a single character (`c`) as input, and will output an integer.
 
-Now, down below the closing curly brace of `main`, let's give ourselves a place to _define_ (i.e., implement) this new function.
-
-```
-int shift(char c)
-{
-   // TODO
-}
-```
-
 In place of that `TODO` is where we'll do the work of converting that character to its positional integer value (so, again, `A` or `a` would be 0, `B` or `b` would be 1, `Z` or `z` would be 25, etc.)
-
-To test this out, delete the line where you printed `"Success"` (but leave the `return 0;` for now), and in place of the just-deleted line, add the below lines to test whether your code works.
-
-```
-int key = shift(argv[1][0]);
-printf("%i\n", key);
-```
 
 Your program should print a 0 if run with the keyword `A` or `a`. Try running the program with other capital and lowercase letters as the keyword. Is the behavior what you expect?
 
 {% spoiler "Hints" %}
 
 * Functions have inputs and outputs.
-* When we *declare* a function, we need to provide its return type, name, and an argument list, each of which also has a type.
-* When we *use* or *call* a function, we just plug in appropriate values in the argument list, and assign the output of the function to a variable that corresponds to the function's return type.
-* If `argv[1]` is a string, then `argv[1][0]` is just the first character of that string.
-* Recall that the `ctype.h` header file contains a number of useful functions that tell us things about characters.
+* When we *declare* a function, we need to provide its name, and an argument list, and return value (if it has one).
+* When we *use* or *call* a function, we just plug in appropriate values in the argument list, and assign the output of the function to a variable.
 * The ASCII value of `A` is 65. The ASCII value of `a` is 97.
 * The ASCII value of `B` is 66. The ASCII value of `b` is 98. See a potential pattern emerging?
 
@@ -136,7 +119,7 @@ Your program should print a 0 if run with the keyword `A` or `a`. Try running th
 Time to get back to using that enciphering code you wrote before! You may have noticed that if your keyword _k_ consists of exactly one letter (say, `H` or `h`), Vigenère's cipher effectively becomes a Caesar cipher (of, in this example, 7). Let's for now indeed assume the user's keyword will just be a single letter. Use your newly-written `shift` function to calculate the shift value for the letter they provided, assign the return value of that function to an integer variable `key`, and use `key` exactly as you did in Caesar's cipher! It should suffice, in fact, to simply delete the recently-added `printf` and the `return 0;` line now, letting the program finally proceed to your previously-written Caesar cipher code!
 
 ```
-$ ./vigenere A
+$ python vigenere.py A
 plaintext:  hello
 ciphertext: hello
 ```
@@ -144,7 +127,7 @@ ciphertext: hello
 or
 
 ```
-$ ./vigenere b
+$ python vigenere.py b
 plaintext:  HELLO
 ciphertext: IFMMP
 ```
@@ -152,7 +135,7 @@ ciphertext: IFMMP
 or
 
 ```
-$ ./vigenere C
+$ python vigenere.py C
 plaintext:  HeLlO
 ciphertext: JgNnQ
 ```
@@ -167,7 +150,7 @@ If some of your variables in your Caesar solution don't match what they've been 
 
 ## Final Steps
 
-Now it's your turn to take things across the finish line by implementing the remaining functionality in `vigenere.c`. Remember that the user's keyword will probably consist of multiple letters, so you may need to calculate a new shift value for each letter of the plaintext; you may then want to move your `shift` function into your loop somehow.
+Now it's your turn to take things across the finish line by implementing the remaining functionality in `vigenere.py`. Remember that the user's keyword will probably consist of multiple letters, so you may need to calculate a new shift value for each letter of the plaintext; you may then want to move your `shift` function into your loop somehow.
 
 Remember also that every time you encipher a character, you need to move to the next letter of _k_, the keyword (and wrap around to the beginning of the keyword if you exhaust all of its characters). But if you don't encipher a character (e.g., a space or a punctuation mark), don't advance to the next character of _k_!
 
@@ -175,18 +158,19 @@ And as before, be sure to preserve case, but do so only based on the case of the
 
 {% spoiler "Hints" %}
 
-* You'll probably need one counter, `i` for iterating over the plaintext and one counter, `j` for iterating over the keyword.
-* You'll probably find it easiest to control the keyword counter yourself, rather than relying on the `for` loop you're using to iterate over the plaintext!
+* You'll probably find it easiest to control the keyword counter yourself, rather than relying on the loop you're using to iterate over the plaintext!
 * If the length of the keyword is, say, 4 characters, then the last character of that keyword can be found at `keyword[3]`. Then, for the next character you encipher, you'll want to use `keyword[0]`.
 
 {% endspoiler %}
 
 {% next %}
 
-## How to Submit
+## Be sure to test your code!
 
-Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
+Try out the examples above, and make your own test cases as well! 
 
-```
-submit50 cs50/2018/ap/vigenere
-```
+{% spoiler "Want another challenge?" %}
+
+If you successfully complete `vigenere` and want to take it one step further, see if you can implement a `devigenere` to take in ciphertext, and output plaintext.
+
+{% endspoiler %}
