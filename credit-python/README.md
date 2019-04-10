@@ -54,17 +54,9 @@ Number: 4003600000000014
 VISA
 ```
 
-Note, that if you use `get_int`, hyphens and non numeric characters will be rejected. And in Python, integers can hold numbers up to any size, limited only by the memory in your computer.
+Note, that if you use `get_int`, hyphens and non-numeric characters will be rejected. And in Python, integers can hold numbers up to any size, limited only by the memory in your computer.
 
 However if you choose to use Python's standard `input` function, your credit card number will be input as a string, and there are some wonderful Python string methods you may find very useful.
-
-```
-$ python credit.py
-Number: 4003-6000-0000-0014
-Number: foo
-Number: 4003600000000014
-VISA
-```
 
 But it's up to you to catch inputs that are not credit card numbers (e.g., a phone number), even if numeric:
 
