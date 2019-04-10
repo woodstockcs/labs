@@ -78,15 +78,17 @@ Now make sure to assign the value of this input function to your new Celsius var
 
 Declare variable to hold degrees Fahrenheit, and assign the result of the temperature conversion formula (given above). 
 
-Finally, print out the result.
+Finally, print out the result with exactly one decimal place.
 
-{% spoiler "hint" %}
+{% spoiler "Hint" %}
 
-Remember we can print out multiple variables, by separating them with a comma.
+You can specify the number of decimal places by usind Python's round function. For example, to print out a variable named `number` with exactly two decimal places, you would type:
 
 ```python
-print("hello,", name)
+print("Number:", round(number, 2))
 ```
+Remember when you print out multiple variables separated by a comma, Python automatically puts a space in between.
+
 
 {% endspoiler %}
 
@@ -94,4 +96,12 @@ print("hello,", name)
 
 Be sure to test your code with different types of inputs. Try using numbers with and without decimals. What happens if you type in a word instead?
 
-In any case, once your output looks like the example above, you are done! Congratulations!
+In any case, once your output looks like the example above, try running check50.
+
+In the terminal type:
+
+```
+check50 fahrenheit-python@cs50nestm/checks
+```
+
+Once you get all green smiley faces, you are done!
