@@ -4,8 +4,6 @@
 
 During this next exercise, we'll be making some bubbles that wobble over the screen! If that doesn't excite you on it's own you should definitely get excited about all the learning you will be doing because by then end you will have some really powerful tools in your programmer's tool belt.
 
-![learning](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/info.gif)
-
 {% next %}
 
 ## A First Attempt
