@@ -1,4 +1,4 @@
-ab50:
+lab50:
   files:
     - !exclude "*"
     - !include credit.py
