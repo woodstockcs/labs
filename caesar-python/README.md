@@ -1,6 +1,6 @@
-# Caesar
+# Caesar (Python)
 
-{% video https://www.youtube.com/watch?v=Rg8P1wHDc0s %}
+{% video https://www.youtube.com/watch?v=5I7QqTTolHE %}
 
 {% next %}
 
@@ -30,7 +30,7 @@ Let's write a program called `caesar` that enables you to encrypt messages using
 Here are a few examples of how the program might work. For example, if the user inputs a key of `1` and a plaintext of `HELLO`:
 
 ```
-$ ./caesar 1
+$ python caesar.py 1
 plaintext:  HELLO
 ciphertext: IFMMP
 ```
@@ -38,7 +38,7 @@ ciphertext: IFMMP
 Here's how the program might work if the user provides a key of `13` and a plaintext of `hello, world`:
 
 ```
-$ ./caesar 13
+$ python caesar.py 13
 plaintext:  hello, world
 ciphertext: uryyb, jbeyq
 ```
@@ -48,157 +48,101 @@ Notice that neither the comma nor the space were "shifted" by the cipher. Only r
 How about one more? Here's how the program might work if the user provides a key of `13` again, with a more complex plaintext:
 
 ```
-$ ./caesar 13
+$ python caesar.py 13
 plaintext:  be sure to drink your Ovaltine
 ciphertext: or fher gb qevax lbhe Binygvar
 ```
-
-{% spoiler "Why?" %}
-
-{% video https://www.youtube.com/watch?v=9K4FsAHB-C8 %}
-
-{% endspoiler %}
 
 Notice that the case of the original message has been preserved. Lowercase letters remain lowercase, and uppercase letters remain uppercase.
 
 And what if a user doesn't cooperate?
 
 ```
-$ ./caesar
-Usage: ./caesar key
+$ python caesar.py
+Usage: python caesar.py k
 ```
 
 Or really doesn't cooperate?
 
 ```
-$ ./caesar 1 2 3
-Usage: ./caesar key
+$ python caesar.py 1 2 3 4 5
+Usage: python caesar.py k
 ```
 
-How to begin? Let's approach this problem one step at a time.
+Be sure to watch the walkhrough above for more detail on how to implement.
 
 {% next %}
 
-## Pseudocode
+## Specification
 
-First, write in `pseudocode.txt` at right some pseudocode that implements this program, even if not (yet!) sure how to write it in code. There's no one right way to write pseudocode, but short English sentences suffice. Recall how we wrote pseudocode for [finding Mike Smith](https://cdn.cs50.net/2018/fall/lectures/0/lecture0.pdf). Odds are your pseudocode will use (or imply using!) one or more functions, conditions, Boolean expressions, loops, and/or variables.
+Design and implement a program, caesar, that encrypts messages using Caesar’s cipher.
 
-{% spoiler %}
+* Implement your program in a file called caesar.py (if it doesn’t already exist, create it now!).
 
-There's more than one way to do this, so here's just one!
-
-1. Check that program was run with one command-line argument
-1. Convert that command-line argument from a `string` to an `int`
-1. Prompt user for plaintext
-1. Iterate over each character of the plaintext:
-    1. If it is an uppercase letter, rotate it, preserving case, then print out the rotated character
-    1. If it is a lowercase letter, shift it, preserving case, then print out the rotated character
-    1. If it is neither, print out the character as is
-1. Print a newline
-
-It's okay to edit your own after seeing this pseudocode here, but don't simply copy/paste ours into your own!
-
-{% endspoiler %}
-
-{% next %}
-
-## Counting Command-Line Arguments
-
-Whatever your pseudocode, let's first write only the C code that checks whether the program was run with a single command-line argument before adding additional functionality.
-
-Specifically, modify `caesar.c` at right in such a way that: if the user provides exactly one command-line argument, it prints `Success`; if the user provides no command-line arguments, or two or more, it prints `Usage: ./caesar key`. Remember, since this key is coming from the command line at runtime, and not via `get_string`, we don't have an opportunity to re-prompt the user. The behavior of the resulting program should be like the below.
-
-```
-$ ./caesar 20
-Success
-```
-
-or
-
-```
-$ ./caesar
-Usage: ./caesar key
-```
-
-or
-
-```
-$ ./caesar 1 2 3
-Usage: ./caesar key
-```
+* Your program must accept a single command-line argument, a non-negative integer. Let’s call it k for the sake of discussion.
 
 {% spoiler "Hints" %}
 
-* Recall that you can compile your program with `make`.
-* Recall that you can print with `printf`.
-* Recall that `argc` and `argv` give you information about what was provided at the command line.
-* Recall that the name of the program itself (here, `./caesar`) is in `argv[0]`.
+Recall that argv is a list of strings representing the command line arguments. Recall that we can use len(argv) in order to figure out how many strings exist in that list; this is the equivalent idea to argc, from C.
 
-{% endspoiler %}
+And so you can access k with code like
 
-{% next %}
-
-## Accessing the Key
-
-Now that your program is (hopefully!) accepting input as prescribed, it's time for another step.
-
-You can assume that, if a user does provide a command-line argument, it will be a non-negative integer (e.g., 1). No need to check that it’s indeed numeric. But remember, you should convert that string (recall that `argv` is an array of strings, even if those strings happen to look like numbers) to an actual integer. There is a function you've used before (remember `atoi`?) that can do this for you!
-
-{% spoiler "Hints" %}
-
-* Recall that `argc` and `argv` give you information about what was provided at the command line.
-* Recall that `argv` is an array of strings.
-* Recall that computer scientists like counting starting from 0.
-* Recall that we can access individual elements of an array, such as `argv` using square brackets, for example: `argv[0]`.
-* Recall that the `atoi` function converts a string that looks like a number into that number.
-
-
-{% endspoiler %}
-
-{% next %}
-
-## Peeking Underneath the Hood
-
-As human beings it's easy for us to intuitively understand the formula described above, inasmuch as we can say "H + 1 = I". But can a computer understand that same logic? Let's find out. For now, we're going to temporarily ignore the key the user provided and instead prompt the user for a secret message and attempt to shift all of its characters by just 1.
-
-Extend the functionality of `caesar.c` at right such that, after accessing the key, we prompt the user for a string and then shift all of its characters by 1, printing out the result. We can also at this point probably remove the line of code we wrote earlier that prints `Success`. All told, this might result in this behavior:
-
-```
-$ ./caesar 1
-plaintext:  hello
-ciphertext: ifmmp
+```python
+k = argv[1]
 ```
 
-{% spoiler "Hints" %}
+assuming it’s actually there! And assuming you’ve imported argv, as by:
 
-* Try to iterate over every character in the plaintext and literally add 1 to it, then print it.
-* If `c` is a variable of type `char` in C, what happens when you call `printf("%c", c + 1)`?
+```python
+from sys import argv
+```
 
 {% endspoiler %}
 
+* If your program is executed without any command-line arguments or with more than one command-line argument, your program should print an error message of your choice (with print) and exit immediately with a status code of 1.
+
+* You can assume that, if a user does provide a command-line argument, it will be a non-negative integer (e.g., 1). No need to check that it’s indeed numeric.
+
+* Do not assume that k will be less than or equal to 26. Your program should work for all non-negative integral values of k. But, even if k is greater than 26, alphabetical characters in your program’s input should remain alphabetical characters in your program’s output. For instance, if k is 27, A should not become [ even though [ is 27 positions away from A in ASCII, per asciichart.com; A should become B, since B is 27 positions away from A, provided you wrap around from Z to A.
+
+{% spoiler "Hints" %}
+Once you have both k and some plaintext, p, it’s time to encrypt the latter with the former. Recall that you can iterate over the characters in a string, printing each one at a time, with code like the below:
+
+```python
+for c in p:
+    print(c, end="")
+```
+
+That `end=""` line just overrides Python’s default behavior when printing which, unlike C, tacks on a newline by default!
+
+You may also wish to have a look at Python’s `ord()` and `chr()` functions!
+
+{% endspoiler %}
+
+* Your program must output plaintext: (without a newline) and then prompt the user for a string of plaintext (using get_string).
+
+* Your program must output ciphertext: (without a newline) followed by the plaintext’s corresponding ciphertext, with each alphabetical character in the plaintext "rotated" by k positions; non-alphabetical characters should be outputted unchanged.
+
+* Your program must preserve case: capitalized letters, though rotated, must remain capitalized letters; lowercase letters, though rotated, must remain lowercase letters.
+
+* After outputting ciphertext, you should print a newline.
+
 {% next %}
+
 
 ## Your Turn
 
-Now it's time to tie everything together! Instead of shifting the characters by 1, modify `caesar.c` to instead shift them by the actual key value. And be sure to preserve case! Uppercase letters should stay uppercase, lowercase letters should stay lowercase, and characters that aren't alphabetical should remain unchanged.
+Now it's time to tie everything together! And be sure to preserve case! Uppercase letters should stay uppercase, lowercase letters should stay lowercase, and characters that aren't alphabetical should remain unchanged.
 
 {% spoiler "Hints" %}
 
 * Best to use the modulo (i.e., remainder) operator, `%`, to handle wraparound from Z to A! But how?
-* Things get weird if we try to wrap `Z` or `z` by 1 using the technique in the previous section.
-* Things get weird also if we try to wrap punctuation marks using that technique.
 * Recall that ASCII maps all printable characters to numbers.
 * Recall that the ASCII value of `A` is 65. The ASCII value of `a`, meanwhile, is 97.
-* If you're not seeing any output at all when you call `printf`, odds are it's because you're printing characters outside of the valid ASCII range from 0 to 127. Try printing characters as numbers (using `%i` instead of `%c`) at first to see what values you're printing, and make sure you're only ever trying to print valid characters!
+* If you're not seeing any output at all when you call `printf`, odds are it's because you're printing characters outside of the valid ASCII range from 0 to 127. 
 
 {% endspoiler %}
 
-{% next %}
+## Now be sure to test your code
 
-## How to Submit
-
-Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
-
-```
-submit50 cs50/2018/ap/caesar
-```
+Try out different types of plaintext to encrypt into ciphertext. Make sure you include lower and upper case letter, as well as non-alphabetic characters. Once your outputs match the examples above you have succeeded! Congratulations!
