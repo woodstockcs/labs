@@ -169,4 +169,8 @@ JavaScript objects are fundamental to how data from the internet is structured a
 
 The way you would access the `g` key would be `bubble.color.g`.  Give it a shot!
 
+## To Submit
+
+submit50 bubbles_challenge@cs50nestm/checks
+
 (Lesson above was adapted from a front-end design class given by Upperline Code)
