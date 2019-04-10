@@ -1,0 +1,5 @@
+ab50:
+  files:
+    - !exclude "*"
+    - !include credit.py
+    - !include pseudocode.txt
