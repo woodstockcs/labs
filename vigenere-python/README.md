@@ -1,6 +1,6 @@
-# Vigenère
+# Vigenère (Python)
 
-{% video https://www.youtube.com/watch?v=L7d2-lcfOz0 %}
+{% video https://www.youtube.com/watch?v=n4gcWaHKhoU %}
 
 {% next %}
 
@@ -27,7 +27,7 @@ Let's now write a program called `vigenere` that enables you to encrypt messages
 Here are a few examples of how the program might work.
 
 ```
-$ ./vigenere bacon
+$ python vigenere.py bacon
 plaintext:  Meet me at the park at eleven am
 ciphertext: Negh zf av huf pcfx bt gzrwep oz
 ```
@@ -35,35 +35,23 @@ ciphertext: Negh zf av huf pcfx bt gzrwep oz
 or for when the user provides a keyword that is not fully alphabetic:
 
 ```
-$ ./vigenere 13
+$ python vigenere.py 13
 Usage: ./vigenere keyword
 ```
 
 or for when they don't provide a keyword at all:
 
 ```
-$ ./vigenere
-Usage: ./vigenere keyword
+$ python vigenere.py
+Usage: python vigenere.py keyword
 ```
 
 or for when they provide too many keywords:
 
 ```
-$ ./vigenere bacon and eggs
-Usage: ./vigenere keyword
+$ python vigenere.py bacon and eggs
+Usage: python vigenere.py keyword
 ```
-
-{% spoiler "Try It" %}
-
-To try out the staff's implementation of this problem, execute
-
-```
-./vigenere keyword
-```
-
-substituting a valid alphabetic string in place of `keyword` within [this sandbox](https://sandbox.cs50.io/00b9fb06-1219-46d9-a94c-210340ead1fb).
-
-{% endspoiler %}
 
 How to begin? Let's start with something familiar.
 
@@ -71,29 +59,27 @@ How to begin? Let's start with something familiar.
 
 ## Déjà vu
 
-As you may have gleaned already, the basic idea for this cipher is strikingly similar to the idea underlying Caesar's cipher. As such, our code from Caesar seems like a good place to begin, so feel free to start by replacing the entire contents of `vigenere.c`, at right, with your solution to `caesar.c`.
+As you may have gleaned already, the basic idea for this cipher is strikingly similar to the idea underlying Caesar's cipher. As such, our code from Caesar seems like a good place to begin, so feel free to start by replacing the entire contents of `vigenere.py`, at right, with your solution to `caesar.py`.
 
-One difference between Caesar's and Vigenère's ciphers is that the key for Vigenère's cipher is a series of letters, rather than a number. So let's make sure that the user actually gave us a keyword! Modify the check you implemented in Caesar to instead ensure every character of the keyword is alphabetic, rather than a digit. If any of them isn't, print `Usage: ./vigenere keyword` and return a non-zero value as we did before. If they are all alphabetic, after checking you should print `Success` and then, `return 0;` immediately (for now), since our enciphering code is not quite ready to work just yet, so we won't have our program execute it.
+One difference between Caesar's and Vigenère's ciphers is that the key for Vigenère's cipher is a series of letters, rather than a number. So first, let's make sure that the user actually gave us a keyword! 
+
+{% spoiler "Hints" %}
+
+Modify the check you implemented in Caesar to instead ensure every character of the keyword is alphabetic, rather than a digit. If any of them isn't, print `Usage: python vigenere.py keyword` and return a non-zero value as we did before. If they are all alphabetic, after checking you should print `Success` and then, `exit(0);` immediately (for now), since our enciphering code is not quite ready to work just yet, so we won't have our program execute it.
 
 Sample behavior:
 
 ```
-$ ./vigenere alpha
+$ python vigenere.py alpha
 Success
 ```
 
 or
 
 ```
-$ ./vigenere 123
+$ python vigenere.py 123
 Usage: ./vigenere keyword
 ```
-
-{% spoiler "Hints" %}
-
-* Recall that the `string.h` header file contains a number of useful functions that work with strings. See [CS50 Reference](https://reference.cs50.net/)'s menu for some!
-* Recall that we can use a loop to iterate over each character of a string if we know its length.
-* Recall that the `ctype.h` header file contains a number of useful functions that tell us things about characters. See [CS50 Reference](https://reference.cs50.net/)'s menu for some!
 
 {% endspoiler %}
 
