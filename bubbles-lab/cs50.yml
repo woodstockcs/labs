@@ -1,0 +1,6 @@
+
+lab50:
+  files:
+    - !exclude "*"
+    - !include index.html
+    - !include sketch.js
