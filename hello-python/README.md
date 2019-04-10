@@ -73,7 +73,16 @@ When you are done be sure to execute your program, testing it a few times with d
 ```
 python hello.py
 ```
+{% next %}
 
-Congratulations! You've completed your first Python program!
+When all looks good, it's time to run your code through `check50`. This will run a series of test cases through your code and give you a final verdict as to whether or not your code meets the program spec.
+
+In the terminal, type in:
+
+```
+check50 cs50/2018/fall/sentimental/hello
+```
+
+when you get all green smiley faces, you know your done! Congratulations! You've completed your first Python program!
 
 
