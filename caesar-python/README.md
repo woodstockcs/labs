@@ -69,7 +69,7 @@ $ python caesar.py 1 2 3 4 5
 Usage: python caesar.py k
 ```
 
-Be sure to watch the walkhrough above for more detail on how to implement.
+Be sure to watch the walkthrough above for more detail on how to implement.
 
 {% next %}
 
