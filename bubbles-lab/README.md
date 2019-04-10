@@ -1,125 +1,172 @@
-# DVD Animation with p5.js
+# JavaScript Objects
 
-Ths goal of this lab is to create a DVD animation as seen in this episode of The Office.
+![bubbles](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/monkey-bubbles.gif)
 
-{% video https://www.youtube.com/watch?v=QOtuX0jL85Y&t=3s %}
+During this next exercise, we'll be making some bubbles that wobble over the screen! If that doesn't excite you on it's own you should definitely get excited about all the learning you will be doing because by then end you will have some really powerful tools in your programmer's tool belt.
 
-But first we need to become familiar with drawing with p5.js.
+![learning](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/info.gif)
 
-{% next %}
 
-## Getting Ready
+## A First Attempt
 
-For this project you will p5.js, a JavaScript library that has a full set of drawing and animation tools. Note that in this lab there are separate HTML and JavaScript files. The HTML does nothing more than import the required p5 libararies as well as the JavaScript files you will create so that you can run your animations. You do not need to change the HTML at this point, all your programming will be done in your sketch.js files.
+![bubbles](https://s3.amazonaws.com/upperline/curriculum-assets/p5js/bubbles.gif)
 
-{% next %}
-
-A typical p5.js sketch starts with a p5 function, `setup()`. Instructions in the `setup()` function are run once when the program starts. It's used to define initial environment properties such as screen size and background color and to load media such as images and fonts as the program starts. 
+That image shows several bubbles, but let's start with one:
 
 ```javascript
+let bubbleSize = 20;
+
+let bubble1X, bubble1Y;
+
 function setup() {
-  createCanvas(600, 400)
-}
-```
-
-This will create your "canvas" as a rectangular area on your web page, with a width of 600 and a height of 400.
-
-Another p5 function you will be using is `draw()`. The `draw()` function runs immediately after `setup()`, and it runs repeatedly, allowing for moving animation.  A single execution of the `draw()` function from top to bottom represents a single “frame” of an animation.  The number of times `draw()` executes in each second may be controlled with the `frameRate()` function. The default frame rate is 60 frames per second. There can only be one `draw()` function for each sketch. 
-
-```javascript
-function draw() {
-  // put your code for drawing here
-}
-```
-{% next %}
-
-Here is a representation of pixels on a 400 x 400 canvas. Note that the y-axis is flipped compared to yuor math class!
-
-![Canvas](http://intro.cs50nestm.net/wp-content/uploads/2019/03/canvas.png)
-
-A few of the p5.js functions you will find useful include:
-1. `fill(color)` which sets the color that all subsequent shapes are filled with. For example, `fill(50)` fills shapes with grayscale, while `fill(204, 102, 0)` fills shapes with orange. [p5js.org fill() reference](https://p5js.org/reference/#/p5/fill)
-1. `ellipse(x, y, width, height)` draws an ellipse, specifying the coordinates (x,y) of the center, width, and height.  
-1. `rect(x, y, width, height)` draws a rectangle, specifying the coordinates (x,y) of the top left corner, width, and height. [Check out `rectMode()` here](https://p5js.org/reference/#/p5/rectMode).
-1. `triangle(x1, y1, x2, y2, x3, y3)` draws a triangle, specifying the coordinates of three vertices: (x1,y1), (x2,y2), and (x3,y3)
-
-More functions and details on these functions can be found at [https://p5js.org/reference](https://p5js.org/reference).
-
-{% next %}
-
-## Warmup #1
-
-1. Open up `sketch1.js` and type in the following:
-
-```javascript
-function setup() {
-  createCanvas(400, 400)
-  background(0, 0, 255)
+  createCanvas(500,400);
+  bubble1X = random(0, width);
+  bubble1Y = random(0, height);
 }
 
 function draw() {
-  if (mouseIsPressed) {
-    fill(255, 0, 0)
-    noStroke()
-    ellipse(mouseX, mouseY, 40, 40)    
+  background(0);
+  fill(250);
+
+  circle(bubble1X, bubble1Y, bubbleSize);
+
+  bubble1X += random(-2, 2);
+  bubble1Y += random(-2, 2);
+}
+```
+
+Now go ahead and add a 100 bubbles...
+
+Just kidding, that would take ages, your hands would be cramped, and you probably wouldn't learn all that much.
+
+One thing that I'm thinking ahead about is that it seems like every time I'd want to add one new bubble, it would require two new variables. But, those two variables are clearly associated with each other. `bubble2X` and `bubble2Y` for example. Every new bubble adds (at least) 2 new variables.
+
+What if we could group those related variables together into one. A bubble is *one thing*, so shouldn't we have it represented in our code as *one variable*. Ideally, a single variable `bubble1` could *store both pieces of data* the `x` and `y`. That would cut our number of variables in half, or even less!
+
+## JavaScript Objects
+
+The way we can do this is with **JavaScript Objects**. An object is *one thing* that can be stored in one variable. An object can have many **properties**, think of these as additional variables stored inside the larger object.
+
+That sounds pretty abstract, but it's not so bad, let's make a an object called `brick`:
+
+![first object](http://intro.cs50nestm.net/wp-content/uploads/2019/04/brick.gif)
+
+Nice, the object we created with this code has two properties, `x` and `y`.
+
+```javascript
+let brick = {x: 10, y: 100};
+```
+#### Creating Objects
+
+We create objects using curly braces
+
+```javascript
+let emptyObject = {};
+```
+
+#### Properties, {key: value}
+
+Properties are added inside of an object. A property has two main parts, a *name* and a *value*.  This is very much like a variable, `x = 3`, the name is `x` the value is `3`.
+
+With objects the name to a property is called a **key**.  You will often hear people refer to properties and their values as *key-value pairs*. The object below has one key-value pair, the key is `firstName` and the value is `"Jenny"`:
+
+```javascript
+let student = {firstName: "Jenny"};
+```
+
+#### Multiple Properties
+
+When there are multiple properties in an object, they are separated by commas. Often objects will be written across multiple lines. Either way is fine as long as your commas and braces are in the right place.
+
+```javascript
+let student = {firstName: "Jenny", grade: 11};
+// or
+let student = {
+  firstName: "Jenny",
+  grade: 11
+};
+```
+
+#### Your Turn
+Make an object that represents you!  You can write it in the text editor, but better would be to open up the chrome console so you can interact with your object.
+
+It should have *at least 5* key-value pairs. Some ideas for the keys might be: name, age, date of birth, grade, favorite food, favorite color, mood, or number of siblings. Some of the vales can also be Boolean values, `true` or `false`, something like`{hasGlasses: true}` or `{tiredToday: false}`.
+
+Read the section below on how to access and change the properties. Change one of the properties on your "me" object.
+
+#### Accessing Properties
+
+We've seen how new objects are created, but we will also need to *access* the values inside of objects. We do this with a dot (a period `.`) after the object name.
+
+`student.firstName` gives us back the value `"Jenny"`.
+
+`student.grade` gives us back the value `11`.
+
+#### Adding Properties
+
+You can also use the same *dot* after the object name plus an `=` to add additional properties to an object after it's created or to change existing properties
+
+![adding properties](http://intro.cs50nestm.net/wp-content/uploads/2019/04/objects.gif)
+
+## Now with Objects
+
+Here's the same program built with objects. This may not seem like a huge change from before, but we're headed in the right direction.
+
+```javascript
+let bubbleSize = 20;
+
+let bubble1;
+
+function setup() {
+  createCanvas(500,400);
+  bubble1 = {
+    x: random(0, width),
+    y: random(0, height)
+  };
+}
+
+function draw() {
+  background(0);
+  fill(250);
+
+  circle(bubble1.x, bubble1.y, bubbleSize);
+
+  bubble1.x += random(-2, 2);
+  bubble1.y += random(-2, 2);
+}
+```
+## Why are Objects Important
+
+Objects are a super important concept in programming and we've just scratched the surface here.
+
+Objects allow us to group together into one container all the useful data that makes sense to be together.  This makes sense because it's like the real world, an object called `dog` might have `age`, `name`, `color`, and `weight` properties.
+
+JavaScript objects are fundamental to how data from the internet is structured and retrieved.  If you wanted to make an app that used information about the current weather, movies playing near your zip-code, or just about any data you can imagine that comes from the internet, it is very, very likely that that data will be in the form of a big JavaScript object. With an understanding of objects, you're on your way to becoming an awesome developer.
+
+## Mini-Challenge
+1. Add at least one more bubble, make it an object.
+
+2. Add a `size` property to each bubble object. The size can be random or hard-coded in.
+
+3. Add a `color` property to every bubble object that is a random number between `0` and `255`. Use that number to make the bubbles `fill` a random grayscale color.
+
+  You don't have to worry that the property `color` will conflict with p5's built-in `color` function.  This is because you will be accessing it by something like `bubble1.color`. The property `color` is sort of protected inside the object.
+
+4. Wouldn't it be cool if the bubbles were a random color that wasn't gray. One way to do this would be to make 3 new properties inside each object. The keys could be `r`, `g`, and `b` perhaps, and the values a random value.
+
+  If you're up for a challenge, one interesting thing is that a key of an object can have a value that is *another object*.  What if you're bubble looked like:
+  ```javascript
+  bubble = {
+    x: ...,
+    y: ...,
+    color: {
+      r: ...,
+      g: ...,
+      b: ...
+    }
   }
-}
-```
-1. To see what this code does, open http-server and open the file page1.html. Make sure you press and move the mouse over the canvas.
-1. Once you have your first program working, make each change described below.  After each individual change,  press and move the mouse over the canvas to see what happens.
-1. Change `createCanvas(400,400)` to `createCanvas(600, 400)`
-1. Change `background(0, 0, 255)` to `background(255, 0, 255)`
-1. Change `fill(255, 0, 0)` to `fill(0, 255, 0)`
-1. Change `noStroke()` to `stroke(0, 0, 255)`
-1. Change the ellipse function to `ellipse(mouseX, 0, 40, 40)`
-1. Then change it to `ellipse(mouseX, mouseY, 100, 50)`
-1. Remove the `if (mousePressed){` from Line 7 and also remove its ending `}`.
-1. Cut the background command in the `setup()` function and paste it into the top of the `draw()` function.
+  ```
 
-{% next %}
+The way you would access the `g` key would be `bubble.color.g`.  Give it a shot!
 
-## Warmup #2
-
-You’ll be making this “spaceship” below.
-
-![Spaceship](http://intro.cs50nestm.net/wp-content/uploads/2019/03/Screen-Shot-2019-03-25-at-6.48.21-AM.png)
-
-1. (no coding)  Assume that the center  of the circle is given by(x,y)and the width of the square is 50 pixels.  Figure out the coordinates of the vertices of the triangle relative to x and y.  
-2. Open the file sketch2.js and code it. Use the code below as starter code and complete the missing pieces:
-
-```javascript
-let x = 200
-let y = 250
-
-function setup() {
-  createCanvas(400, 400)
-  rectMode(CENTER)
-}
-
-function draw() {
-  // TODO 
-}
-```
-3. Once you have a working spaceship: in the `draw()` function add the command `y = y – 1`;
-
-## Submit this part
-
-When done with this part submit to: 
-
-submit50 p5_spaceship@cs50nestm/checks
-
-## DVD Logo Challenge
-
-1. Working in the file dvd.js, start by creating a rectangle and have it bounce off the sides of the screen.
-1. Have the rectangle change colors when bouncing off the side of a screen (this can be random, or a predetermined set of colors)
-
-1. When the rectangle hits a corner of the screen, have it stop the animation and display some sort of celebratory gif or message on the screen.
-1. Load the DVD logo into your sketch and replace the rectangle with this logo: [https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8j2ZvogClZN_eBG7qKeZUCcHweqjjsulAsOGOzKvhkQ2iEEzF](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8j2ZvogClZN_eBG7qKeZUCcHweqjjsulAsOGOzKvhkQ2iEEzF)
-
-1. **Extension:** Have rectangle play a “boing” sound when it bounces off the side of a wall (If working in CS50Lab, add the line `<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/addons/p5.sound.js"></script>` after line 8 in dvd.html to import the p5 sound library, then look at the p5-sound reference to achieve this)
-
-## Submit DVD Screen Saver
-
-submit50 dvd_screen_saver@cs50nestm/checks
-
-
+(Lesson above was adapted from a front-end design class given by Upperline Code)
