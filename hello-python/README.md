@@ -10,7 +10,21 @@ If you've taken CS50 Intro this year, you've already created Hello in C. If you 
 
 {% next %}
 
-You will write your hello program in the file to the right, hello.py. Since Python is an interpreted language, there is no need to compile! To run your code, simply type in 
+You will write your hello program in the file to the right, hello.py. As you see in the video above, you can type in one line of code
+
+```python
+print("hello, world")
+```
+
+To execute your code, and simply type in 
+
+```
+python hello.py
+```
+in the lower terminal window.
+
+
+Since Python is an interpreted language, there is no need to compile! 
 
 ```
 python hello.py
