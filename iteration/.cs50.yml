@@ -1,0 +1,6 @@
+lab50:
+  files:
+    - !exclude "*"
+    - !include iteration.py
+    - !include pseudocode.txt
+    
