@@ -1,6 +1,6 @@
 # Iteration Lab
 
-![iteration](https://gph.is/2hvfyv9)
+![iteration](https://media.giphy.com/media/Zj9MMsHc9Uzi8/giphy.gif)
 
 {% next %}
 
