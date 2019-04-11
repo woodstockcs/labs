@@ -21,7 +21,6 @@ To accomplish this, you will be using cs50 input functions, such as get_string a
 The syntax for conditionals (if statements) looks like this:
 
 ```python
-```
 if job == "Doctor":
   print("Hello, Doctor", name)
 elif job == "Carpenter":
