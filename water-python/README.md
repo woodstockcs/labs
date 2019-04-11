@@ -78,13 +78,21 @@ We'll leave it to you to figure out how to express the equivalent number of bott
 Finally, use the Python print function to print out the number of bottles.
 
 {% spoiler "Hint" %}
-In your last program, you printed out multiple variables, by separating them with a comma.
+Recall that we can print out multiple variables, by separating them with a comma.
 
 ```python
 print("hello,", name)
 ```
+
 {% endspoiler %}
 
 {% next %}
-Remember to test out your code with lots of different inputs. Once your inputs and outputs behave like the program spec, you've completed water!
+
+## Testing your code
+
+Test out your code with lots of different inputs. When you are satisfied that all looks correct, run your code through check50 for a final check.
+
+submit50 ______
+
+WHen you have all green smiles, your program behaves just like the program spec. You've completed water!
 
