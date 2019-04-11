@@ -1,6 +1,6 @@
 # Iteration Lab
 
-{% video https://gph.is/2hvfyv9 %}
+![iteration](https://gph.is/2hvfyv9)
 
 {% next %}
 
