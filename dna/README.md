@@ -1,5 +1,3 @@
-# Strings Real World Challenge: Biology
-
 # Real World Strings: DNA
 
 ![dna structure](https://s3.amazonaws.com/upperline/curriculum-assets/ruby/dnastructure.jpg)
