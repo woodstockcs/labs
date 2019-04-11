@@ -25,17 +25,18 @@ The string below consists of a small snippet of a DNA sequence. Your job is to r
 
 1) How long is the string?
 
-{% spoiler "Hint" %}
-There are many useful string methods in Python. One way to learn more about these is to look up a method when you need it. For exampls you might google `string length Python 3` and this might be what you fine:
 
-One of the best sites too look up python3 syntax is W3 Schools. As you can see there are many, many string methods, and I may have no idea of what most of them do. But a few, for instance, upper() look they they may come in useful. Best to just scan through the many methods and only look at the ones that seem that they may be helpful.
+
+2) How many adenine symbols ('A')?
+
+{% spoiler "Hint" %}
+There are many useful string methods in Python. But sometimes it can be hard to know how to even look it up, when you don't know where to start!. One way to learn more about these is to look up which string methods exist and then look more closely at any that sound like thay may be helpful.
+
+One of the best sites too look up python3 syntax is W3 Schools. As you can see there are many, many string methods, and we may have no idea of what most of them do. But a few, such as count() look they they may come in useful. Best to just scan through the many methods and only look at the ones that seem that they may be helpful.
 
 {% video https://youtu.be/EHVqQ5JpdGE %}
 
-
 {% endspoiler %}
-
-2) How many adenine symbols ('A')?
 
 3) How many guanine symbols ('G')?
 
