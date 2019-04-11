@@ -29,6 +29,6 @@ elif job == "Carpenter":
 else:
   print("Welcome!")
 ```
-{% endspoiler}
+{% endspoiler %}
 
 Feel free to use your imagination!
