@@ -13,3 +13,22 @@ A popular example of a text based adventure game is Oregon Trail, a game origina
 ![Oregon Trail](http://intro.cs50nestm.net/wp-content/uploads/2019/04/oregon-trail.png)
 
 The video above is an example of what your adventure game might look like!
+
+To accomplish this, you will be using cs50 input functions, such as get_string and get_int, print statements, and conditionals. 
+
+{% spoiler "What is a conditional statement?"}
+
+The syntax for conditionals (if statements) looks like this:
+
+```python
+```
+if job == "Doctor":
+  print("Hello, Doctor", name)
+elif job == "Carpenter":
+  print("You may want to bring your tools,", name)
+else:
+  print("Welcome!")
+```
+{% endspoiler}
+
+Feel free to use your imagination!
