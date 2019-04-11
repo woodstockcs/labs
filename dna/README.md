@@ -25,6 +25,9 @@ The string below consists of a small snippet of a DNA sequence. Your job is to r
 
 1) How long is the string?
 
+{% spoiler "Hint" %}
+The Python method `len()` may come in helpful here.
+{% endspoiler %}
 
 
 2) How many adenine symbols ('A')?
