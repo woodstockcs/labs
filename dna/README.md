@@ -1,5 +1,7 @@
 # Strings Real World Challenge: Biology
 
+# Real World Strings: DNA
+
 ![dna structure](https://s3.amazonaws.com/upperline/curriculum-assets/ruby/dnastructure.jpg)
 
 DNA is the code in which all life is written. Inside of each of our cells is a blueprint for who we are (of course, who we are also depends on our environment). Using computers to 'crack the genetic code' is one of the biggest challenges of our time, and an important field of research known as bioinformatics.
