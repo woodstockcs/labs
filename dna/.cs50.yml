@@ -1,2 +1,5 @@
 lab50:
-  true
+  files:
+    - !exclude "*"
+    - !include dna.py
+    - !include pseudocode.txt
