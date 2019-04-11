@@ -35,7 +35,9 @@ The Python method `len()` may come in helpful here.
 {% spoiler "Hint" %}
 There are many useful string methods in Python. But sometimes it can be hard to know how to even look it up, when you don't know where to start!. One way to learn more about these is to look up which string methods exist and then look more closely at any that sound like thay may be helpful.
 
-One of the best sites too look up python3 syntax is W3 Schools. As you can see there are many, many string methods, and we may have no idea of what most of them do. But a few, such as count() look they they may come in useful. Best to just scan through the many methods and only look at the ones that seem that they may be helpful.
+One of the best sites too look up python3 syntax is W3 Schools. As you can see there are many, many string methods, and we may have no idea of what most of them do. Here we find the syntax to convert a string to uppercase. You might want to look for a method to `count` all the substrings in a string.
+
+Best to just scan through the many methods and only look at the ones that seem that they may be helpful.
 
 {% video https://youtu.be/EHVqQ5JpdGE %}
 
