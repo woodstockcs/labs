@@ -94,5 +94,5 @@ Test out your code with lots of different inputs. When you are satisfied that al
 
 submit50 ______
 
-WHen you have all green smiles, your program behaves just like the program spec. You've completed water!
+When you have all green smiles, your program behaves just like the program spec. You've completed water!
 
