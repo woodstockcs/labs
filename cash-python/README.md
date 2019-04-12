@@ -80,5 +80,13 @@ Does your code work as prescribed when you input
 * letters or words?
 * no input at all, when you only hit Enter?
 
+### Check50
 
+When you feel your code is in good shape, it's time to run it through check50.
+
+```
+check50 cs50/2018/ap/sentimental/cash
+```
+
+inputting your GitHub username and GitHub password as prompted.
 
