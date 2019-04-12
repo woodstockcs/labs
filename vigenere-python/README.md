@@ -169,6 +169,12 @@ And as before, be sure to preserve case, but do so only based on the case of the
 
 Try out the examples above, and make your own test cases as well! 
 
+Then run check50.
+
+```
+check50 cs50/2018/fall/sentimental/vigenere
+```
+
 {% spoiler "Want another challenge?" %}
 
 If you successfully complete `vigenere` and want to take it one step further, see if you can implement a `devigenere` to take in ciphertext, and output plaintext.
