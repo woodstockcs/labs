@@ -72,4 +72,14 @@ If your program behaves incorrectly on some inputs, time to debug!
 
 {% next %}
 
+## Check50
+
+Finally, run your code through check50.
+
+```
+check50 cs50/2018/fall/sentimental/credit
+```
+
+
+
 
