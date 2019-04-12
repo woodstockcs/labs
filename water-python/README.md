@@ -92,7 +92,7 @@ print("hello,", name)
 
 Test out your code with lots of different inputs. When you are satisfied that all looks correct, run your code through check50 for a final check.
 
-submit50 ______
+check50 water-python@cs50nestm/checks
 
 When you have all green smiles, your program behaves just like the program spec. You've completed water!
 
