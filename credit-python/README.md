@@ -77,7 +77,7 @@ If your program behaves incorrectly on some inputs, time to debug!
 Finally, run your code through check50.
 
 ```
-check50 cs50/2018/fall/sentimental/credit
+check50 credit-python@cs50nestm/checks
 ```
 
 
