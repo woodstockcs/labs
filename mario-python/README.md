@@ -228,7 +228,13 @@ Does your code work as prescribed when you input
 * letters or words?
 * no input at all, when you only hit Enter?
 
-Once your pyramid matches the spec above, you are done! Congratulations!
+When these tests seem to work, test your code with check50!
+
+```
+check50 cs50/2018/ap/sentimental/mario/less
+```
+
+Once you see all happy smiles, you are done! Congratulations!
 
 
 
