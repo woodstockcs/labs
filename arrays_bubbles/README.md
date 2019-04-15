@@ -45,6 +45,40 @@ let bubbles = []
 at the top of your program. You can add elements to an array in two ways. First create the object:
 
 ```javascript
+bubble = {
+  x: 10,
+  y: 10
+}
+```
+And then add it to a specific index:
+
+```javascript
 bubble[0] = bubble
 ```
+Or additing it the end of the array:
+
+```javascript
+bubbles.push(bubble)
+```
+
+Now add 100 bubble objects to your bubbles array by using a for loop!
+
+## Extensions
+
+Once you are successful in creating 100 jittering bubbles, see if you can add some additional functionality. 
+
+Some ideas:
+
+* Make each bubble change color when you click on it. (Hint: Check out the p5 function mouseClicked and dist for this one.)
+
+* Make each bubble get bigger when you click on it.
+
+* Make each bubble pop after clicking on it 3 times. (Hint: Look into the JavaScript function splice.)
+
+* Create a new bubble when you click somewhere other than on another bubble.
+
+
+
+
+
 
