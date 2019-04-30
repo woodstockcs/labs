@@ -77,8 +77,11 @@ Some ideas:
 
 * Create a new bubble when you click somewhere other than on another bubble.
 
+To submit:
 
-
+```
+submit50 arrays_bubbles@cs50nestm/checks
+```
 
 
 
