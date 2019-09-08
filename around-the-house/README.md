@@ -92,3 +92,5 @@ submit50 cs50/problems/2019/ap/house
 
 Navigate to `submit.cs50.io` to check that "Around The House" was submitted. If you see `check50` with a score of `1/1`, it means you successfully submitted a file with the correct name and it is available for your teacher to grade. You will find your actual grade in your PupilPath Gradebook.
 
+This was Around the House, your first problem in CS50!
+
