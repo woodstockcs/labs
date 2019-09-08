@@ -34,6 +34,8 @@ Or perhaps may not even have moving parts?
 
 {% video https://youtu.be/tI0GqYJha1Q %}
 
+{% next %}
+
 If you had some preconceived notions about what a computer is, odds are they were challenged somewhat by watching the videos above (particularly the last two!), and that’s okay! In fact, you may find that some folks quickly agree that everything shown above is a computer, and some won’t. Try speaking with family and friends about it and see if it doesn’t spark an interesting discussion.
 
 We’ll wait here while you do that.
