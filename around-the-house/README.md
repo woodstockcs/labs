@@ -20,15 +20,19 @@ In 400 words, describe a device in detail using the following questions:
 
 If not familiar with what computers are, take a quick look at a more modern spin on them here:
 
+{% video https://youtu.be/WAxH0YHdTuA %}
 
 Although they’ve also been known to be a bit smaller than that:
 
+{% video https://youtu.be/HXs8G7Kjrd8 %}
 
 But perhaps there are some that do not even use electricity?
 
+{% video https://youtu.be/GcDshWmhF4A %}
 
 Or perhaps may not even have moving parts?
 
+{% video https://youtu.be/tI0GqYJha1Q %}
 
 If you had some preconceived notions about what a computer is, odds are they were challenged somewhat by watching the videos above (particularly the last two!), and that’s okay! In fact, you may find that some folks quickly agree that everything shown above is a computer, and some won’t. Try speaking with family and friends about it and see if it doesn’t spark an interesting discussion.
 
