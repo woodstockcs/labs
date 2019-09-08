@@ -64,7 +64,9 @@ Have a look around your home. See any computers? Even if you don’t have laptop
 
 In this problem, we want you to think even more outside the box than that. Recall that we defined a computer as a device that accepts input, and processes it in some way to produce a result automatically. Surely there exists some device in your home that adheres to that definition but isn’t something that before now you would have readily called a computer. If you can’t think of any such device in your home, feel free to venture beyond those four walls and pick any device with which you may be familiar.
 
-You will write your essay in the text editor on the right, labeled `house.txt`. In no more than 400 words, describe this device in detail. You may wish to consider questions such as:
+You will write your essay in the text editor on the right, labeled `house.txt`. If you have problems with the text editor timing out, or you prefer to use a spell checker, feel free to write your essay in the word processing program of your choice,  (you may want to consider google docs), and then copy and paste into the text editor in this lab to submit.
+
+In no more than 400 words, describe this device in detail. You may wish to consider questions such as:
 
 * What does the device look like?
 
