@@ -76,7 +76,13 @@ Conduct a little bit of research (formal or informal), and if you suspect others
 
 ## How to submit
 
-Under the tab that says `>_ Terminal`, is a window with a $ prompt. This is the terminal window where you can type commands. You will type in a special code here that will submit your essay to your GitHub account.
+Under the tab that says `>_ Terminal`, is a window with a `$` prompt. This is the terminal window where you can type commands. You will type in a special code here that will submit your essay to your GitHub account.
+
+Type in the following, next to the `$` prompt, logging in with your GitHub username and password when prompted. For security, you’ll see asterisks (*) instead of the actual characters in your password.
+
+```
+submit50 cs50/problems/2019/ap/house
+```
 
 
 
