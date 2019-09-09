@@ -8,7 +8,7 @@
 
 Hello, world! At right, in the *text editor*, is the very first program we will complete in C, in a file called `hello.c`. 
 
-Click the folder icon, and you'll see that `hello.c` is the only file that's present at the moment. Per the mention of `/root/sandbox` below that icon, `hello.c` happens to be in a folder (otherwise known as a *directory*) called `sandbox`, which itself is in another folder called `root`. Click the folder icon again to hide all that.
+Click the folder icon, and you'll see that `hello.c` is the only file that's present at the moment. Click the folder icon again to hide it.
 
 Next, in the *terminal window* at right, immediately to the right of the dollar sign (`$`), otherwise known as a *prompt*, type precisely the below (in lowercase), then hit Enter:
 
