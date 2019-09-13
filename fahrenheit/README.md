@@ -8,7 +8,7 @@
 
 In the past, if you wanted to know what the outdoor temperature was, you had to look around for one of these, which might have been mounted outside at your house.
 
-![Thermometer](http://intro.cs50nestm.net/wp-content/uploads/2018/10/thermometersm.png)
+![Thermometer](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Raumthermometer_Fahrenheit%2BCelsius.jpg/900px-Raumthermometer_Fahrenheit%2BCelsius.jpg)
 
 Prior to that, you just stood outside, but we digress. Nowadays, it’s a fairly trivial exercise to pull open a weather app on your phone or visit a weather-reporting website to get the current temperature and the five-day forecast. No need to mess around with one of the above circular dials or its tube-of-mercury cousin.
 
@@ -97,5 +97,5 @@ Can you see why this prints with 2 decimal places? Now adapt this to print degre
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/2018/ap/fahrenheit
+submit50 cs50/2019/ap/fahrenheit
 ```
