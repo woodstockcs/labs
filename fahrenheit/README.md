@@ -97,5 +97,5 @@ Can you see why this prints with 2 decimal places? Now adapt this to print degre
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/2019/ap/fahrenheit
+submit50 cs50/problems/2019/ap/fahrenheit
 ```
