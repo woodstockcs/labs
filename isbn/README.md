@@ -159,5 +159,5 @@ After submitting your code, be sure to check your score on [me50](https://submit
 
 ***have some extra time?***
 
-See that grade for **style** in me50? Have a look at what it suggests and try to get it up to a score of 1.00! You are free to resubmit as many times as you like.
+See that score for **style50**? It's a decimal number 0.00 - 1.00 listed right next to the check50 score. Click the style50 link and have a look at what it suggests for updates. Try to get it up to a score of 1.00! You are free to resubmit as many times as you like.
 
