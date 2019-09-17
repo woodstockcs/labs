@@ -60,7 +60,7 @@ In a file named isbn.c, write a program that prompts the user for an ISBN-10 and
 
 For simplicity, you may assume that the user’s input will be exactly ten decimal digits (i.e., devoid of hyphens and X), the first of which might even be zero(es), as in the case of our recommended book. But do not assume that the user’s input will fit in an int! Recall, after all, that the largest value that can fit in an int is 2<sup>32</sup> - 1 = 4,294,967,295 (and, even then, only if declared as unsigned). True, that’s a 10-digit value, but there might still be a problem. (What?) Best to be safe and use get_long from CS50’s library to get users' input. (Why?)
 
-Okay, so you’ve gotten some input. What should you do? Well, realize that this C program, not unlike Scratch projects, can be reduced to the most basic of building blocks. For the sake of discussion, suppose that some variable x contains a 10-digit long long (with no leading zeroes). How can you get at its tenth (i.e., rightmost) digit? Well how about this?
+Okay, so you’ve gotten some input. What should you do? Well, realize that this C program, not unlike Scratch projects, can be reduced to the most basic of building blocks. For the sake of discussion, suppose that some variable x contains a 10-digit long (with no leading zeroes). How can you get at its tenth (i.e., rightmost) digit? Well how about this?
 
 ```c
 int tenth = x % 10;
