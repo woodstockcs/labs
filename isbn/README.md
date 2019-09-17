@@ -28,7 +28,7 @@ Per the International ISBN Agency’s ISBN Users' Manual, "The check digit is th
 
 Yes, but what does that mean? The manual elaborates. "This means that each of the first nine digits of the ISBN—​excluding the check digit itself—​is multiplied by a number ranging from 10 to 2 and that the resulting sum of the products, plus the check digit, must be divisible by 11 without a remainder."
 
-Okay, better, but still a bit unclear. Let’s define the check digit in terms of a formula. Fortunately, thanks to "modular arithmetic," we can simplify the Agency’s formal definition using weights ranging from 1 to 9 instead of 10 to 2. In fact, it’s really quite simple. If x<sub>1</sub> represents an ISBN-10’s first digit and x<sub>10</sub> its last, it turns out that:
+Okay, better, but still a bit unclear. Let’s define the check digit in terms of a formula. Fortunately, thanks to "modular arithmetic," we can simplify the Agency’s formal definition using weights ranging from 1 to 9 instead of 10 to 2. In fact, it’s really quite simple. If x<sub>1</sub> represents an ISBN-10’s first digit (aka the left-most digit) and x<sub>10</sub> its last digit (aka the right-most digit), it turns out that:
 
 x<sub>10</sub> = (1·x<sub>1</sub> + 2·x<sub>2</sub> + 3·x<sub>3</sub> + 4·<sub>x4</sub> + 5·x<sub>5</sub> + 6·x<sub>6</sub> + 7·x<sub>7</sub> + 8·x<sub>8</sub> + 9·x<sub>9</sub>) mod 11
 
@@ -38,7 +38,7 @@ In other words, to compute an ISBN-10’s tenth digit, multiply its first digit 
 
 ## I S BN Calculatin'
 
-Let’s try all this out. The ISBN-10 for the *Absolute Beginner’s Guide to C*, one of the course’s recommended books, is 0-789-75198-4, the tenth digit of which is, obviously, 4. But is the syllabus right? Well, let’s first take that sum using the ISBN-10’s first nine digits (highlighted in bold):
+Let’s try all this out. The ISBN-10 for the *Absolute Beginner’s Guide to C*  is 0-789-75198-4, the tenth digit of which is, obviously, 4. But is the syllabus right? Well, let’s first take that sum using the ISBN-10’s first nine digits (highlighted in bold):
 
 1·**0** + 2·**7** + 3·**8** + 4·**9** + 5·**7** + 6·**5** + 7·**1** + 8·**9** + 9·**8** = 290
 
@@ -152,14 +152,12 @@ within [this sandbox](http://bit.ly/2NQ36U4).
 Execute the below, logging in with your GitHub username and password when prompted. For security, you'll see asterisks (`*`) instead of the actual characters in your password.
 
 ```
-submit50 cs50/2018/ap/isbn
+submit50 cs50/problems/2019/ap/isbn
 ```
 
-To make sure you get 5/5 for style, you may want to execute style50 first.
+After submitting your code, be sure to check your score on [me50](https://submit.cs50.io). If you don't have full credit on you check50 grade, make the necessary updates and resubmit. You are free to resubmit as many times as you like.
 
-```
-style50 isbn.c
-```
+***have some extra time?***
 
-After submitting your code, be sure to check your score on cs50.me. If it's not a 5/5 on correctness, go to submissions, and click on check50 for that program to see which tests succeeded and whih failed. You are welcome to correct any error and resubmit!
+See that grade for **style** in me50? Have a look at what it suggests and try to get it up to a score of 1.00! You are free to resubmit as many times as you like.
 
