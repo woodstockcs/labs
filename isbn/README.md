@@ -38,7 +38,7 @@ In other words, to compute an ISBN-10’s tenth digit, multiply its first digit 
 
 ## I S BN Calculatin'
 
-Let’s try all this out. The ISBN-10 for the *Absolute Beginner’s Guide to C*  is 0-789-75198-4, the tenth digit of which is, obviously, 4. But is the syllabus right? Well, let’s first take that sum using the ISBN-10’s first nine digits (highlighted in bold):
+Let’s try all this out. The ISBN-10 for the *Absolute Beginner’s Guide to C* is 0-789-75198-4, the tenth digit of which is, obviously, 4. But that *actually* the correct ISBN? Well, let’s first take that sum using the ISBN-10’s first nine digits (highlighted in bold):
 
 1·**0** + 2·**7** + 3·**8** + 4·**9** + 5·**7** + 6·**5** + 7·**1** + 8·**9** + 9·**8** = 290
 
@@ -58,7 +58,7 @@ So, computing this check digit’s not hard, but it does get a bit tedious by ha
 
 In a file named isbn.c, write a program that prompts the user for an ISBN-10 and then reports (via printf) whether the number’s legit. So that we can automate some tests of your code, we ask that your program’s last line of output be either YES\n or NO\n, nothing more, nothing less.
 
-For simplicity, you may assume that the user’s input will be exactly ten decimal digits (i.e., devoid of hyphens and X), the first of which might even be zero(es), as in the case of our recommended book. But do not assume that the user’s input will fit in an int! Recall, after all, that the largest value that can fit in an int is 2<sup>32</sup> - 1 = 4,294,967,295 (and, even then, only if declared as unsigned). True, that’s a 10-digit value, but there might still be a problem. (What?) Best to be safe and use get_long from CS50’s library to get users' input. (Why?)
+For simplicity, you may assume that the user’s input will be exactly ten decimal digits (i.e., devoid of hyphens and X), the first of which might even be zero(es), as in the case of our book above. But do not assume that the user’s input will fit in an int! Recall, after all, that the largest value that can fit in an int is 2<sup>32</sup> - 1 = 4,294,967,295 (and, even then, only if declared as unsigned). True, that’s a 10-digit value, but there might still be a problem. (What?) Best to be safe and use get_long from CS50’s library to get users' input. (Why?)
 
 Okay, so you’ve gotten some input. What should you do? Well, realize that this C program, not unlike Scratch projects, can be reduced to the most basic of building blocks. For the sake of discussion, suppose that some variable x contains a 10-digit long (with no leading zeroes). How can you get at its tenth (i.e., rightmost) digit? Well how about this?
 
@@ -145,7 +145,7 @@ To try out the staff's implementation of this problem, execute
 ./isbn
 ```
 
-within [this sandbox](http://bit.ly/2NQ36U4).
+within [this sandbox](http://bit.ly/30a5mAD).
 
 ## How to Submit
 
